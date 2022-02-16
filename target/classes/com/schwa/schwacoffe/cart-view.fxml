@@ -10,10 +10,12 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" stylesheets="@cart-style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <bottom>
-      <Button fx:id="PlaceOrderButton" mnemonicParsing="false" prefHeight="67.0" prefWidth="178.0" text="Place Order" BorderPane.alignment="CENTER" />
+      <Button fx:id="PlaceOrderButton" mnemonicParsing="false" prefHeight="67.0" prefWidth="178.0" text="Place Order" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="5.0" top="5.0" />
+         </BorderPane.margin></Button>
    </bottom>
    <top>
       <Label text="Schwa Cart" BorderPane.alignment="CENTER">
@@ -25,23 +27,16 @@
    <center>
       <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" prefHeight="27.0" prefWidth="110.0" text="In Cart">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
+            <ListView fx:id="CartListView" prefHeight="404.0" prefWidth="600.0">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin></ListView>
             <Separator prefWidth="200.0">
                <VBox.margin>
-                  <Insets bottom="-12.0" top="-12.0" />
+                  <Insets />
                </VBox.margin>
             </Separator>
-            <ListView fx:id="CartListView" prefHeight="200.0" prefWidth="200.0" />
-            <Separator prefWidth="200.0">
-               <VBox.margin>
-                  <Insets bottom="-12.0" top="-12.0" />
-               </VBox.margin>
-            </Separator>
-            <Label text="Pick up time">
+            <Label fx:id="PickUpLabel" text="Pick up time">
                <font>
                   <Font size="14.0" />
                </font>

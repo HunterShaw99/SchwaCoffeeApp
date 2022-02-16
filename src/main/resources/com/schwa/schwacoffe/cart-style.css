@@ -1,0 +1,32 @@
+.button {
+    -fx-font: 16px "Serif";
+    -fx-text-fill: "0xede0d4";
+    -fx-font-weight: BOLD;
+    -fx-background-color: "0x9c6644";
+}
+#PickUpLabel {
+    -fx-font: 18px "Serif";
+    -fx-font-weight: BOLD;
+    -fx-text-fill: "0x9c6644";
+}
+.list-view {
+    -fx-background-color: "white";
+}
+VBox {
+    -fx-background-color: "0xddb892";
+    -fx-background-radius: 25px;
+    -fx-border-radius: 25px;
+}
+BorderPane {
+    -fx-background-color: "0xede0d4";
+}
+.track {
+    -fx-background-color: "0xb08968";
+
+}
+.separator .line{
+    -fx-background-color: "0xb08968";
+    -fx-border-color: "0xb08968";
+    -fx-border-width: 4px;
+    -fx-border-style: solid;
+}
