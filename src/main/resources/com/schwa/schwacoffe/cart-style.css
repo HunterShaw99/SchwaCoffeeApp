@@ -5,14 +5,19 @@
     -fx-background-color: "9c6644";
 }
 #PickUpLabel, #CartLabel {
-    -fx-font: 18px "Serif";
+    -fx-font: 20px "Serif";
     -fx-font-weight: BOLD;
     -fx-text-fill: "9c6644";
 }
 #CartTotalLabel {
-    -fx-font: 18px "Serif";
+    -fx-font: 20px "Serif";
     -fx-font-weight: BOLD;
     -fx-text-fill: "faedcd";
+}
+#CartTitleLabel {
+    -fx-font: 26px "Sans";
+    -fx-font-weight: BOLD;
+    -fx-text-fill: "#ede0d4ff";
 }
 .list-view {
     -fx-background-color: "white";
