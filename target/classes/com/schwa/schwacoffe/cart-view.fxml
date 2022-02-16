@@ -7,27 +7,15 @@
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" stylesheets="@cart-style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
-   <bottom>
-      <Button fx:id="PlaceOrderButton" mnemonicParsing="false" prefHeight="67.0" prefWidth="178.0" text="Place Order" BorderPane.alignment="CENTER">
-         <BorderPane.margin>
-            <Insets bottom="5.0" top="5.0" />
-         </BorderPane.margin></Button>
-   </bottom>
-   <top>
-      <Label text="Schwa Cart" BorderPane.alignment="CENTER">
-         <font>
-            <Font name="Georgia Bold" size="24.0" />
-         </font>
-      </Label>
-   </top>
    <center>
       <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0" BorderPane.alignment="CENTER">
          <children>
-            <ListView fx:id="CartListView" prefHeight="404.0" prefWidth="600.0">
+            <ListView fx:id="CartListView" prefHeight="364.0" prefWidth="580.0">
                <VBox.margin>
                   <Insets left="10.0" right="10.0" />
                </VBox.margin></ListView>
@@ -46,23 +34,43 @@
                   <Insets left="25.0" right="25.0" />
                </padding>
             </Slider>
-            <Label text="Cart total">
+            <Label fx:id="CartLabel" text="Cart total">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="CartTotalLabel" text="Cart sum goes here">
+            <Label fx:id="CartTotalLabel" text="\$0.00">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="80.0">
+               <children>
+                  <Button fx:id="PlaceOrderButton" mnemonicParsing="false" prefHeight="67.0" prefWidth="178.0" text="Cancel Order" />
+                  <Button fx:id="PlaceOrderButton1" layoutX="221.0" layoutY="27.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="178.0" text="Place Order" />
+               </children>
+            </HBox>
          </children>
          <BorderPane.margin>
-            <Insets left="100.0" right="100.0" />
+            <Insets bottom="20.0" left="100.0" right="100.0" />
          </BorderPane.margin>
          <padding>
             <Insets top="15.0" />
          </padding>
       </VBox>
    </center>
+   <top>
+      <HBox fx:id="HeaderBar" alignment="CENTER" prefHeight="59.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="CartTitleLabel" alignment="CENTER" text="Schwa Cart">
+               <font>
+                  <Font name="Georgia Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="15.0" />
+         </BorderPane.margin>
+      </HBox>
+   </top>
 </BorderPane>

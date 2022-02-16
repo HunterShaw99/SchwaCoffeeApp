@@ -62,7 +62,7 @@
    <top>
       <HBox fx:id="HeaderBar" alignment="CENTER" prefHeight="59.0" prefWidth="800.0" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" text="Schwa Cart">
+            <Label fx:id="CartTitleLabel" alignment="CENTER" text="Schwa Cart">
                <font>
                   <Font name="Georgia Bold" size="24.0" />
                </font>
