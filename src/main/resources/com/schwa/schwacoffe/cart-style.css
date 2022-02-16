@@ -17,6 +17,9 @@
 .list-view {
     -fx-background-color: "white";
 }
+#HeaderBar {
+    -fx-background-color: "7f5539";
+}
 VBox {
     -fx-background-color: "ddb892";
     -fx-background-radius: 25px;
