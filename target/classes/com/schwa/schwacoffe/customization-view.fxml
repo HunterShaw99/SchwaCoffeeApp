@@ -1,26 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 
-
-<AnchorPane fx:id="ap" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.schwa.schwacoffe.CustomizationController">
+<AnchorPane fx:id="ap" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.schwa.schwacoffe.CustomizationController">
     <children>
-        <Button fx:id="backButton" layoutX="32.0" layoutY="27.0" mnemonicParsing="false" text="Back" />
-        <Rectangle fx:id="TODO_IMAGEVIEW" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="139.0" layoutX="223.0" layoutY="40.0" stroke="BLACK" strokeType="INSIDE" width="155.0" />
-        <Button fx:id="finishButton" layoutX="517.0" layoutY="344.0" mnemonicParsing="false" text="Finish" />
-        <ChoiceBox fx:id="sizeChoiceBox" layoutX="148.0" layoutY="213.0" prefWidth="150.0" />
-        <ChoiceBox fx:id="milkChoiceBox" layoutX="148.0" layoutY="251.0" prefWidth="150.0" />
-        <Label fx:id="sizeLabel" layoutX="88.0" layoutY="217.0" text="Size" />
-        <Label fx:id="milkLabel" layoutX="87.0" layoutY="255.0" text="Milk" />
-        <Label fx:id="flavorLabel" layoutX="83.0" layoutY="297.0" text="Flavor" />
-        <ChoiceBox fx:id="flavorChoiceBox" layoutX="148.0" layoutY="293.0" prefWidth="150.0" />
-        <Label fx:id="sizePriceLabel" layoutX="378.0" layoutY="217.0" text="sizePrice" />
-        <Label fx:id="milkPriceLabel" layoutX="378.0" layoutY="255.0" text="milkPrice" />
-        <Label fx:id="flavorPriceLabel" layoutX="378.0" layoutY="297.0" text="flavorPrice" />
-        <Label fx:id="totalPriceLabel" layoutX="377.0" layoutY="335.0" text="totalPrice" />
+        <Button fx:id="backButton" layoutX="32.0" layoutY="27.0" mnemonicParsing="false" onAction="#BackButtonClicked" text="Back" />
+        <Rectangle fx:id="TODO_IMAGEVIEW" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="139.0" layoutX="286.0" layoutY="41.0" stroke="BLACK" strokeType="INSIDE" width="155.0" />
+        <Button fx:id="finishButton" layoutX="702.0" layoutY="525.0" mnemonicParsing="false" onAction="#FinishButtonClicked" text="Finish" />
+        <Label fx:id="sizeLabel" layoutX="86.0" layoutY="226.0" text="Size" />
+        <Label fx:id="milkLabel" layoutX="90.0" layoutY="319.0" text="Milk" />
+        <Label fx:id="flavorLabel" layoutX="86.0" layoutY="422.0" text="Flavor" />
+        <Label fx:id="sizePriceLabel" layoutX="386.0" layoutY="226.0" text="sizePrice" />
+        <Label fx:id="milkPriceLabel" layoutX="385.0" layoutY="319.0" text="milkPrice" />
+        <Label fx:id="flavorPriceLabel" layoutX="381.0" layoutY="422.0" text="flavorPrice" />
+        <Label fx:id="totalPriceLabel" layoutX="384.0" layoutY="516.0" text="totalPrice" />
+      <ImageView fx:id="myImageView" fitHeight="150.0" fitWidth="200.0" layoutX="363.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true" />
+      <CheckBox fx:id="flavorCheckBox1" layoutX="163.0" layoutY="396.0" mnemonicParsing="false" text="flavor 1" />
+      <CheckBox fx:id="flavorCheckBox2" layoutX="163.0" layoutY="422.0" mnemonicParsing="false" text="flavor 2" />
+      <RadioButton fx:id="sizeRadio1" layoutX="159.0" layoutY="201.0" mnemonicParsing="false" text="Small" />
+      <RadioButton fx:id="sizeRadio2" layoutX="159.0" layoutY="226.0" mnemonicParsing="false" text="Medium" />
+      <RadioButton fx:id="sizeRadio3" layoutX="159.0" layoutY="250.0" mnemonicParsing="false" text="Large" />
+      <Label fx:id="sizeOption1PriceLabel" layoutX="258.0" layoutY="201.0" text="sizeOption1Price" />
+      <Label fx:id="sizeOption2PriceLabel" layoutX="258.0" layoutY="226.0" text="sizeOption2Price" />
+      <Label fx:id="sizeOption3PriceLabel" layoutX="258.0" layoutY="250.0" text="sizeOption3Price" />
+      <RadioButton fx:id="milkRadio1" layoutX="162.0" layoutY="294.0" mnemonicParsing="false" text="Whole" />
+      <RadioButton fx:id="milkRadio2" layoutX="162.0" layoutY="319.0" mnemonicParsing="false" text="2%" />
+      <RadioButton fx:id="milkRadio3" layoutX="162.0" layoutY="343.0" mnemonicParsing="false" text="Non-fat" />
+      <Label fx:id="milkOption1PriceLabel" layoutX="261.0" layoutY="294.0" text="milkOption1Price" />
+      <Label fx:id="milkOption2PriceLabel" layoutX="261.0" layoutY="319.0" text="milkOption2Price" />
+      <Label fx:id="milkOption3PriceLabel" layoutX="261.0" layoutY="343.0" text="milkoption3Price" />
+      <CheckBox fx:id="flavorCheckBox3" layoutX="163.0" layoutY="444.0" mnemonicParsing="false" text="flavor 3" />
+      <Label fx:id="flavorOption1PriceLabel" layoutX="261.0" layoutY="397.0" text="FlavorOption1Price" />
+      <Label fx:id="flavorOption2PriceLabel" layoutX="261.0" layoutY="422.0" text="FlavorOption2Price" />
+      <Label fx:id="flavorOption3PriceLabel" layoutX="261.0" layoutY="446.0" text="FlavorOption3Price" />
+      <Label fx:id="typeLabel" layoutX="158.0" layoutY="69.0" text="Item Type" />
     </children>
 </AnchorPane>

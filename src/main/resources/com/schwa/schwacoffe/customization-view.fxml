@@ -35,7 +35,7 @@
       <Label fx:id="milkOption1PriceLabel" layoutX="261.0" layoutY="294.0" text="milkOption1Price" />
       <Label fx:id="milkOption2PriceLabel" layoutX="261.0" layoutY="319.0" text="milkOption2Price" />
       <Label fx:id="milkOption3PriceLabel" layoutX="261.0" layoutY="343.0" text="milkoption3Price" />
-      <CheckBox fx:id="flavorCheckBox1" layoutX="163.0" layoutY="444.0" mnemonicParsing="false" text="flavor 3" />
+      <CheckBox fx:id="flavorCheckBox3" layoutX="163.0" layoutY="444.0" mnemonicParsing="false" text="flavor 3" />
       <Label fx:id="flavorOption1PriceLabel" layoutX="261.0" layoutY="397.0" text="FlavorOption1Price" />
       <Label fx:id="flavorOption2PriceLabel" layoutX="261.0" layoutY="422.0" text="FlavorOption2Price" />
       <Label fx:id="flavorOption3PriceLabel" layoutX="261.0" layoutY="446.0" text="FlavorOption3Price" />
