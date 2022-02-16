@@ -1,21 +1,21 @@
 .button {
-    -fx-font: 16px "Serif";
+    -fx-font: 16px "Arial";
     -fx-text-fill: "ede0d4ff";
     -fx-font-weight: BOLD;
     -fx-background-color: "9c6644";
 }
 #PickUpLabel, #CartLabel {
-    -fx-font: 20px "Serif";
+    -fx-font: 22px "Arial";
     -fx-font-weight: BOLD;
     -fx-text-fill: "9c6644";
 }
 #CartTotalLabel {
-    -fx-font: 20px "Serif";
+    -fx-font: 22px "Arial";
     -fx-font-weight: BOLD;
     -fx-text-fill: "faedcd";
 }
 #CartTitleLabel {
-    -fx-font: 26px "Sans";
+    -fx-font: 28px "Sans";
     -fx-font-weight: BOLD;
     -fx-text-fill: "#ede0d4ff";
 }
