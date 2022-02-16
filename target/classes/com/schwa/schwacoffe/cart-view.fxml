@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
@@ -22,22 +23,51 @@
       </Label>
    </top>
    <center>
-      <VBox prefHeight="200.0" prefWidth="100.0" spacing="15.0" BorderPane.alignment="CENTER">
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" prefHeight="17.0" prefWidth="52.0" text="In Cart" />
+            <Label alignment="CENTER" prefHeight="27.0" prefWidth="110.0" text="In Cart">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Separator prefWidth="200.0">
+               <VBox.margin>
+                  <Insets bottom="-12.0" top="-12.0" />
+               </VBox.margin>
+            </Separator>
             <ListView fx:id="CartListView" prefHeight="200.0" prefWidth="200.0" />
-            <Label text="Pick up time" />
+            <Separator prefWidth="200.0">
+               <VBox.margin>
+                  <Insets bottom="-12.0" top="-12.0" />
+               </VBox.margin>
+            </Separator>
+            <Label text="Pick up time">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
             <Slider fx:id="PickupSlider" blockIncrement="5.0" majorTickUnit="15.0" max="120.0" min="15.0" minorTickCount="2" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="15.0">
                <padding>
                   <Insets left="25.0" right="25.0" />
                </padding>
             </Slider>
-            <Label text="Cart total" />
-            <Label fx:id="CartTotalLabel" text="Cart sum goes here" />
+            <Label text="Cart total">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="CartTotalLabel" text="Cart sum goes here">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
          </children>
          <BorderPane.margin>
             <Insets left="100.0" right="100.0" />
          </BorderPane.margin>
+         <padding>
+            <Insets top="15.0" />
+         </padding>
       </VBox>
    </center>
 </BorderPane>
