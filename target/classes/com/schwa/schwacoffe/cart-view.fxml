@@ -60,8 +60,12 @@
       </VBox>
    </center>
    <top>
-      <HBox fx:id="HeaderBar" alignment="CENTER" prefHeight="59.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+      <HBox fx:id="HeaderBar" alignment="CENTER_LEFT" prefHeight="59.0" prefWidth="800.0" spacing="185.0" BorderPane.alignment="CENTER">
          <children>
+            <Button fx:id="BackButton" mnemonicParsing="false" text="Menu">
+               <HBox.margin>
+                  <Insets left="75.0" />
+               </HBox.margin></Button>
             <Label fx:id="CartTitleLabel" alignment="CENTER" text="Schwa Cart">
                <font>
                   <Font name="Georgia Bold" size="24.0" />
