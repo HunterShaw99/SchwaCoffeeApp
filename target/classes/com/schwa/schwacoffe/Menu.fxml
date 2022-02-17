@@ -1,29 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.schwa.schwacoffe.MenuController">
+<BorderPane fx:id="BorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" stylesheets="@menu-style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.schwa.schwacoffe.MenuController">
    <top>
-      <SplitPane dividerPositions="0.8058155080213902" prefHeight="81.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+      <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" BorderPane.alignment="CENTER">
         <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                <children>
-                  <TextField fx:id="CompanyNameField" layoutX="101.0" layoutY="1.0" prefHeight="78.0" prefWidth="277.0" text="Schwa Coffee">
-                     <font>
-                        <Font name="System Bold Italic" size="36.0" />
-                     </font>
-                  </TextField>
+                  <SplitPane dividerPositions="0.8569639278557114" layoutX="-1.0" layoutY="-6.0" prefHeight="106.0" prefWidth="800.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <Label fx:id="CompanyNameField" layoutX="176.0" layoutY="5.0" prefHeight="98.0" prefWidth="368.0" text="Schwa Coffee">
+                                 <font>
+                                    <Font name="Comic Sans MS" size="54.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <Button fx:id="CartButton" layoutX="15.0" layoutY="26.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="81.0" text="Cart">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
                </children>
             </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                <children>
-                  <Button fx:id="CartButton" layoutX="23.0" layoutY="13.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="67.0" text="Cart">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Button>
+                  <SplitPane dividerPositions="0.5009940357852882" layoutX="-2.0" layoutY="-5.0" prefHeight="106.0" prefWidth="806.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <Label fx:id="HotDrinksLabel" layoutX="113.0" layoutY="26.0" prefHeight="52.0" prefWidth="173.0" text="     Hot Drinks">
+                                 <font>
+                                    <Font name="Comic Sans MS Bold" size="23.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <Label fx:id="ColdDrinksLabel" layoutX="120.0" layoutY="27.0" prefHeight="50.0" prefWidth="158.0" text=" Cold Drinks">
+                                 <font>
+                                    <Font name="Comic Sans MS Bold" size="23.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
                </children>
             </AnchorPane>
         </items>

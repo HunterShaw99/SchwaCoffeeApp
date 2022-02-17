@@ -11,7 +11,7 @@ public class MenuApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MenuApplication.class.getResource("Menu.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 600, 600);
+        Scene scene = new Scene(fxmlLoader.load(), 800, 800);
         stage.setTitle("Schwa Coffee");
         stage.setScene(scene);
         stage.show();

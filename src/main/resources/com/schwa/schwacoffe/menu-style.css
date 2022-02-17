@@ -1,0 +1,10 @@
+.button {
+    -fx-font: 20px "Comic Sans MS";
+    -fx-text-fill: "ede0d4ff";
+    -fx-font-weight: BOLD;
+    -fx-background-color: "#9c6644ff";
+}
+
+BorderPane {
+    -fx-background-color: "#ede0d4ff";
+}
