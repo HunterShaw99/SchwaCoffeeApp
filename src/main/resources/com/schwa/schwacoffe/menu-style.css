@@ -5,6 +5,35 @@
     -fx-background-color: "#9c6644ff";
 }
 
+#TempLabel {
+    -fx-font: 22px "Arial";
+    -fx-font-weight: BOLD;
+    -fx-text-fill: "#9c6644ff";
+}
+
+#AppLabel {
+    -fx-font: 26px "Sans";
+    -fx-font-weight: BOLD;
+    -fx-text-fill: "#ede0d4ff";
+}
+
+#HeaderBar {
+    -fx-background-color: "7f5539";
+}
+
+VBox {
+    -fx-background-color: "#ddb892ff";
+    -fx-background-radius: 25px;
+    -fx-border-radius: 25px;
+}
+
 BorderPane {
     -fx-background-color: "#ede0d4ff";
+}
+
+.separator .line{
+    -fx-background-color: "#b08968ff";
+    -fx-border-color: "#b08968ff";
+    -fx-border-width: 4px;
+    -fx-border-style: solid;
 }
