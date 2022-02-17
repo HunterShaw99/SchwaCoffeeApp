@@ -4,6 +4,7 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -61,21 +62,45 @@ public class CustomizationController implements Initializable {
             MilkGroupChanged(rb);
         });
 
+        //event handlers for the flavor check boxes
+        AddEventHandlerForCheckbox(flavorCheckBox1);
+        AddEventHandlerForCheckbox(flavorCheckBox2);
+        AddEventHandlerForCheckbox(flavorCheckBox3);
+
 
     }
 
+    //Adds an event handler for a given checkbox
+    public void AddEventHandlerForCheckbox(CheckBox cb) {
+        Label label = flavorPriceLabel;
+        EventHandler<ActionEvent> event = actionEvent -> {
+            String text = label.getText();
+            if (cb.isSelected()) {
+                text = text + cb.getText();
+            } else {
+                text = text.replace(cb.getText(), "");
+            }
+            label.setText(text);
+        };
+        cb.setOnAction(event);
+    }
+
+    //What to do when the size radio group gets changed
     public void SizeGroupChanged(RadioButton rb) {
         RadioGroupChanged(rb, sizePriceLabel);
     }
+    //What to do when the milk radio group gets changed
     public void MilkGroupChanged(RadioButton rb) {
         RadioGroupChanged(rb, milkPriceLabel);
     }
 
+    //What to do when a radio group gets changed
     public void RadioGroupChanged(RadioButton rb, Label label) {
         String newText = rb.getText();
         label.setText(newText);
     }
 
+    //What to do when the finish button is clicked
     @FXML
     public void FinishButtonClicked(ActionEvent event) {
         System.out.println("Finish button was clicked.");
@@ -94,6 +119,7 @@ public class CustomizationController implements Initializable {
         System.out.printf("Flavor 3:" + flavorCheckBox3.selectedProperty().getValue() + ".\n");
     }
 
+    //What to do when the back button is clicked
     @FXML
     public void BackButtonClicked(ActionEvent event) {
         System.out.println("Back button was clicked.");
