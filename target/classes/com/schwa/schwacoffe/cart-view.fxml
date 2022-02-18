@@ -115,7 +115,7 @@
                   <Image url="@schwa-logo-right.png" />
                </image>
                <VBox.margin>
-                  <Insets top="175.0" />
+                  <Insets top="180.0" />
                </VBox.margin>
             </ImageView>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">

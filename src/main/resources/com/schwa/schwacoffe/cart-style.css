@@ -28,6 +28,7 @@
 }
 #HeaderBar {
     -fx-background-color: "7f5539";
+    -fx-effect: dropshadow(three-pass-box, #674027FF, 10, .07, 0.5,0.5);
 }
 VBox {
     -fx-background-color: "#ddb892ff";
