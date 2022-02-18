@@ -4,6 +4,10 @@
     -fx-font-weight: BOLD;
     -fx-background-color: "#9c6644ff";
 }
+.button:focused {
+    -fx-background-color: "#F2EFDE";
+    -fx-text-fill: "7f5539";
+}
 #PickUpLabel, #CartLabel {
     -fx-font: 22px "Arial";
     -fx-font-weight: BOLD;
