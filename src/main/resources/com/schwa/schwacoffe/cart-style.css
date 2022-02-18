@@ -5,7 +5,7 @@
     -fx-background-color: "#9c6644ff";
 }
 .button:focused {
-    -fx-background-color: "#F2EFDE";
+    -fx-background-color: "#ede0d4ff";
     -fx-text-fill: "7f5539";
 }
 #PickUpLabel, #CartLabel {
@@ -39,7 +39,6 @@ BorderPane {
 }
 .track {
     -fx-background-color: "#b08968ff";
-
 }
 .separator .line{
     -fx-background-color: "#b08968ff";

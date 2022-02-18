@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" stylesheets="@cart-style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" stylesheets="@cart-style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.schwa.schwacoffe.CartController">
    <center>
       <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0" BorderPane.alignment="CENTER">
          <children>
@@ -46,8 +46,8 @@
             </Label>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="80.0">
                <children>
-                  <Button fx:id="PlaceOrderButton" mnemonicParsing="false" prefHeight="67.0" prefWidth="178.0" text="Cancel Order" />
-                  <Button fx:id="PlaceOrderButton1" layoutX="221.0" layoutY="27.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="178.0" text="Place Order" />
+                  <Button fx:id="PlaceOrderButton" mnemonicParsing="false" onMouseClicked="#CancelOrderClicked" prefHeight="67.0" prefWidth="178.0" text="Cancel Order" />
+                  <Button fx:id="PlaceOrderButton1" layoutX="221.0" layoutY="27.0" mnemonicParsing="false" onMouseClicked="#PlaceOrderClicked" prefHeight="67.0" prefWidth="178.0" text="Place Order" />
                </children>
             </HBox>
          </children>
@@ -62,7 +62,7 @@
    <top>
       <HBox fx:id="HeaderBar" alignment="CENTER_LEFT" prefHeight="59.0" prefWidth="800.0" spacing="185.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="BackButton" mnemonicParsing="false" text="Menu">
+            <Button fx:id="BackButton" mnemonicParsing="false" onMouseClicked="#MenuButtonClicked" text="Menu">
                <HBox.margin>
                   <Insets left="75.0" />
                </HBox.margin></Button>
