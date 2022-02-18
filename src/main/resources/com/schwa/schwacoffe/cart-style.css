@@ -34,6 +34,9 @@ VBox {
     -fx-background-radius: 25px;
     -fx-border-radius: 25px;
 }
+#SideImageLeftVBox, #SideImageRightVBox {
+    -fx-background-color: "#ede0d4ff";
+}
 BorderPane {
     -fx-background-color: "#ede0d4ff";
 }

@@ -6,6 +6,8 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -77,4 +79,51 @@
          </BorderPane.margin>
       </HBox>
    </top>
+   <left>
+      <VBox fx:id="SideImageLeftVBox" prefHeight="200.0" prefWidth="100.0" spacing="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@schwa-logo-left.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="20.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@schwa-logo-left.png" />
+               </image>
+            </ImageView>
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets right="-100.0" />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+   <right>
+      <VBox fx:id="SideImageRightVBox" prefHeight="495.0" prefWidth="119.0" spacing="200.0" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets right="10.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets left="-100.0" />
+         </BorderPane.margin>
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@schwa-logo-right.png" />
+               </image>
+               <VBox.margin>
+                  <Insets top="175.0" />
+               </VBox.margin>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@schwa-logo-right.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+   </right>
 </BorderPane>
