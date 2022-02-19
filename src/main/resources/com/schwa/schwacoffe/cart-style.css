@@ -5,8 +5,12 @@
     -fx-background-color: "#7f5539";
 }
 .button:focused {
-    -fx-background-color: "#ede0d4ff";
-    -fx-text-fill: "7f5539";
+    -fx-background-color: "#502c12";
+    -fx-text-fill: "#ede0d4";
+}
+#BackButton:focused {
+    -fx-background-color: "#ede0d4";
+    -fx-text-fill: "#502c12";
 }
 #PickUpLabel, #CartLabel {
     -fx-font: 22px "Arial";
@@ -21,7 +25,7 @@
 #CartTitleLabel {
     -fx-font: 26px "Sans";
     -fx-font-weight: BOLD;
-    -fx-text-fill: "#ede0d4ff";
+    -fx-text-fill: "#ede0d4";
 }
 .list-view {
     -fx-background-color: "#ede0d4";
