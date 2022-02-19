@@ -16,10 +16,10 @@
         <Label fx:id="sizeLabel" layoutX="86.0" layoutY="226.0" text="Size" />
         <Label fx:id="milkLabel" layoutX="90.0" layoutY="319.0" text="Milk" />
         <Label fx:id="flavorLabel" layoutX="86.0" layoutY="422.0" text="Flavor" />
-        <Label fx:id="sizePriceLabel" layoutX="386.0" layoutY="226.0" text="sizePrice" />
-        <Label fx:id="milkPriceLabel" layoutX="385.0" layoutY="319.0" text="milkPrice" />
-        <Label fx:id="flavorPriceLabel" layoutX="381.0" layoutY="422.0" text="flavorPrice" />
-        <Label fx:id="totalPriceLabel" layoutX="384.0" layoutY="516.0" text="totalPrice" />
+        <Label fx:id="sizePriceLabel" layoutX="512.0" layoutY="226.0" text="sizePrice" />
+        <Label fx:id="milkPriceLabel" layoutX="511.0" layoutY="319.0" text="milkPrice" />
+        <Label fx:id="flavorPriceLabel" layoutX="507.0" layoutY="422.0" text="flavorPrice" />
+        <Label fx:id="totalPriceLabel" layoutX="510.0" layoutY="516.0" text="totalPrice" />
       <ImageView fx:id="myImageView" fitHeight="150.0" fitWidth="200.0" layoutX="363.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true" />
       <CheckBox fx:id="flavorCheckBox1" layoutX="163.0" layoutY="396.0" mnemonicParsing="false" text="flavor 1" />
       <CheckBox fx:id="flavorCheckBox2" layoutX="163.0" layoutY="422.0" mnemonicParsing="false" text="flavor 2" />
@@ -39,6 +39,8 @@
       <Label fx:id="flavorOption1PriceLabel" layoutX="261.0" layoutY="397.0" text="FlavorOption1Price" />
       <Label fx:id="flavorOption2PriceLabel" layoutX="261.0" layoutY="422.0" text="FlavorOption2Price" />
       <Label fx:id="flavorOption3PriceLabel" layoutX="261.0" layoutY="446.0" text="FlavorOption3Price" />
-      <Label fx:id="typeLabel" layoutX="158.0" layoutY="69.0" text="Item Type" />
+      <Label fx:id="nameLabel" layoutX="158.0" layoutY="69.0" text="Coffee Name" />
+      <Label layoutX="521.0" layoutY="185.0" text="Prices" />
+      <Label layoutX="477.0" layoutY="516.0" text="Total:" />
     </children>
 </AnchorPane>

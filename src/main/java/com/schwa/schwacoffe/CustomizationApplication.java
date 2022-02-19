@@ -14,6 +14,10 @@ public class CustomizationApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Customization Page");
         stage.setScene(scene);
+
+        //add css
+        scene.getStylesheets().add(String.valueOf(CustomizationApplication.class.getResource("customization-style.css")));
+
         stage.show();
     }
 

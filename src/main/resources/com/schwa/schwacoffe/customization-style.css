@@ -1,0 +1,51 @@
+.button {
+    -fx-font: 16px "Arial";
+    -fx-text-fill: "ede0d4ff";
+    -fx-font-weight: BOLD;
+    -fx-background-color: "#9c6644ff";
+}
+.button:focused {
+    -fx-background-color: "#ede0d4ff";
+    -fx-text-fill: "7f5539";
+}
+#PickUpLabel, #CartLabel {
+    -fx-font: 22px "Arial";
+    -fx-font-weight: BOLD;
+    -fx-text-fill: "#9c6644ff";
+}
+#CartTotalLabel {
+    -fx-font: 22px "Arial";
+    -fx-font-weight: BOLD;
+    -fx-text-fill: "faedcd";
+}
+#CartTitleLabel {
+    -fx-font: 26px "Sans";
+    -fx-font-weight: BOLD;
+    -fx-text-fill: "#ede0d4ff";
+}
+.list-view {
+    -fx-background-color: "#ddb892ff";
+}
+#HeaderBar {
+    -fx-background-color: "7f5539";
+}
+VBox {
+    -fx-background-color: "#ddb892ff";
+    -fx-background-radius: 25px;
+    -fx-border-radius: 25px;
+}
+#SideImageLeftVBox, #SideImageRightVBox {
+    -fx-background-color: "#ede0d4ff";
+}
+AnchorPane {
+    -fx-background-color: "#ede0d4ff";
+}
+.track {
+    -fx-background-color: "#b08968ff";
+}
+.separator .line{
+    -fx-background-color: "#b08968ff";
+    -fx-border-color: "#b08968ff";
+    -fx-border-width: 4px;
+    -fx-border-style: solid;
+}
