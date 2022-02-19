@@ -32,7 +32,7 @@
 }
 #HeaderBar {
     -fx-background-color: "#502c12";
-    -fx-effect: dropshadow(three-pass-box, #674027FF, 10, .07, 0.5,0.5);
+    -fx-effect: dropshadow(three-pass-box, #3b200b, 10, .07, 0.5,0.5);
 }
 VBox {
     -fx-background-color: "#ede0d4";
@@ -47,6 +47,9 @@ BorderPane {
 }
 .track {
     -fx-background-color: "#7f5539";
+}
+.slider .axis .axis-tick-mark {
+    -fx-stroke: "#502c12";
 }
 .separator .line{
     -fx-border-color: "#502c12";
