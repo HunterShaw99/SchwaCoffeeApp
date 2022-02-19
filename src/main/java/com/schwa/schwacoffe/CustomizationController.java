@@ -121,7 +121,9 @@ public class CustomizationController implements Initializable {
                 currentItem.getFlavors().remove(cb.getText());
             }
             label.setText(currencyFormatter.format(CalculateFlavorPrice()));
-            CalculateTotal();
+
+            double totalPrice = CalculateTotal();
+            currentItem.setPrice(totalPrice);
         };
         cb.setOnAction(event);
     }
@@ -204,7 +206,7 @@ public class CustomizationController implements Initializable {
     private double CalculateFlavorPrice() {
         double total = 0;
 
-        for (String flavor: currentItem.getFlavors()) {
+        for (String flavor : currentItem.getFlavors()) {
             total += 1;
         }
         return total;
@@ -216,23 +218,15 @@ public class CustomizationController implements Initializable {
 
         //testing stuff
         System.out.println("Finish button was clicked.");
-        RadioButton selectedSize = (RadioButton)sizeGroup.getSelectedToggle();
-        RadioButton selectedMilk = (RadioButton)milkGroup.getSelectedToggle();
-        if (selectedSize != null)
-            System.out.println("You selected the: " + selectedSize.getText() + " size.");
-        else
-            System.out.println("You did not select a size.");
-        if (selectedMilk != null)
-            System.out.println("You selected the: " + selectedMilk.getText() + " milk.");
-        else
-            System.out.println("You did not select a milk.");
-        System.out.println("Flavor 1:" + flavorCheckBox1.selectedProperty().getValue() + ".");
-        System.out.println("Flavor 2:" + flavorCheckBox2.selectedProperty().getValue() + ".");
-        System.out.println("Flavor 3:" + flavorCheckBox3.selectedProperty().getValue() + ".");
+
+        System.out.println("currentItem.getName() = " + currentItem.getName());
+        System.out.println("currentItem.getSize() = " + currentItem.getSize());
+        System.out.println("currentItem.getMilk() = " + currentItem.getMilk());
+        System.out.println("currentItem.getFlavors() = " + currentItem.getFlavors());
+        System.out.println("currentItem.getPrice() = " + currentItem.getPrice());
         //</>
 
         //current item SHOULD be completely populated with the correct choices
-        //this needs testing though
 
         SwitchToCheckoutScreen();
     }
