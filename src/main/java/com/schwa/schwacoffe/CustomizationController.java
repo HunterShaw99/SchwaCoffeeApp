@@ -57,10 +57,19 @@ public class CustomizationController implements Initializable {
         milkRadio3.setToggleGroup(milkGroup);
 
         //TODO: actually get the current item (either passed in from another page somehow, or retrieved from a singleton)
-        //TODO: IF THIS ITEM IS ALREADY POPULATED (ACCESSING THIS PAGE FROM AN 'EDIT' BUTTON):
-        //TODO:     write code to allow previous choices to be selected by default
 
-        currentItem = new DarkRoast();        //temporary code
+        //temporary code
+        currentItem = new CoffeeModel();
+        currentItem.setName("Coffee Name");
+        double[] priceOptions = new double[] {
+                1.0, 1.5, 2.0
+        };
+        currentItem.setPriceOptions(priceOptions);
+        currentItem.setMilk("2%");
+        currentItem.setSize("Large");
+        currentItem.getFlavors().add("Vanilla");
+        currentItem.getFlavors().add("Hazelnut");
+        //</>
 
         //setting label text to associated current item's data
         currencyFormatter = NumberFormat.getCurrencyInstance();
@@ -104,8 +113,45 @@ public class CustomizationController implements Initializable {
 
 
         //setting default options
-        sizeRadio1.setSelected(true);
-        milkRadio1.setSelected(true);
+        //for size
+        if (currentItem.getSize() == "" || currentItem.getSize().equals("Small")) {
+            sizeRadio1.setSelected(true);
+        } else if (currentItem.getSize().equals("Medium")) {
+            sizeRadio2.setSelected(true);
+        } else if (currentItem.getSize().equals("Large")) {
+            sizeRadio3.setSelected(true);
+        }
+        //for milk
+        if (currentItem.getMilk() == "" || currentItem.getMilk().equals("Whole")) {
+            milkRadio1.setSelected(true);
+        } else if (currentItem.getMilk().equals("2%")) {
+            milkRadio2.setSelected(true);
+        } else if (currentItem.getMilk().equals("Non-fat")) {
+            milkRadio3.setSelected(true);
+        }
+        //for flavors
+        double f;
+        if (currentItem.getFlavors().contains("Vanilla")) {
+            flavorCheckBox1.setSelected(true);
+            f = flavorPrices[0];
+        } else {
+            flavorCheckBox1.setSelected(false);
+            f = 0;
+        }
+
+        if (currentItem.getFlavors().contains("Caramel")) {
+            flavorCheckBox2.setSelected(true);
+            f += flavorPrices[1];
+        } else {
+            flavorCheckBox2.setSelected(false);
+        }
+        if (currentItem.getFlavors().contains("Hazelnut")) {
+            flavorCheckBox3.setSelected(true);
+            f += flavorPrices[2];
+        } else {
+            flavorCheckBox3.setSelected(false);
+        }
+        flavorPriceLabel.setText(currencyFormatter.format(f));
 
     }
 
