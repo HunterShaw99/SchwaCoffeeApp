@@ -37,3 +37,7 @@ BorderPane {
     -fx-border-width: 4px;
     -fx-border-style: solid;
 }
+
+Pane {
+    -fx-background-color: "#ffffff";
+}

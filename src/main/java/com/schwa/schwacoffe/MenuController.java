@@ -2,53 +2,50 @@ package com.schwa.schwacoffe;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
-import javafx.collections.ObservableList;
-import javafx.collections.FXCollections;
-import javafx.scene.control.cell.ChoiceBoxListCell;
-
-import java.io.IOException;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
 
 public class MenuController {
-
-    public static final ObservableList hotDrinks = FXCollections.observableArrayList("Cappuccino", "Pistachio Latte", "Cinnamon Dolce Latte", "White Chocolate Mocha", "Caramel Macchiato");
-    public static final ObservableList coldDrinks = FXCollections.observableArrayList("Salted Caramel Cream Cold Brew", "Iced Coffee", "Iced Espresso", "Iced Pistachio Latte", "Iced Caramel Macchiato");
-
-    @FXML
-    private ListView MenuListView;
 
     @FXML
     private Button CartButton;
 
     @FXML
-    private RadioButton HotButton;
+    private HBox HeaderBar;
 
     @FXML
-    private RadioButton ColdButton;
+    private ImageView hotDrinkIcon;
 
     @FXML
-    private ToggleGroup TempButtons;
+    private ImageView coldDrinkIcon;
 
     @FXML
-    public void initialize() {
-        HotButton.setSelected(false);
-        ColdButton.setSelected(false);
+    private Button customizeButton1, customizeButton2, customizeButton3, customizeButton4, customizeButton5, customizeButton6,
+            customizeButton7, customizeButton8, customizeButton9, customizeButton10, customizeButton11, customizeButton12;
+
+    @FXML
+    private Label item1Name, item2Name, item3Name, item4Name, item5Name, item6Name, item7Name, item8Name, item9Name,
+            item10Name, item11Name, item12Name;
+
+    @FXML
+    private ImageView item1Picture, item2Picture, item3Picture, item4Picture, item5Picture, item6Picture, item7Picture,
+            item8Picture, item9Picture, item10Picture, item11Picture, item12Picture;
+
+    @FXML
+    private Label item1Price, item2Price, item3Price, item4Price, item5Price, item6Price, item7Price, item8Price,
+            item9Price, item10Price, item11Price, item12Price;
+
+    @FXML
+    void CartButtonPressed(ActionEvent event) {
+
     }
 
     @FXML
-    private void CartButtonPressed (ActionEvent event) throws IOException {
+    void CustomizeButtonPressed(ActionEvent event) {
 
     }
 
-    @FXML
-    private void HotButtonPressed (ActionEvent event) {
-        MenuListView.setItems(hotDrinks);
-        MenuListView.setCellFactory(ChoiceBoxListCell.forListView(hotDrinks));
-    }
-
-    @FXML
-    private void ColdButtonPressed (ActionEvent event) {
-        MenuListView.setItems(coldDrinks);
-        MenuListView.setCellFactory(ChoiceBoxListCell.forListView(coldDrinks));
-    }
 }
+
