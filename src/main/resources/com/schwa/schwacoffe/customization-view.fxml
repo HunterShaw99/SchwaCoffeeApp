@@ -41,6 +41,6 @@
       <Label fx:id="flavorOption3PriceLabel" layoutX="261.0" layoutY="446.0" text="FlavorOption3Price" />
       <Label fx:id="nameLabel" layoutX="158.0" layoutY="69.0" text="Coffee Name" />
       <Label layoutX="521.0" layoutY="185.0" text="Prices" />
-      <Label layoutX="477.0" layoutY="516.0" text="Total:" />
+      <Label layoutX="448.0" layoutY="516.0" text="Total:" />
     </children>
 </AnchorPane>

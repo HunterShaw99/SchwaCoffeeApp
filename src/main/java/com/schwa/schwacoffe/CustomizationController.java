@@ -220,7 +220,7 @@ public class CustomizationController implements Initializable {
         BigDecimal total = BigDecimal.ZERO;
 
         //size
-        total.add(switch (currentItem.getSize()) {
+        total = total.add(switch (currentItem.getSize()) {
             case "Small" -> currentItem.getPriceOptions()[0];
             case "Medium" -> currentItem.getPriceOptions()[1];
             case "Large" -> currentItem.getPriceOptions()[2];
@@ -230,7 +230,7 @@ public class CustomizationController implements Initializable {
         });
 
         //milk
-        total.add(switch (currentItem.getMilk()) {
+        total = total.add(switch (currentItem.getMilk()) {
             case "Whole" -> milkPrices[0];
             case "2%" -> milkPrices[1];
             case "Non-fat" -> milkPrices[2];
@@ -242,7 +242,7 @@ public class CustomizationController implements Initializable {
         //flavors
         //TODO: (maybe change this) since all flavors cost exactly 1 right now, this works
         for (String flavor: currentItem.getFlavors()) {
-            total.add(BigDecimal.ONE);
+            total = total.add(BigDecimal.ONE);
         }
 
         totalPriceLabel.setText(currencyFormatter.format(total));
@@ -250,11 +250,11 @@ public class CustomizationController implements Initializable {
     }
 
     //TODO: (maybe change this) since all flavors cost exactly 1 right now, this works
-    private double CalculateFlavorPrice() {
-        double total = 0;
+    private BigDecimal CalculateFlavorPrice() {
+        BigDecimal total = BigDecimal.ZERO;
 
         for (String flavor : currentItem.getFlavors()) {
-            total += 1;
+            total = total.add(BigDecimal.ONE);
         }
         return total;
     }
