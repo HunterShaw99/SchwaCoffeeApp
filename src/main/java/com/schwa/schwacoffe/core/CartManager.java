@@ -47,7 +47,7 @@ public class CartManager {
         BigDecimal cartTotal = new BigDecimal(0);
         //TODO: Implement functionality for getting cart total
         for (CoffeeModel c : _currentOrder) {
-            cartTotal.add(BigDecimal.valueOf(c.getPrice()));
+            cartTotal.add(c.getPrice());
         }
         return cartTotal;
     }
