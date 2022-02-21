@@ -31,7 +31,7 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Slider fx:id="PickupSlider" blockIncrement="5.0" majorTickUnit="15.0" max="120.0" min="15.0" minorTickCount="2" onMouseDragReleased="#SetSliderTimePickup" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="15.0">
+            <Slider fx:id="PickupSlider" blockIncrement="5.0" majorTickUnit="15.0" max="120.0" min="15.0" minorTickCount="2" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="15.0">
                <padding>
                   <Insets left="25.0" right="25.0" />
                </padding>
