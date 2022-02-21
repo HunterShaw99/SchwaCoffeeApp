@@ -13,6 +13,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.shape.Rectangle;
 
+import java.math.BigDecimal;
 import java.net.URL;
 import java.text.NumberFormat;
 import java.util.ArrayList;
@@ -40,7 +41,7 @@ public class CustomizationController implements Initializable {
 
     private CoffeeModel currentItem;
     private NumberFormat currencyFormatter;
-    private double[] milkPrices, flavorPrices;
+    private BigDecimal[] milkPrices, flavorPrices;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -61,8 +62,8 @@ public class CustomizationController implements Initializable {
         //temporary code
         currentItem = new CoffeeModel();
         currentItem.setName("Coffee Name");
-        double[] priceOptions = new double[] {
-                1.0, 1.5, 2.0
+        BigDecimal[] priceOptions = new BigDecimal[] {
+                BigDecimal.valueOf(1.0), BigDecimal.valueOf(1.5), BigDecimal.valueOf(2.0)
         };
         currentItem.setPriceOptions(priceOptions);
         currentItem.setMilk("2%");
@@ -75,19 +76,19 @@ public class CustomizationController implements Initializable {
         currencyFormatter = NumberFormat.getCurrencyInstance();
 
         nameLabel.setText(currentItem.getName());
-        double[] prices = currentItem.getPriceOptions();
+        BigDecimal[] prices = currentItem.getPriceOptions();
         sizeOption1PriceLabel.setText(currencyFormatter.format(prices[0]));
         sizeOption2PriceLabel.setText(currencyFormatter.format(prices[1]));
         sizeOption3PriceLabel.setText(currencyFormatter.format(prices[2]));
 
 
         //these labels are always the same (prices of these things are consistent across all coffee types)
-        milkPrices = new double[]{1,1,1};
+        milkPrices = new BigDecimal[]{BigDecimal.ONE, BigDecimal.ONE, BigDecimal.ONE};
         milkOption1PriceLabel.setText(currencyFormatter.format(milkPrices[0]));
         milkOption2PriceLabel.setText(currencyFormatter.format(milkPrices[1]));
         milkOption3PriceLabel.setText(currencyFormatter.format(milkPrices[2]));
 
-        flavorPrices = new double[]{1,1,1};
+        flavorPrices = new BigDecimal[]{BigDecimal.ONE, BigDecimal.ONE, BigDecimal.ONE};
         flavorOption1PriceLabel.setText(currencyFormatter.format(flavorPrices[0]));
         flavorOption2PriceLabel.setText(currencyFormatter.format(flavorPrices[1]));
         flavorOption3PriceLabel.setText(currencyFormatter.format(flavorPrices[2]));
@@ -130,24 +131,24 @@ public class CustomizationController implements Initializable {
             milkRadio3.setSelected(true);
         }
         //for flavors
-        double f;
+        BigDecimal f;
         if (currentItem.getFlavors().contains("Vanilla")) {
             flavorCheckBox1.setSelected(true);
             f = flavorPrices[0];
         } else {
             flavorCheckBox1.setSelected(false);
-            f = 0;
+            f = BigDecimal.ZERO;
         }
 
         if (currentItem.getFlavors().contains("Caramel")) {
             flavorCheckBox2.setSelected(true);
-            f += flavorPrices[1];
+            f.add(flavorPrices[1]);
         } else {
             flavorCheckBox2.setSelected(false);
         }
         if (currentItem.getFlavors().contains("Hazelnut")) {
             flavorCheckBox3.setSelected(true);
-            f += flavorPrices[2];
+            f.add(flavorPrices[2]);
         } else {
             flavorCheckBox3.setSelected(false);
         }
@@ -168,7 +169,7 @@ public class CustomizationController implements Initializable {
             }
             label.setText(currencyFormatter.format(CalculateFlavorPrice()));
 
-            double totalPrice = CalculateTotal();
+            BigDecimal totalPrice = CalculateTotal();
             currentItem.setPrice(totalPrice);
         };
         cb.setOnAction(event);
@@ -177,17 +178,17 @@ public class CustomizationController implements Initializable {
     //What to do when the size radio group gets changed
     private void SizeGroupChanged(RadioButton rb) {
         String choice = rb.getText();
-        double price = switch (choice) {
+        BigDecimal price = switch (choice) {
             case "Small" -> currentItem.getPriceOptions()[0];
             case "Medium" -> currentItem.getPriceOptions()[1];
             case "Large" -> currentItem.getPriceOptions()[2];
             default ->
                     //method should never reach this statement
-                    -10;
+                    BigDecimal.valueOf(-10);
         };
 
         currentItem.setSize(choice);
-        double totalPrice = CalculateTotal();
+        BigDecimal totalPrice = CalculateTotal();
         currentItem.setPrice(totalPrice);
 
         sizePriceLabel.setText(currencyFormatter.format(price));
@@ -197,17 +198,17 @@ public class CustomizationController implements Initializable {
     //What to do when the milk radio group gets changed
     private void MilkGroupChanged(RadioButton rb) {
         String choice = rb.getText();
-        double price = switch (choice) {
+        BigDecimal price = switch (choice) {
             case "Whole" -> milkPrices[0];
             case "2%" -> milkPrices[1];
             case "Non-fat" -> milkPrices[2];
             default ->
                     //method should never reach this statement
-                    -10;
+                    BigDecimal.valueOf(-10);
         };
 
         currentItem.setMilk(choice);
-        double totalPrice = CalculateTotal();
+        BigDecimal totalPrice = CalculateTotal();
         currentItem.setPrice(totalPrice);
         currentItem.setMilk(choice);
 
@@ -215,33 +216,33 @@ public class CustomizationController implements Initializable {
     }
 
     //calculates the total price of the current item based on the current selections (also updates label)
-    private double CalculateTotal() {
-        double total = 0;
+    private BigDecimal CalculateTotal() {
+        BigDecimal total = BigDecimal.ZERO;
 
         //size
-        total += switch (currentItem.getSize()) {
+        total.add(switch (currentItem.getSize()) {
             case "Small" -> currentItem.getPriceOptions()[0];
             case "Medium" -> currentItem.getPriceOptions()[1];
             case "Large" -> currentItem.getPriceOptions()[2];
             default ->
                     //method should never reach this statement
-                    -10;
-        };
+                    BigDecimal.valueOf(-10);
+        });
 
         //milk
-        total += switch (currentItem.getMilk()) {
+        total.add(switch (currentItem.getMilk()) {
             case "Whole" -> milkPrices[0];
             case "2%" -> milkPrices[1];
             case "Non-fat" -> milkPrices[2];
             default ->
                     //method should never reach this statement
-                    -10;
-        };
+                    BigDecimal.valueOf(-10);
+        });
 
         //flavors
         //TODO: (maybe change this) since all flavors cost exactly 1 right now, this works
         for (String flavor: currentItem.getFlavors()) {
-            total += 1;
+            total.add(BigDecimal.ONE);
         }
 
         totalPriceLabel.setText(currencyFormatter.format(total));
@@ -288,7 +289,7 @@ public class CustomizationController implements Initializable {
     }
 
     //TODO: this
-    public void SwitchToMenuScreen(){
+    public void SwitchToMenuScreen() {
 
     }
 

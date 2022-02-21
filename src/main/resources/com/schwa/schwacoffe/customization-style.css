@@ -1,51 +1,78 @@
+Label {
+    -fx-font: 22px "Arial";
+    -fx-font-weight: BOLD;
+    -fx-text-fill: "#7f5539";
+}
+#sizePriceLabel, #sizeOption1PriceLabel, #sizeOption2PriceLabel, #sizeOption3PriceLabel,
+#milkPriceLabel, #milkOption1PriceLabel, #milkOption2PriceLabel, #milkOption3PriceLabel,
+#flavorPriceLabel, #flavorOption1PriceLabel, #flavorOption2PriceLabel, #flavorOption3PriceLabel,
+#totalPriceLabel {
+    -fx-font: 22px "Arial";
+    -fx-font-weight: BOLD;
+    -fx-text-fill: "#502c12";
+}
+RadioButton {
+    -fx-font: 22px "Arial";
+    -fx-font-weight: BOLD;
+    -fx-text-fill: "#7f5539";
+}
+CheckBox {
+    -fx-font: 22px "Arial";
+    -fx-font-weight: BOLD;
+    -fx-text-fill: "#7f5539";
+}
 .button {
     -fx-font: 16px "Arial";
-    -fx-text-fill: "ede0d4ff";
+    -fx-text-fill: "#ede0d4";
     -fx-font-weight: BOLD;
-    -fx-background-color: "#9c6644ff";
+    -fx-background-color: "#7f5539";
 }
-.button:focused {
-    -fx-background-color: "#ede0d4ff";
-    -fx-text-fill: "7f5539";
+.button:pressed {
+    -fx-background-color: "#502c12";
+    -fx-text-fill: "#ede0d4";
+}
+#BackButton:pressed {
+    -fx-background-color: "#ede0d4";
+    -fx-text-fill: "#502c12";
 }
 #PickUpLabel, #CartLabel {
     -fx-font: 22px "Arial";
     -fx-font-weight: BOLD;
-    -fx-text-fill: "#9c6644ff";
+    -fx-text-fill: "#7f5539";
 }
 #CartTotalLabel {
     -fx-font: 22px "Arial";
     -fx-font-weight: BOLD;
-    -fx-text-fill: "faedcd";
+    -fx-text-fill: "#502c12";
 }
 #CartTitleLabel {
     -fx-font: 26px "Sans";
     -fx-font-weight: BOLD;
-    -fx-text-fill: "#ede0d4ff";
+    -fx-text-fill: "#ede0d4";
 }
 .list-view {
-    -fx-background-color: "#ddb892ff";
+    -fx-background-color: "#ede0d4";
 }
 #HeaderBar {
-    -fx-background-color: "7f5539";
+    -fx-background-color: "#502c12";
+    -fx-effect: dropshadow(three-pass-box, #674027FF, 10, .07, 0.5,0.5);
 }
 VBox {
-    -fx-background-color: "#ddb892ff";
+    -fx-background-color: "#ede0d4";
     -fx-background-radius: 25px;
     -fx-border-radius: 25px;
 }
 #SideImageLeftVBox, #SideImageRightVBox {
-    -fx-background-color: "#ede0d4ff";
+    -fx-background-color: "#bbaea3";
 }
 AnchorPane {
-    -fx-background-color: "#ede0d4ff";
+    -fx-background-color: "#bbaea3";
 }
 .track {
-    -fx-background-color: "#b08968ff";
+    -fx-background-color: "#7f5539";
 }
 .separator .line{
-    -fx-background-color: "#b08968ff";
-    -fx-border-color: "#b08968ff";
+    -fx-border-color: "#502c12";
     -fx-border-width: 4px;
     -fx-border-style: solid;
 }

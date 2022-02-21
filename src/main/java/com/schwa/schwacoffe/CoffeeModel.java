@@ -1,5 +1,8 @@
 package com.schwa.schwacoffe;
 
+import javafx.scene.image.Image;
+
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Dictionary;
 import java.util.HashMap;
@@ -12,11 +15,12 @@ public class CoffeeModel {
     private String size;
     private String milk;
     private List<String> flavors;
-    private double price;
-    private double[] priceOptions;
+    private BigDecimal price;
+    private BigDecimal[] priceOptions;
+    private Image image;
 
     public CoffeeModel() {
-        this.priceOptions = new double[3];     //0 = small, 1 = medium, 2 = large
+        this.priceOptions = new BigDecimal[3];     //0 = small, 1 = medium, 2 = large
         this.flavors = new ArrayList<>();
         size = "";
         milk = "";
@@ -46,16 +50,16 @@ public class CoffeeModel {
     public void setFlavors(List<String> flavors) {
         this.flavors = flavors;
     }
-    public void setPrice(double price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
-    public double getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
-    public void setPriceOptions(double[] priceOptions) {
+    public void setPriceOptions(BigDecimal[] priceOptions) {
         this.priceOptions = priceOptions;
     }
-    public double[] getPriceOptions() {
+    public BigDecimal[] getPriceOptions() {
         return priceOptions;
     }
     public void addFlavor(String flavor) {
@@ -63,5 +67,11 @@ public class CoffeeModel {
     }
     public void removeFlavor(String flavor) {
         flavors.remove(flavor);
+    }
+    public void setImage(Image image) {
+        this.image = image;
+    }
+    public Image getImage() {
+        return image;
     }
 }

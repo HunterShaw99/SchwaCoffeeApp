@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane fx:id="ap" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.schwa.schwacoffe.CustomizationController">
+<AnchorPane fx:id="ap" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.schwa.schwacoffe.CustomizationController">
     <children>
         <Button fx:id="backButton" layoutX="32.0" layoutY="27.0" mnemonicParsing="false" onAction="#BackButtonClicked" text="Back" />
         <Rectangle fx:id="TODO_IMAGEVIEW" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="139.0" layoutX="286.0" layoutY="41.0" stroke="BLACK" strokeType="INSIDE" width="155.0" />
