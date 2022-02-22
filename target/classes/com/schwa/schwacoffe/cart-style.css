@@ -48,6 +48,9 @@ BorderPane {
 .track {
     -fx-background-color: "#7f5539";
 }
+.slider .axis .axis-tick-mark {
+    -fx-stroke: "#502c12";
+}
 .separator .line{
     -fx-border-color: "#502c12";
     -fx-border-width: 4px;
