@@ -24,7 +24,7 @@ public class CustomizationController implements Initializable {
     @FXML
     private Button backButton, finishButton;
     @FXML
-    private Label sizeLabel, milkLabel, flavorLabel, nameLabel,
+    private Label sizeLabel, milkLabel, flavorLabel, nameLabel, titleLabel,
                   sizePriceLabel, milkPriceLabel, flavorPriceLabel, totalPriceLabel,
                   sizeOption1PriceLabel, sizeOption2PriceLabel, sizeOption3PriceLabel,
                   milkOption1PriceLabel, milkOption2PriceLabel, milkOption3PriceLabel,
@@ -57,15 +57,19 @@ public class CustomizationController implements Initializable {
         milkRadio2.setToggleGroup(milkGroup);
         milkRadio3.setToggleGroup(milkGroup);
 
-        //TODO: actually get the current item (either passed in from another page somehow, or retrieved from a singleton)
 
-        //temporary code
+        //TODO: actually get the current item (either passed in from another page somehow, or retrieved from a singleton)
+        //temporary code, this is what needs to be done before moving to this page.
         currentItem = new CoffeeModel();
-        currentItem.setName("Coffee Name");
+        currentItem.setName("Cinnamon Roll Frappuccino® Blended Coffee");
         BigDecimal[] priceOptions = new BigDecimal[] {
                 BigDecimal.valueOf(1.0), BigDecimal.valueOf(1.5), BigDecimal.valueOf(2.0)
         };
         currentItem.setPriceOptions(priceOptions);
+        //currentItem.setImage(new Image(""));
+
+
+        //for testing edit ability
         currentItem.setMilk("2%");
         currentItem.setSize("Large");
         currentItem.getFlavors().add("Vanilla");
@@ -142,13 +146,13 @@ public class CustomizationController implements Initializable {
 
         if (currentItem.getFlavors().contains("Caramel")) {
             flavorCheckBox2.setSelected(true);
-            f.add(flavorPrices[1]);
+            f = f.add(flavorPrices[1]);
         } else {
             flavorCheckBox2.setSelected(false);
         }
         if (currentItem.getFlavors().contains("Hazelnut")) {
             flavorCheckBox3.setSelected(true);
-            f.add(flavorPrices[2]);
+            f = f.add(flavorPrices[2]);
         } else {
             flavorCheckBox3.setSelected(false);
         }
