@@ -1,5 +1,6 @@
 package com.schwa.schwacoffe;
 
+import com.schwa.schwacoffe.core.data.CartManager;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -17,7 +18,7 @@ public class CartController {
     private Label CartLabel;
 
     @FXML
-    private ListView<?> CartListView;
+    private ListView<CoffeeModel> CartListView;
 
     @FXML
     private Label CartTitleLabel;
@@ -39,6 +40,11 @@ public class CartController {
 
     @FXML
     private Button PlaceOrderButton1;
+
+
+    public void initialize() {
+        CartListView.setItems(CartManager.getInstance().GetCartItems());
+    }
 
     @FXML
     void CancelOrderClicked(MouseEvent event) {
