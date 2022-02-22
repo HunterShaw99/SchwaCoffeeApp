@@ -1,6 +1,7 @@
 package com.schwa.schwacoffe;
 
 import com.schwa.schwacoffe.core.data.CartManager;
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -8,6 +9,8 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.Slider;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
+
+import java.math.BigDecimal;
 
 public class CartController {
 
@@ -18,7 +21,7 @@ public class CartController {
     private Label CartLabel;
 
     @FXML
-    private ListView<CoffeeModel> CartListView;
+    private ListView<String> CartListView;
 
     @FXML
     private Label CartTitleLabel;
@@ -43,17 +46,23 @@ public class CartController {
 
 
     public void initialize() {
-        CartListView.setItems(CartManager.getInstance().GetCartItems());
+        CartListView.setItems(CartManager.GetCartItems());
     }
 
     @FXML
     void CancelOrderClicked(MouseEvent event) {
+        CoffeeModel coffee = new CoffeeModel();
+        coffee.setPrice(BigDecimal.valueOf(6.25));
+        CartManager.GetInstance().AddBeverage(coffee);
         System.out.println("Order Canceled");
     }
 
     @FXML
     void MenuButtonClicked(MouseEvent event) {
         System.out.println("Menu Button Clicked");
+        for (Object c : CartListView.getItems().toArray()) {
+            System.out.println(c.toString());
+        }
     }
 
     @FXML

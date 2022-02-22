@@ -1,8 +1,10 @@
 package com.schwa.schwacoffe.core.data;
 
 import com.schwa.schwacoffe.CoffeeModel;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 
 
 /**
@@ -12,17 +14,17 @@ import java.math.BigDecimal;
 public class CartManager {
 
     private volatile static CartManager instance = null;
-    private static ObservableList<CoffeeModel> _currentOrder;
+    private static ObservableList<String> _currentOrder;
 
     private CartManager() {
-
+        _currentOrder = FXCollections.observableArrayList();
     }
 
     /**
      * Method for getting the CartManager object
      * @return instance of the CartManager class
      */
-    public static CartManager getInstance() {
+    public static CartManager GetInstance() {
         if (instance == null) {
             synchronized (CartManager.class) {
                 if (instance == null) {
@@ -34,7 +36,7 @@ public class CartManager {
     }
 
     public static void AddBeverage(CoffeeModel toAdd) {
-        _currentOrder.add(toAdd);
+        _currentOrder.add(toAdd.toString());
     }
 
     public static void RemoveBeverage(CoffeeModel toRemove) {
@@ -51,13 +53,18 @@ public class CartManager {
 
     public static BigDecimal GetCartTotal() {
         BigDecimal cartTotal = new BigDecimal(0);
+        /*
         for (CoffeeModel c : _currentOrder) {
             cartTotal.add(c.getPrice());
         }
+        */
         return cartTotal;
     }
 
-    public static ObservableList<CoffeeModel> GetCartItems() {
+    public static ObservableList<String> GetCartItems() {
+        if (instance == null) {
+            GetInstance();
+        }
         return _currentOrder;
     }
 
