@@ -4,7 +4,7 @@ import com.schwa.schwacoffe.CoffeeModel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import java.math.BigDecimal;
-import java.util.ArrayList;
+
 
 
 /**
@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class CartManager {
 
     private volatile static CartManager instance = null;
-    private static ObservableList<String> _currentOrder;
+    private static ObservableList<CoffeeModel> _currentOrder;
 
     private CartManager() {
         _currentOrder = FXCollections.observableArrayList();
@@ -36,7 +36,7 @@ public class CartManager {
     }
 
     public static void AddBeverage(CoffeeModel toAdd) {
-        _currentOrder.add(toAdd.toString());
+        _currentOrder.add(toAdd);
     }
 
     public static void RemoveBeverage(CoffeeModel toRemove) {
@@ -53,15 +53,13 @@ public class CartManager {
 
     public static BigDecimal GetCartTotal() {
         BigDecimal cartTotal = new BigDecimal(0);
-        /*
         for (CoffeeModel c : _currentOrder) {
             cartTotal.add(c.getPrice());
         }
-        */
         return cartTotal;
     }
 
-    public static ObservableList<String> GetCartItems() {
+    public static ObservableList<CoffeeModel> GetCartItems() {
         if (instance == null) {
             GetInstance();
         }

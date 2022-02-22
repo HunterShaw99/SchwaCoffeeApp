@@ -27,8 +27,11 @@
     -fx-font-weight: BOLD;
     -fx-text-fill: "#ede0d4";
 }
+.list-cell {
+    -fx-background-color: transparent;
+}
 .list-view {
-    -fx-background-color: "#ede0d4";
+    -fx-background-color: transparent;
 }
 #HeaderBar {
     -fx-background-color: "#502c12";
