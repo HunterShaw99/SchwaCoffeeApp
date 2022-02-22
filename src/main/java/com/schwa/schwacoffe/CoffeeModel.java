@@ -26,6 +26,10 @@ public class CoffeeModel {
         milk = "";
     }
 
+    public String toString() {
+        return name+" Price:"+price.toString()+" Flavors:"+flavors.toString();
+    }
+
     public void setName(String name) {
         this.name = name;
     }
