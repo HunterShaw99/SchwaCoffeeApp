@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="825.0" prefWidth="793.0" stylesheets="@menu-style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.schwa.schwacoffe.MenuController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" stylesheets="@menu-style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.schwa.schwacoffe.MenuController">
    <center>
       <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="621.0" spacing="15.0" BorderPane.alignment="CENTER">
          <children>
@@ -27,7 +36,7 @@
             <Separator prefWidth="200.0" />
             <Pane maxWidth="570.0" prefHeight="606.0" prefWidth="570.0">
                <children>
-                  <GridPane layoutX="-1.0" layoutY="5.0" prefHeight="595.0" prefWidth="566.0">
+                  <GridPane prefHeight="590.0" prefWidth="575.0">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.79999999999995" minWidth="10.0" prefWidth="293.4" />
                       <ColumnConstraints hgrow="SOMETIMES" maxWidth="182.0" minWidth="0.0" prefWidth="2.3999999999999773" />
@@ -42,39 +51,75 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Button fx:id="customizeButton7" mnemonicParsing="false" onAction="#CustomizeButtonPressed" prefHeight="17.0" prefWidth="23.0" text="+" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM" />
-                        <Button fx:id="customizeButton1" minHeight="4.0" mnemonicParsing="false" onAction="#CustomizeButtonPressed" prefHeight="39.0" prefWidth="40.0" text="+" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM" />
-                        <Button fx:id="customizeButton2" mnemonicParsing="false" onAction="#CustomizeButtonPressed" prefHeight="0.0" prefWidth="0.0" text="+" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
-                        <Button fx:id="customizeButton8" mnemonicParsing="false" onAction="#CustomizeButtonPressed" prefHeight="0.0" prefWidth="0.0" text="+" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
-                        <Button fx:id="customizeButton3" mnemonicParsing="false" onAction="#CustomizeButtonPressed" prefHeight="12.0" prefWidth="0.0" text="+" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
-                        <Button fx:id="customizeButton9" mnemonicParsing="false" onAction="#CustomizeButtonPressed" prefHeight="21.0" prefWidth="0.0" text="+" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
-                        <Button fx:id="customizeButton4" mnemonicParsing="false" onAction="#CustomizeButtonPressed" prefHeight="0.0" prefWidth="0.0" text="+" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
-                        <Button fx:id="customizeButton10" mnemonicParsing="false" onAction="#CustomizeButtonPressed" prefHeight="8.0" prefWidth="0.0" text="+" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
-                        <Button fx:id="customizeButton5" mnemonicParsing="false" onAction="#CustomizeButtonPressed" prefHeight="0.0" prefWidth="0.0" text="+" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
-                        <Button fx:id="customizeButton11" mnemonicParsing="false" onAction="#CustomizeButtonPressed" prefHeight="0.0" prefWidth="0.0" text="+" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
-                        <Button fx:id="customizeButton6" mnemonicParsing="false" onAction="#CustomizeButtonPressed" prefHeight="1.0" prefWidth="0.0" text="+" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="BOTTOM" />
-                        <Button fx:id="customizeButton12" mnemonicParsing="false" onAction="#CustomizeButtonPressed" prefHeight="0.0" prefWidth="0.0" text="+" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="BOTTOM" />
-                        <Label fx:id="item1Name" prefHeight="30.0" prefWidth="81.0" text="Cappuccino" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                        <Button fx:id="customizeButton7" minHeight="4.0" mnemonicParsing="false" onAction="#CustomizeButtonPressed" prefHeight="40.0" prefWidth="40.0" text="+" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin></Button>
+                        <Button fx:id="customizeButton1" minHeight="4.0" mnemonicParsing="false" onAction="#CustomizeButtonPressed" prefHeight="40.0" prefWidth="40.0" text="+" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin></Button>
+                        <Button fx:id="customizeButton2" minHeight="4.0" mnemonicParsing="false" onAction="#CustomizeButtonPressed" prefHeight="40.0" prefWidth="40.0" text="+" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin></Button>
+                        <Button fx:id="customizeButton8" minHeight="4.0" mnemonicParsing="false" onAction="#CustomizeButtonPressed" prefHeight="40.0" prefWidth="40.0" text="+" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin></Button>
+                        <Button fx:id="customizeButton3" minHeight="4.0" mnemonicParsing="false" onAction="#CustomizeButtonPressed" prefHeight="40.0" prefWidth="40.0" text="+" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin></Button>
+                        <Button fx:id="customizeButton9" minHeight="4.0" mnemonicParsing="false" onAction="#CustomizeButtonPressed" prefHeight="40.0" prefWidth="40.0" text="+" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin></Button>
+                        <Button fx:id="customizeButton4" minHeight="4.0" mnemonicParsing="false" onAction="#CustomizeButtonPressed" prefHeight="40.0" prefWidth="40.0" text="+" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin></Button>
+                        <Button fx:id="customizeButton10" minHeight="4.0" mnemonicParsing="false" onAction="#CustomizeButtonPressed" prefHeight="40.0" prefWidth="40.0" text="+" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin></Button>
+                        <Button fx:id="customizeButton5" minHeight="4.0" mnemonicParsing="false" onAction="#CustomizeButtonPressed" prefHeight="40.0" prefWidth="40.0" text="+" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin></Button>
+                        <Button fx:id="customizeButton11" minHeight="4.0" mnemonicParsing="false" onAction="#CustomizeButtonPressed" prefHeight="40.0" prefWidth="40.0" text="+" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin></Button>
+                        <Button fx:id="customizeButton6" minHeight="4.0" mnemonicParsing="false" onAction="#CustomizeButtonPressed" prefHeight="40.0" prefWidth="40.0" text="+" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="BOTTOM">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin></Button>
+                        <Button fx:id="customizeButton12" minHeight="4.0" mnemonicParsing="false" onAction="#CustomizeButtonPressed" prefHeight="40.0" prefWidth="40.0" text="+" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="BOTTOM">
+                           <GridPane.margin>
+                              <Insets right="5.0" />
+                           </GridPane.margin></Button>
+                        <Label fx:id="item1Name" text="Cappuccino" GridPane.halignment="CENTER" GridPane.valignment="TOP">
                            <font>
                               <Font size="14.0" />
                            </font></Label>
-                        <Label fx:id="item2Name" prefHeight="29.0" prefWidth="156.0" text="White Chocolate Mocha" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                        <Label fx:id="item2Name" text="White Chocolate Mocha" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
                            <font>
                               <Font size="14.0" />
                            </font></Label>
-                        <Label fx:id="item3Name" prefHeight="28.0" prefWidth="125.0" text="Caramel Macchiato" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                        <Label fx:id="item3Name" text="Caramel Macchiato" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
                            <font>
                               <Font size="14.0" />
                            </font></Label>
-                        <Label fx:id="item7Name" prefHeight="26.0" prefWidth="76.0" text="Iced Coffee" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                        <Label fx:id="item7Name" text="Iced Coffee" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="TOP">
                            <font>
                               <Font size="14.0" />
                            </font></Label>
-                        <Label fx:id="item8Name" prefHeight="28.0" prefWidth="155.0" text="Iced Caramel Macchiato" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                        <Label fx:id="item8Name" text="Iced Caramel Macchiato" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
                            <font>
                               <Font size="14.0" />
                            </font></Label>
-                        <Label fx:id="item9Name" prefHeight="29.0" prefWidth="112.0" text="Iced Coffee Latte" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                        <Label fx:id="item9Name" text="Iced Coffee Latte" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
                            <font>
                               <Font size="14.0" />
                            </font></Label>
@@ -98,48 +143,84 @@
                            <font>
                               <Font size="14.0" />
                            </font></Label>
-                        <Label fx:id="item12Name" text="Iced Caffè Americano" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="TOP">
+                        <Label fx:id="item12Name" text="Iced Coffee Americano" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="TOP">
                            <font>
                               <Font size="14.0" />
                            </font></Label>
-                        <ImageView fx:id="item1Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
-                        <ImageView fx:id="item2Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
-                        <ImageView fx:id="item3Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
-                        <ImageView fx:id="item4Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
-                        <ImageView fx:id="item5Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
-                        <ImageView fx:id="item6Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="BOTTOM" />
-                        <ImageView fx:id="item7Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
-                        <ImageView fx:id="item8Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
-                        <ImageView fx:id="item9Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
-                        <ImageView fx:id="item10Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
-                        <ImageView fx:id="item11Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM" />
-                        <ImageView fx:id="item12Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="BOTTOM" />
-                        <Label fx:id="item1Price" prefHeight="57.0" prefWidth="39.0" text="\$6.99" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+                        <ImageView fx:id="item1Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                           <image>
+                              <Image url="@Cuppuccino.PNG" />
+                           </image></ImageView>
+                        <ImageView fx:id="item2Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                           <image>
+                              <Image url="@WhiteChoc.PNG" />
+                           </image></ImageView>
+                        <ImageView fx:id="item3Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                           <image>
+                              <Image url="@CarmelMacc.PNG" />
+                           </image></ImageView>
+                        <ImageView fx:id="item4Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+                           <image>
+                              <Image url="@CinnamonDL.PNG" />
+                           </image></ImageView>
+                        <ImageView fx:id="item5Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+                           <image>
+                              <Image url="@ExpressoMacc.PNG" />
+                           </image></ImageView>
+                        <ImageView fx:id="item6Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="BOTTOM">
+                           <image>
+                              <Image url="@PistachioL.PNG" />
+                           </image></ImageView>
+                        <ImageView fx:id="item7Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                           <image>
+                              <Image url="@IcedCoffee.PNG" />
+                           </image></ImageView>
+                        <ImageView fx:id="item8Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                           <image>
+                              <Image url="@IcedCarmelMacc.PNG" />
+                           </image></ImageView>
+                        <ImageView fx:id="item9Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                           <image>
+                              <Image url="@IcedCoffeeL.PNG" />
+                           </image></ImageView>
+                        <ImageView fx:id="item10Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+                           <image>
+                              <Image url="@IcedExpresso.PNG" />
+                           </image></ImageView>
+                        <ImageView fx:id="item11Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+                           <image>
+                              <Image url="@SaltedCarmel.PNG" />
+                           </image></ImageView>
+                        <ImageView fx:id="item12Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="BOTTOM">
+                           <image>
+                              <Image url="@IcedCoffeeA.PNG" />
+                           </image></ImageView>
+                        <Label fx:id="item1Price" prefHeight="55.0" prefWidth="40.0" text="\$6.99" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Label fx:id="item2Price" prefHeight="54.0" prefWidth="41.0" text="\$6.99" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                        <Label fx:id="item2Price" prefHeight="55.0" prefWidth="40.0" text="\$6.99" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Label fx:id="item3Price" prefHeight="54.0" prefWidth="40.0" text="\$6.99" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                        <Label fx:id="item3Price" prefHeight="55.0" prefWidth="40.0" text="\$6.99" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Label fx:id="item4Price" prefHeight="54.0" prefWidth="42.0" text="\$6.99" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                        <Label fx:id="item4Price" prefHeight="55.0" prefWidth="40.0" text="\$6.99" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="TOP">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Label fx:id="item5Price" prefHeight="51.0" prefWidth="41.0" text="\$6.99" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="TOP">
+                        <Label fx:id="item5Price" prefHeight="55.0" prefWidth="40.0" text="\$6.99" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="TOP">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Label fx:id="item6Price" prefHeight="53.0" prefWidth="40.0" text="\$6.99" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="TOP">
+                        <Label fx:id="item6Price" prefHeight="55.0" prefWidth="40.0" text="\$6.99" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="TOP">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -149,12 +230,12 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Label fx:id="item8Price" prefHeight="51.0" prefWidth="40.0" text="\$6.99" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                        <Label fx:id="item8Price" prefHeight="55.0" prefWidth="40.0" text="\$6.99" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Label fx:id="item9Price" prefHeight="53.0" prefWidth="40.0" text="\$6.99" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                        <Label fx:id="item9Price" prefHeight="55.0" prefWidth="40.0" text="\$6.99" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -164,17 +245,20 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Label fx:id="item11Price" prefHeight="63.0" prefWidth="40.0" text="\$6.99" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="TOP">
+                        <Label fx:id="item11Price" prefHeight="55.0" prefWidth="40.0" text="\$6.99" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="TOP">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Label fx:id="item12Price" prefHeight="55.0" prefWidth="42.0" text="\$6.99" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="TOP">
+                        <Label fx:id="item12Price" prefHeight="55.0" prefWidth="40.0" text="\$6.99" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="TOP">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Label>
                      </children>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
                   </GridPane>
                </children></Pane>
          </children>
