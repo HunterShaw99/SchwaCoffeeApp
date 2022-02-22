@@ -1,19 +1,27 @@
-package com.schwa.schwacoffe.core;
+package com.schwa.schwacoffe.core.data;
 
 import com.schwa.schwacoffe.CoffeeModel;
-
+import javafx.collections.ObservableList;
 import java.math.BigDecimal;
-import java.util.List;
 
+
+/**
+ * CartManager allows for ease of communication between different scenes needing data from the cart.
+ * @author Hunter
+ */
 public class CartManager {
 
     private volatile static CartManager instance = null;
-    private static List<CoffeeModel> _currentOrder;
+    private static ObservableList<CoffeeModel> _currentOrder;
 
     private CartManager() {
 
     }
 
+    /**
+     * Method for getting the CartManager object
+     * @return instance of the CartManager class
+     */
     public static CartManager getInstance() {
         if (instance == null) {
             synchronized (CartManager.class) {
@@ -26,12 +34,10 @@ public class CartManager {
     }
 
     public static void AddBeverage(CoffeeModel toAdd) {
-        //TODO: Implement add functionality
         _currentOrder.add(toAdd);
     }
 
     public static void RemoveBeverage(CoffeeModel toRemove) {
-        //TODO: Implement remove functionality
         _currentOrder.remove(toRemove);
     }
 
@@ -45,11 +51,14 @@ public class CartManager {
 
     public static BigDecimal GetCartTotal() {
         BigDecimal cartTotal = new BigDecimal(0);
-        //TODO: Implement functionality for getting cart total
         for (CoffeeModel c : _currentOrder) {
             cartTotal.add(c.getPrice());
         }
         return cartTotal;
+    }
+
+    public static ObservableList<CoffeeModel> GetCartItems() {
+        return _currentOrder;
     }
 
 }
