@@ -10,7 +10,7 @@
 <?import javafx.scene.shape.Ellipse?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane fx:id="ap" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.schwa.schwacoffe.CustomizationController">
+<AnchorPane fx:id="ap" prefHeight="800.0" prefWidth="800.0" stylesheets="@customization-style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.schwa.schwacoffe.CustomizationController">
     <children>
         <HBox fx:id="headerBar" alignment="CENTER" prefHeight="59.0" prefWidth="800.0">
          <children>
