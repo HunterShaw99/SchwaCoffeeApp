@@ -2,24 +2,16 @@ package com.schwa.schwacoffe;
 
 import com.schwa.schwacoffe.core.data.CartManager;
 
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.shape.Rectangle;
 
 import java.math.BigDecimal;
 import java.net.URL;
 import java.text.NumberFormat;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
 
 public class CustomizationController implements Initializable {
@@ -67,7 +59,7 @@ public class CustomizationController implements Initializable {
                 BigDecimal.valueOf(1.0), BigDecimal.valueOf(1.5), BigDecimal.valueOf(2.0)
         };
         currentItem.setPriceOptions(priceOptions);
-        //currentItem.setImage(new Image(""));
+        //currentItem.setImage(new Image("")); //TODO:
 
 
         //for testing edit ability
