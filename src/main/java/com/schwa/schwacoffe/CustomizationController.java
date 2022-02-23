@@ -1,5 +1,7 @@
 package com.schwa.schwacoffe;
 
+import com.schwa.schwacoffe.core.data.CartManager;
+
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
@@ -56,7 +58,6 @@ public class CustomizationController implements Initializable {
         milkRadio1.setToggleGroup(milkGroup);
         milkRadio2.setToggleGroup(milkGroup);
         milkRadio3.setToggleGroup(milkGroup);
-
 
         //TODO: actually get the current item (either passed in from another page somehow, or retrieved from a singleton)
         //temporary code, this is what needs to be done before moving to this page.
@@ -278,6 +279,9 @@ public class CustomizationController implements Initializable {
         //</>
 
         //current item SHOULD be completely populated with the correct choices
+
+        //add customized item to cartManager
+        CartManager.AddBeverage(currentItem);
 
         SwitchToCheckoutScreen();
     }
