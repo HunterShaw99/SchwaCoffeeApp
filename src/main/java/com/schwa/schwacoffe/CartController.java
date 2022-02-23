@@ -10,6 +10,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 public class CartController {
 
@@ -64,6 +65,13 @@ public class CartController {
 
     @FXML
     void PlaceOrderClicked(MouseEvent event) {
+        String[] flavors = new String[] {"Caramel", "Vanilla"};
+        CoffeeModel e = new CoffeeModel();
+        e.setName("Coffee");
+        e.setMilk("Whole");
+        e.setPrice(BigDecimal.valueOf(5.25));
+        e.setFlavors(List.of(flavors));
+        CartManager.AddBeverage(e);
         System.out.println("Order Placed");
     }
 
