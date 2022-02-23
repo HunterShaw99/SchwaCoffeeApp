@@ -16,11 +16,11 @@ public class CoffeeModel {
     private String milk;
     private List<String> flavors;
     private BigDecimal price;
-    private BigDecimal[] priceOptions;
+    private BigDecimal basePrice;
     private Image image;
 
     public CoffeeModel() {
-        this.priceOptions = new BigDecimal[3];     //0 = small, 1 = medium, 2 = large
+        this.basePrice = BigDecimal.ZERO;
         this.flavors = new ArrayList<>();
         size = "";
         milk = "";
@@ -60,11 +60,11 @@ public class CoffeeModel {
     public BigDecimal getPrice() {
         return price;
     }
-    public void setPriceOptions(BigDecimal[] priceOptions) {
-        this.priceOptions = priceOptions;
+    public void setBasePrice(BigDecimal basePrice) {
+        this.basePrice = basePrice;
     }
-    public BigDecimal[] getPriceOptions() {
-        return priceOptions;
+    public BigDecimal getBasePrice() {
+        return basePrice;
     }
     public void addFlavor(String flavor) {
         flavors.add(flavor);

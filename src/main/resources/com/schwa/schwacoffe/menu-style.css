@@ -5,12 +5,12 @@
     -fx-background-color: "#7f5539";
 }
 
-.button:focused {
+.button:pressed {
     -fx-background-color: "#502c12";
     -fx-text-fill: "#ede0d4";
 }
 
-#CartButton:focused {
+#CartButton:pressed {
     -fx-background-color: "#ede0d4";
     -fx-text-fill: "#502c12";
 }

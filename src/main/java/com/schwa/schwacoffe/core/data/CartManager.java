@@ -15,6 +15,7 @@ public class CartManager {
 
     private volatile static CartManager instance = null;
     private static ObservableList<CoffeeModel> _currentOrder;
+    private static CoffeeModel currentItem;
 
     private CartManager() {
         _currentOrder = FXCollections.observableArrayList();
@@ -35,23 +36,23 @@ public class CartManager {
         return instance;
     }
 
-    public static void AddBeverage(CoffeeModel toAdd) {
+    public void AddBeverage(CoffeeModel toAdd) {
         _currentOrder.add(toAdd);
     }
 
-    public static void RemoveBeverage(CoffeeModel toRemove) {
+    public void RemoveBeverage(CoffeeModel toRemove) {
         _currentOrder.remove(toRemove);
     }
 
-    public static void EmptyCart() {
+    public void EmptyCart() {
         _currentOrder.clear();
     }
 
-    public static boolean CartEmpty() {
+    public boolean CartEmpty() {
         return _currentOrder.isEmpty();
     }
 
-    public static BigDecimal GetCartTotal() {
+    public BigDecimal GetCartTotal() {
         BigDecimal cartTotal = new BigDecimal(0);
         for (CoffeeModel c : _currentOrder) {
             cartTotal.add(c.getPrice());
@@ -59,11 +60,18 @@ public class CartManager {
         return cartTotal;
     }
 
-    public static ObservableList<CoffeeModel> GetCartItems() {
+    public ObservableList<CoffeeModel> GetCartItems() {
         if (instance == null) {
             GetInstance();
         }
         return _currentOrder;
+    }
+
+    public CoffeeModel GetCurrentItem() {
+        return currentItem;
+    }
+    public void SetCurrentItem(CoffeeModel m) {
+        currentItem = m;
     }
 
 }

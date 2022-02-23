@@ -5,10 +5,16 @@ import com.schwa.schwacoffe.core.data.CartManager;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.shape.Rectangle;
+import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.net.URL;
 import java.text.NumberFormat;
@@ -24,21 +30,29 @@ public class CustomizationController implements Initializable {
                   milkOption1PriceLabel, milkOption2PriceLabel, milkOption3PriceLabel,
                   flavorOption1PriceLabel, flavorOption2PriceLabel, flavorOption3PriceLabel;
     @FXML
-    private Rectangle TODO_IMAGEVIEW;
-    @FXML
     private RadioButton sizeRadio1, sizeRadio2, sizeRadio3,
                         milkRadio1, milkRadio2, milkRadio3;
     @FXML
     private CheckBox flavorCheckBox1, flavorCheckBox2, flavorCheckBox3;
+
+    @FXML
+    private ImageView coffeeImageView;
 
     private ToggleGroup sizeGroup, milkGroup;
 
     private CoffeeModel currentItem;
     private NumberFormat currencyFormatter;
     private BigDecimal[] milkPrices, flavorPrices;
+    private CartManager cartManager;
+
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        cartManager = CartManager.GetInstance();
 
         //Radio button config
         sizeGroup = new ToggleGroup();
@@ -51,36 +65,25 @@ public class CustomizationController implements Initializable {
         milkRadio2.setToggleGroup(milkGroup);
         milkRadio3.setToggleGroup(milkGroup);
 
-        //TODO: actually get the current item (either passed in from another page somehow, or retrieved from a singleton)
-        //temporary code, this is what needs to be done before moving to this page.
-        currentItem = new CoffeeModel();
-        currentItem.setName("Cinnamon Roll Frappuccino® Blended Coffee");
-        BigDecimal[] priceOptions = new BigDecimal[] {
-                BigDecimal.valueOf(1.0), BigDecimal.valueOf(1.5), BigDecimal.valueOf(2.0)
-        };
-        currentItem.setPriceOptions(priceOptions);
-        //currentItem.setImage(new Image("")); //TODO:
 
+        //get current item from cart manager
+        currentItem = cartManager.GetCurrentItem();
 
-        //for testing edit ability
-        currentItem.setMilk("2%");
-        currentItem.setSize("Large");
-        currentItem.getFlavors().add("Vanilla");
-        currentItem.getFlavors().add("Hazelnut");
-        //</>
+        //set image
+        coffeeImageView.setImage(currentItem.getImage());
 
         //setting label text to associated current item's data
         currencyFormatter = NumberFormat.getCurrencyInstance();
 
         nameLabel.setText(currentItem.getName());
-        BigDecimal[] prices = currentItem.getPriceOptions();
-        sizeOption1PriceLabel.setText(currencyFormatter.format(prices[0]));
-        sizeOption2PriceLabel.setText(currencyFormatter.format(prices[1]));
-        sizeOption3PriceLabel.setText(currencyFormatter.format(prices[2]));
+        BigDecimal basePrice = currentItem.getBasePrice();
+        sizeOption1PriceLabel.setText(currencyFormatter.format(basePrice));
+        sizeOption2PriceLabel.setText(currencyFormatter.format(basePrice.add(BigDecimal.valueOf(1))));
+        sizeOption3PriceLabel.setText(currencyFormatter.format(basePrice.add(BigDecimal.valueOf(2))));
 
 
         //these labels are always the same (prices of these things are consistent across all coffee types)
-        milkPrices = new BigDecimal[]{BigDecimal.ONE, BigDecimal.ONE, BigDecimal.ONE};
+        milkPrices = new BigDecimal[]{BigDecimal.ONE, BigDecimal.ONE, BigDecimal.valueOf(1.25)};
         milkOption1PriceLabel.setText(currencyFormatter.format(milkPrices[0]));
         milkOption2PriceLabel.setText(currencyFormatter.format(milkPrices[1]));
         milkOption3PriceLabel.setText(currencyFormatter.format(milkPrices[2]));
@@ -176,9 +179,9 @@ public class CustomizationController implements Initializable {
     private void SizeGroupChanged(RadioButton rb) {
         String choice = rb.getText();
         BigDecimal price = switch (choice) {
-            case "Small" -> currentItem.getPriceOptions()[0];
-            case "Medium" -> currentItem.getPriceOptions()[1];
-            case "Large" -> currentItem.getPriceOptions()[2];
+            case "Small" -> currentItem.getBasePrice();
+            case "Medium" -> currentItem.getBasePrice().add(BigDecimal.valueOf(1));
+            case "Large" -> currentItem.getBasePrice().add(BigDecimal.valueOf(2));
             default ->
                     //method should never reach this statement
                     BigDecimal.valueOf(-10);
@@ -218,9 +221,9 @@ public class CustomizationController implements Initializable {
 
         //size
         total = total.add(switch (currentItem.getSize()) {
-            case "Small" -> currentItem.getPriceOptions()[0];
-            case "Medium" -> currentItem.getPriceOptions()[1];
-            case "Large" -> currentItem.getPriceOptions()[2];
+            case "Small" -> currentItem.getBasePrice();
+            case "Medium" -> currentItem.getBasePrice().add(BigDecimal.valueOf(1));
+            case "Large" -> currentItem.getBasePrice().add(BigDecimal.valueOf(2));
             default ->
                     //method should never reach this statement
                     BigDecimal.valueOf(-10);
@@ -258,7 +261,7 @@ public class CustomizationController implements Initializable {
 
     //What to do when the finish button is clicked
     @FXML
-    public void FinishButtonClicked(ActionEvent event) {
+    public void FinishButtonClicked(ActionEvent event) throws IOException {
 
         //testing stuff
         System.out.println("Finish button was clicked.");
@@ -273,29 +276,41 @@ public class CustomizationController implements Initializable {
         //current item SHOULD be completely populated with the correct choices
 
         //add customized item to cartManager
-        CartManager.AddBeverage(currentItem);
+        cartManager.AddBeverage(currentItem);
 
-        SwitchToCheckoutScreen();
+        SwitchToCheckoutScreen(event);
     }
 
     //What to do when the back button is clicked
     @FXML
-    public void BackButtonClicked(ActionEvent event) {
+    public void BackButtonClicked(ActionEvent event) throws IOException {
         System.out.println("Back button was clicked.");
 
         //TODO: [maybe] discard current item
 
-        SwitchToMenuScreen();
+        SwitchToMenuScreen(event);
     }
 
-    //TODO: this
-    public void SwitchToMenuScreen() {
+    public void SwitchToMenuScreen(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Menu.fxml"));
+        root = loader.load();
 
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
     }
 
-    //TODO: this
-    public void SwitchToCheckoutScreen() {
+    public void SwitchToCheckoutScreen(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("cart-view.fxml"));
+        root = loader.load();
 
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
     }
 
 }

@@ -1,14 +1,21 @@
 package com.schwa.schwacoffe;
 
 import com.schwa.schwacoffe.core.data.CartManager;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.Slider;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -44,9 +51,16 @@ public class CartController {
     @FXML
     private Button PlaceOrderButton1;
 
+    private CartManager cartManager;
+
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
+
 
     public void initialize() {
-        CartListView.setItems(CartManager.GetCartItems());
+        cartManager = CartManager.GetInstance();
+        CartListView.setItems(cartManager.GetCartItems());
         CartListView.setCellFactory(new CoffeeCellFactory());
     }
 
@@ -56,11 +70,21 @@ public class CartController {
     }
 
     @FXML
-    void MenuButtonClicked(MouseEvent event) {
+    void MenuButtonClicked(MouseEvent event) throws IOException {
         System.out.println("Menu Button Clicked");
         for (Object c : CartListView.getItems().toArray()) {
             System.out.println(c.toString());
         }
+
+        //switch scenes
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Menu.fxml"));
+        root = loader.load();
+
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
@@ -71,7 +95,7 @@ public class CartController {
         e.setMilk("Whole");
         e.setPrice(BigDecimal.valueOf(5.25));
         e.setFlavors(List.of(flavors));
-        CartManager.AddBeverage(e);
+        cartManager.AddBeverage(e);
         System.out.println("Order Placed");
     }
 
