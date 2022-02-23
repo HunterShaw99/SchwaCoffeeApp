@@ -37,7 +37,6 @@ public class MenuController {
     private Label item1Price, item2Price, item3Price, item4Price, item5Price, item6Price, item7Price, item8Price,
             item9Price, item10Price, item11Price, item12Price;
 
-
     @FXML
     void CartButtonPressed(ActionEvent event) {
         // TODO: transfer to cart page
