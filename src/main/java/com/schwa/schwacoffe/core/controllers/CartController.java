@@ -55,6 +55,7 @@ public class CartController {
     private Stage stage;
     private Scene scene;
     private Parent root;
+    private int numInits = 0;
 
     File baristaView = new File("orders.txt");
 
@@ -64,9 +65,12 @@ public class CartController {
      * Changes the total sum of the cart each time.
      */
     public void initialize() {
-        CartListView.setItems(CartManager.GetInstance().GetCartItems());
-        CartListView.setCellFactory(new CoffeeCellFactory());
+        if (numInits == 0) {
+            CartListView.setItems(CartManager.GetInstance().GetCartItems());
+            CartListView.setCellFactory(new CoffeeCellFactory());
+        }
         CartTotalLabel.setText(CartManager.GetInstance().GetCartTotal());
+        numInits++;
     }
 
     @FXML
