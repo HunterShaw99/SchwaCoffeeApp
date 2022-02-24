@@ -6,15 +6,11 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Slider?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<?import javafx.collections.FXCollections?>
-<?import com.schwa.schwacoffe.core.controllers.CoffeeCellFactory?>
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" stylesheets="@cart-style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.schwa.schwacoffe.core.controllers.CartController">
    <center>
       <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0" BorderPane.alignment="CENTER">
@@ -64,13 +60,13 @@
       </VBox>
    </center>
    <top>
-      <HBox fx:id="HeaderBar" alignment="CENTER_LEFT" prefHeight="59.0" prefWidth="800.0" spacing="185.0" BorderPane.alignment="CENTER">
+      <HBox fx:id="HeaderBar" alignment="CENTER_LEFT" prefHeight="59.0" prefWidth="800.0" spacing="230.0" BorderPane.alignment="CENTER">
          <children>
             <Button fx:id="BackButton" mnemonicParsing="false" onMouseClicked="#MenuButtonClicked" text="Menu">
                <HBox.margin>
                   <Insets left="75.0" />
                </HBox.margin></Button>
-            <Label fx:id="CartTitleLabel" alignment="CENTER" text="Schwa Cart">
+            <Label fx:id="CartTitleLabel" alignment="CENTER" text="Cart">
                <font>
                   <Font name="Georgia Bold" size="24.0" />
                </font>

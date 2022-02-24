@@ -13,12 +13,16 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
+import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.math.BigDecimal;
 
 public class MenuController {
+
+    @FXML
+    public Rectangle rect;
 
     @FXML
     private Button CartButton;

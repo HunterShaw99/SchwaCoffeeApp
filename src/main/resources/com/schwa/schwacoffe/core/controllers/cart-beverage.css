@@ -1,3 +1,7 @@
 .label {
     -fx-font: 16px "Arial";
 }
+#rect {
+    -fx-stroke-width: 2;
+    -fx-stroke: #3b200b;
+}

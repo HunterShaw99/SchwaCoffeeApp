@@ -83,3 +83,7 @@ CheckBox {
 AnchorPane {
     -fx-background-color: "#bbaea3";
 }
+#imagePlaceholder {
+    -fx-stroke-width: 2;
+    -fx-stroke: #3b200b;
+}

@@ -1,0 +1,3 @@
+Customer Order: 
+   Item 1:  Salted Caramel Cream Cold Brew    Medium    Non-fat    [Vanilla, Caramel, Hazelnut]
+
