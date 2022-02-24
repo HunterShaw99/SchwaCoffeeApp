@@ -68,8 +68,18 @@ public class CartController {
     }
 
     @FXML
-    void CancelOrderClicked(MouseEvent event) {
+    void CancelOrderClicked(MouseEvent event) throws IOException {
         System.out.println("Order Canceled");
+        CartManager.GetInstance().EmptyCart();
+        //switch scenes
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Menu.fxml"));
+        root = loader.load();
+
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML

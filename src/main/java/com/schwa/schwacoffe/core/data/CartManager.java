@@ -48,7 +48,7 @@ public class CartManager {
         _currentOrder.clear();
     }
 
-    public boolean CartEmpty() {
+    public boolean IsEmpty() {
         return _currentOrder.isEmpty();
     }
 

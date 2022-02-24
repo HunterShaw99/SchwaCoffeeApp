@@ -1,4 +1,4 @@
-package com.schwa.schwacoffe;
+package com.schwa.schwacoffe.core.controllers;
 
 import com.schwa.schwacoffe.core.controllers.CoffeeCellFactory;
 import com.schwa.schwacoffe.core.data.CartManager;
@@ -19,11 +19,9 @@ public class ConfirmationController {
     @FXML
     private HBox HeaderBar;
 
-    private CartManager cartManager;
 
     public void initialize() {
-        cartManager = CartManager.GetInstance();
-        ConfirmListView.setItems(cartManager.GetCartItems());
+        ConfirmListView.setItems(CartManager.GetInstance().GetCartItems());
         ConfirmListView.setCellFactory(new CoffeeCellFactory());
     }
 }
