@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.Separator?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" stylesheets="@cart-style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.schwa.schwacoffe.core.controllers.ConfirmationController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" stylesheets="@cart-style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.schwa.schwacoffe.core.controllers.ConfirmationController">
     <center>
         <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="621.0" spacing="15.0" BorderPane.alignment="CENTER">
             <children>
@@ -23,6 +18,8 @@
                 <Pane maxWidth="570.0" prefHeight="606.0" prefWidth="570.0">
                <children>
                   <ListView fx:id="ConfirmListView" layoutX="7.0" layoutY="31.0" prefHeight="282.0" prefWidth="559.0" />
+                  <Button fx:id="MenuButton" layoutX="56.0" layoutY="544.0" mnemonicParsing="false" onAction="#MenuButtonClicked" text="Menu" />
+                  <Button fx:id="ExitButton" layoutX="458.0" layoutY="544.0" mnemonicParsing="false" onAction="#ExitButtonClicked" text="Exit" />
                </children></Pane>
             </children>
             <BorderPane.margin>
@@ -36,7 +33,7 @@
     <top>
         <HBox fx:id="HeaderBar" alignment="CENTER_LEFT" prefHeight="59.0" prefWidth="800.0" spacing="185.0" BorderPane.alignment="CENTER">
             <children>
-                <Label fx:id="AppLabel" alignment="CENTER" contentDisplay="RIGHT" text="Schwa Coffee">
+                <Label fx:id="AppLabel" alignment="CENTER" contentDisplay="TOP" text="Quick Coffəə" textFill="#ede0d4">
                     <font>
                         <Font name="Georgia Bold" size="24.0" />
                     </font>

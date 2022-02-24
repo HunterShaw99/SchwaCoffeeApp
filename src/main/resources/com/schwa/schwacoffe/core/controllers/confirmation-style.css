@@ -24,7 +24,7 @@
 #AppLabel {
     -fx-font: 26px "Arial";
     -fx-font-weight: BOLD;
-    -fx-text-fill: "#ede0d4";
+    -fx-text-fill: #ede0d4;
 }
 
 #HeaderBar {
