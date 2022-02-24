@@ -1,9 +1,7 @@
 package com.schwa.schwacoffe.core.controllers;
 
-import com.schwa.schwacoffe.core.controllers.CoffeeCellFactory;
 import com.schwa.schwacoffe.core.data.CartManager;
 import com.schwa.schwacoffe.models.CoffeeModel;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -16,13 +14,11 @@ import javafx.scene.control.Slider;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.math.BigDecimal;
-import java.util.List;
+
 
 public class CartController {
 
@@ -62,6 +58,11 @@ public class CartController {
 
     File baristaView = new File("orders.txt");
 
+    /**
+     * Method that is called every time CartController is loaded into the stage.
+     * Used to bind the ListView to the current orders cart.
+     * Changes the total sum of the cart each time.
+     */
     public void initialize() {
         CartListView.setItems(CartManager.GetInstance().GetCartItems());
         CartListView.setCellFactory(new CoffeeCellFactory());
@@ -86,9 +87,6 @@ public class CartController {
     @FXML
     void MenuButtonClicked(MouseEvent event) throws IOException {
         System.out.println("Menu Button Clicked");
-        for (Object c : CartListView.getItems().toArray()) {
-            System.out.println(c.toString());
-        }
 
         //switch scenes
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Menu.fxml"));
