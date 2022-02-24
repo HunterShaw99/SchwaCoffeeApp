@@ -1,4 +1,4 @@
-package com.schwa.schwacoffe.core.data;
+package com.schwa.schwacoffe.core.controllers;
 
 import com.schwa.schwacoffe.core.controllers.CustomizationController;
 import com.schwa.schwacoffe.models.CoffeeModel;
