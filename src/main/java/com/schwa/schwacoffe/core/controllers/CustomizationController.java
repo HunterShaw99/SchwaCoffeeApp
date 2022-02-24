@@ -44,7 +44,6 @@ public class CustomizationController implements Initializable {
     private CoffeeModel currentItem;
     private NumberFormat currencyFormatter;
     private BigDecimal[] milkPrices, flavorPrices;
-    private CartManager cartManager;
 
     private Stage stage;
     private Scene scene;
@@ -52,8 +51,6 @@ public class CustomizationController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
-        cartManager = CartManager.GetInstance();
 
         //Radio button config
         sizeGroup = new ToggleGroup();
@@ -68,7 +65,7 @@ public class CustomizationController implements Initializable {
 
 
         //get current item from cart manager
-        currentItem = cartManager.GetCurrentItem();
+        currentItem = CartManager.GetInstance().GetCurrentItem();
 
         //set image
         coffeeImageView.setImage(currentItem.getImage());
@@ -277,7 +274,7 @@ public class CustomizationController implements Initializable {
         //current item SHOULD be completely populated with the correct choices
 
         //add customized item to cartManager
-        cartManager.AddBeverage(currentItem);
+        CartManager.GetInstance().AddBeverage(currentItem);
 
         SwitchToCheckoutScreen(event);
     }
@@ -287,8 +284,7 @@ public class CustomizationController implements Initializable {
     public void BackButtonClicked(ActionEvent event) throws IOException {
         System.out.println("Back button was clicked.");
 
-        //TODO: [maybe] discard current item
-
+        CartManager.GetInstance().SetCurrentItem(null);
         SwitchToMenuScreen(event);
     }
 

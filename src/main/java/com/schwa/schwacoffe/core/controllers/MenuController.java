@@ -48,7 +48,6 @@ public class MenuController {
     private Label item1Price, item2Price, item3Price, item4Price, item5Price, item6Price, item7Price, item8Price,
             item9Price, item10Price, item11Price, item12Price;
 
-    private CartManager cartManager = CartManager.GetInstance();
 
     private Stage stage;
     private Scene scene;
@@ -144,7 +143,7 @@ public class MenuController {
         m.setBasePrice(price);
         m.setName(itemName);
         m.setImage(image);
-        cartManager.SetCurrentItem(m);
+        CartManager.GetInstance().SetCurrentItem(m);
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("customization-view.fxml"));
         root = loader.load();

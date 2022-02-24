@@ -1,6 +1,5 @@
 package com.schwa.schwacoffe.core.controllers;
 
-import com.schwa.schwacoffe.core.controllers.CoffeeCellFactory;
 import com.schwa.schwacoffe.core.data.CartManager;
 import com.schwa.schwacoffe.models.CoffeeModel;
 import javafx.fxml.FXML;
