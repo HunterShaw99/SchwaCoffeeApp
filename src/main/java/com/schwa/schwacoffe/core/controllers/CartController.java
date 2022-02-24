@@ -95,13 +95,6 @@ public class CartController {
 
     @FXML
     void PlaceOrderClicked(MouseEvent event) throws IOException {
-        String[] flavors = new String[] {"Caramel", "Vanilla"};
-        CoffeeModel e = new CoffeeModel();
-        e.setName("Coffee");
-        e.setMilk("Whole");
-        e.setPrice(BigDecimal.valueOf(5.25));
-        e.setFlavors(List.of(flavors));
-        cartManager.AddBeverage(e);
         System.out.println("Order Placed");
 
         CreateBaristaFile();
