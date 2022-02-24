@@ -1,11 +1,11 @@
-package com.schwa.schwacoffe;
+package com.schwa.schwacoffe.core.controllers;
 
-import com.schwa.schwacoffe.core.data.CartManager;
+import com.schwa.schwacoffe.models.CoffeeModel;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.ContentDisplay;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
@@ -26,8 +26,10 @@ public class CoffeeCell extends ListCell<CoffeeModel> {
     @FXML
     private Label milkLabel;
 
+    @FXML
+    private ImageView coffeeImage;
+
     public void initialize() {
-        nameLabel.setText("askjdlfh");
     }
 
     public CoffeeCell() {
@@ -55,10 +57,10 @@ public class CoffeeCell extends ListCell<CoffeeModel> {
             setGraphic(null);
         } else {
             nameLabel.setText(beverage.getName());
-            milkLabel.setText(beverage.getMilk());
-            flavorLabel.setText(beverage.getFlavors().toString());
+            milkLabel.setText("Milk: "+beverage.getMilk());
+            flavorLabel.setText("Flavors: "+beverage.getFlavors().toString());
             priceLabel.setText("$"+beverage.getPrice().toString());
-
+            coffeeImage.setImage(beverage.getImage());
             setGraphic(base);
         }
     }

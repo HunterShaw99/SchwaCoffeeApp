@@ -1,6 +1,6 @@
 package com.schwa.schwacoffe.core.data;
 
-import com.schwa.schwacoffe.CoffeeModel;
+import com.schwa.schwacoffe.models.CoffeeModel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import java.math.BigDecimal;

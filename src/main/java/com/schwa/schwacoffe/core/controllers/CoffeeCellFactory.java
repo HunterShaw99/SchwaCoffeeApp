@@ -1,6 +1,8 @@
-package com.schwa.schwacoffe;
+package com.schwa.schwacoffe.core.controllers;
 
 
+import com.schwa.schwacoffe.core.controllers.CoffeeCell;
+import com.schwa.schwacoffe.models.CoffeeModel;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.util.Callback;

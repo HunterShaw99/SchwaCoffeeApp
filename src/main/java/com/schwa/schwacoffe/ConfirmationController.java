@@ -1,6 +1,8 @@
 package com.schwa.schwacoffe;
 
+import com.schwa.schwacoffe.core.controllers.CoffeeCellFactory;
 import com.schwa.schwacoffe.core.data.CartManager;
+import com.schwa.schwacoffe.models.CoffeeModel;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;

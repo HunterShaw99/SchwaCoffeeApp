@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" stylesheets="@menu-style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.schwa.schwacoffe.ConfirmationController">
+    <center>
+        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="621.0" spacing="15.0" BorderPane.alignment="CENTER">
+            <children>
+            <Label prefHeight="47.0" prefWidth="339.0" text="Your order has been confirmed!">
+               <font>
+                  <Font name="Georgia" size="24.0" />
+               </font>
+            </Label>
+                <Separator prefWidth="200.0" />
+                <Pane maxWidth="570.0" prefHeight="606.0" prefWidth="570.0">
+               <children>
+                  <ListView fx:id="ConfirmListView" layoutX="50.0" layoutY="31.0" prefHeight="282.0" prefWidth="471.0" />
+               </children></Pane>
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="20.0" left="100.0" right="100.0" />
+            </BorderPane.margin>
+            <padding>
+                <Insets top="15.0" />
+            </padding>
+        </VBox>
+    </center>
+    <top>
+        <HBox fx:id="HeaderBar" alignment="CENTER_LEFT" prefHeight="59.0" prefWidth="800.0" spacing="185.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label fx:id="AppLabel" alignment="CENTER" contentDisplay="RIGHT" text="Schwa Coffee">
+                    <font>
+                        <Font name="Georgia Bold" size="24.0" />
+                    </font>
+                </Label>
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="15.0" />
+            </BorderPane.margin>
+            <padding>
+                <Insets left="310.0" />
+            </padding>
+        </HBox>
+    </top>
+</BorderPane>

@@ -1,4 +1,4 @@
-package com.schwa.schwacoffe;
+package com.schwa.schwacoffe.models;
 
 import javafx.scene.image.Image;
 

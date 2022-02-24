@@ -1,8 +1,9 @@
-package com.schwa.schwacoffe;
+package com.schwa.schwacoffe.core.controllers;
 
+import com.schwa.schwacoffe.core.controllers.CoffeeCellFactory;
 import com.schwa.schwacoffe.core.data.CartManager;
+import com.schwa.schwacoffe.models.CoffeeModel;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;

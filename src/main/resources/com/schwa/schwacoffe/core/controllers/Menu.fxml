@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" stylesheets="@menu-style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.schwa.schwacoffe.MenuController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" stylesheets="@menu-style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.schwa.schwacoffe.core.controllers.MenuController">
    <center>
       <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="621.0" spacing="15.0" BorderPane.alignment="CENTER">
          <children>
@@ -140,51 +149,51 @@
                            </font></Label>
                         <ImageView fx:id="item1Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
                            <image>
-                              <Image url="@Cuppuccino.PNG" />
+                              <Image url="@../../Cuppuccino.PNG" />
                            </image></ImageView>
                         <ImageView fx:id="item2Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
                            <image>
-                              <Image url="@WhiteChoc.PNG" />
+                              <Image url="@../../WhiteChoc.PNG" />
                            </image></ImageView>
                         <ImageView fx:id="item3Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
                            <image>
-                              <Image url="@CarmelMacc.PNG" />
+                              <Image url="@../../CarmelMacc.PNG" />
                            </image></ImageView>
                         <ImageView fx:id="item4Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
                            <image>
-                              <Image url="@CinnamonDL.PNG" />
+                              <Image url="@../../CinnamonDL.PNG" />
                            </image></ImageView>
                         <ImageView fx:id="item5Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
                            <image>
-                              <Image url="@ExpressoMacc.PNG" />
+                              <Image url="@../../ExpressoMacc.PNG" />
                            </image></ImageView>
                         <ImageView fx:id="item6Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="BOTTOM">
                            <image>
-                              <Image url="@PistachioL.PNG" />
+                              <Image url="@../../PistachioL.PNG" />
                            </image></ImageView>
                         <ImageView fx:id="item7Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
                            <image>
-                              <Image url="@IcedCoffee.PNG" />
+                              <Image url="@../../IcedCoffee.PNG" />
                            </image></ImageView>
                         <ImageView fx:id="item8Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
                            <image>
-                              <Image url="@IcedCarmelMacc.PNG" />
+                              <Image url="@../../IcedCarmelMacc.PNG" />
                            </image></ImageView>
                         <ImageView fx:id="item9Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
                            <image>
-                              <Image url="@IcedCoffeeL.PNG" />
+                              <Image url="@../../IcedCoffeeL.PNG" />
                            </image></ImageView>
                         <ImageView fx:id="item10Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
                            <image>
-                              <Image url="@IcedExpresso.PNG" />
+                              <Image url="@../../IcedExpresso.PNG" />
                            </image></ImageView>
                         <ImageView fx:id="item11Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
                            <image>
-                              <Image url="@SaltedCarmel.PNG" />
+                              <Image url="@../../SaltedCarmel.PNG" />
                            </image></ImageView>
                         <ImageView fx:id="item12Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="BOTTOM">
                            <image>
-                              <Image url="@IcedCoffeeA.PNG" />
+                              <Image url="@../../IcedCoffeeA.PNG" />
                            </image></ImageView>
                         <Label fx:id="item1Price" prefHeight="55.0" prefWidth="40.0" text="\$5.99" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
                            <font>

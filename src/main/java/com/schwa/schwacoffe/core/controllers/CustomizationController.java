@@ -1,7 +1,8 @@
-package com.schwa.schwacoffe;
+package com.schwa.schwacoffe.core.controllers;
 
 import com.schwa.schwacoffe.core.data.CartManager;
 
+import com.schwa.schwacoffe.models.CoffeeModel;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
