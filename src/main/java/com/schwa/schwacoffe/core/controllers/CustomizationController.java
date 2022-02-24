@@ -42,8 +42,9 @@ public class CustomizationController implements Initializable {
     private ToggleGroup sizeGroup, milkGroup;
 
     private CoffeeModel currentItem;
-    private NumberFormat currencyFormatter;
-    private BigDecimal[] milkPrices, flavorPrices;
+    private NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance();
+    private BigDecimal[] flavorPrices;
+    private BigDecimal[] milkPrices = new BigDecimal[]{BigDecimal.ONE, BigDecimal.ONE, BigDecimal.valueOf(1.25)};
 
     private Stage stage;
     private Scene scene;
@@ -71,7 +72,6 @@ public class CustomizationController implements Initializable {
         coffeeImageView.setImage(currentItem.getImage());
 
         //setting label text to associated current item's data
-        currencyFormatter = NumberFormat.getCurrencyInstance();
 
         nameLabel.setText(currentItem.getName());
         BigDecimal basePrice = currentItem.getBasePrice();
@@ -81,7 +81,6 @@ public class CustomizationController implements Initializable {
 
 
         //these labels are always the same (prices of these things are consistent across all coffee types)
-        milkPrices = new BigDecimal[]{BigDecimal.ONE, BigDecimal.ONE, BigDecimal.valueOf(1.25)};
         milkOption1PriceLabel.setText(currencyFormatter.format(milkPrices[0]));
         milkOption2PriceLabel.setText(currencyFormatter.format(milkPrices[1]));
         milkOption3PriceLabel.setText(currencyFormatter.format(milkPrices[2]));
@@ -165,10 +164,9 @@ public class CustomizationController implements Initializable {
             } else {
                 currentItem.getFlavors().remove(cb.getText());
             }
-            label.setText(currencyFormatter.format(CalculateFlavorPrice()));
+            label.setText(currencyFormatter.format(CalculateFlavorPrice(currentItem)));
 
-            BigDecimal totalPrice = CalculateTotal();
-            currentItem.setPrice(totalPrice);
+            UpdateTotal();
         };
         cb.setOnAction(event);
     }
@@ -176,102 +174,101 @@ public class CustomizationController implements Initializable {
     //What to do when the size radio group gets changed
     private void SizeGroupChanged(RadioButton rb) {
         String choice = rb.getText();
-        BigDecimal price = switch (choice) {
-            case "Small" -> currentItem.getBasePrice();
-            case "Medium" -> currentItem.getBasePrice().add(BigDecimal.valueOf(1));
-            case "Large" -> currentItem.getBasePrice().add(BigDecimal.valueOf(2));
-            default ->
-                    //method should never reach this statement
-                    BigDecimal.valueOf(-10);
-        };
-
         currentItem.setSize(choice);
-        BigDecimal totalPrice = CalculateTotal();
-        currentItem.setPrice(totalPrice);
 
-        sizePriceLabel.setText(currencyFormatter.format(price));
+        UpdateSize();
     }
 
 
     //What to do when the milk radio group gets changed
     private void MilkGroupChanged(RadioButton rb) {
         String choice = rb.getText();
-        BigDecimal price = switch (choice) {
-            case "Whole" -> milkPrices[0];
-            case "2%" -> milkPrices[1];
-            case "Non-fat" -> milkPrices[2];
-            default ->
-                    //method should never reach this statement
-                    BigDecimal.valueOf(-10);
-        };
-
-        currentItem.setMilk(choice);
-        BigDecimal totalPrice = CalculateTotal();
-        currentItem.setPrice(totalPrice);
         currentItem.setMilk(choice);
 
+        UpdateMilk();
+    }
+
+    //calculates the size price and updates the label, then does the same for total
+    private void UpdateSize() {
+        BigDecimal price = CalculateSizePrice(currentItem);
+        sizePriceLabel.setText(currencyFormatter.format(price));
+        UpdateTotal();
+    }
+
+    //calculates the milk price and updates the label, then does the same for total
+    private void UpdateMilk() {
+        BigDecimal price = CalculateMilkPrice(currentItem);
         milkPriceLabel.setText(currencyFormatter.format(price));
+        UpdateTotal();
+    }
+
+
+    //calculates the total price and updates both current item and the label
+    private void UpdateTotal() {
+        BigDecimal total = CalculateTotal(currentItem);
+        currentItem.setPrice(total);
+        totalPriceLabel.setText(currencyFormatter.format(total));
     }
 
     //calculates the total price of the current item based on the current selections (also updates label)
-    private BigDecimal CalculateTotal() {
+    public BigDecimal CalculateTotal(CoffeeModel item) {
         BigDecimal total = BigDecimal.ZERO;
 
         //size
-        total = total.add(switch (currentItem.getSize()) {
-            case "Small" -> currentItem.getBasePrice();
-            case "Medium" -> currentItem.getBasePrice().add(BigDecimal.valueOf(1));
-            case "Large" -> currentItem.getBasePrice().add(BigDecimal.valueOf(2));
-            default ->
-                    //method should never reach this statement
-                    BigDecimal.valueOf(-10);
-        });
+        total = total.add(CalculateSizePrice(item));
 
         //milk
-        total = total.add(switch (currentItem.getMilk()) {
-            case "Whole" -> milkPrices[0];
-            case "2%" -> milkPrices[1];
-            case "Non-fat" -> milkPrices[2];
-            default ->
-                    //method should never reach this statement
-                    BigDecimal.valueOf(-10);
-        });
+        total = total.add(CalculateMilkPrice(item));
 
         //flavors
-        //TODO: (maybe change this) since all flavors cost exactly 1 right now, this works
-        for (String flavor: currentItem.getFlavors()) {
-            total = total.add(BigDecimal.ONE);
-        }
+        total = total.add(CalculateFlavorPrice(item));
 
-        totalPriceLabel.setText(currencyFormatter.format(total));
         return total;
     }
 
-    //TODO: (maybe change this) since all flavors cost exactly 1 right now, this works
-    private BigDecimal CalculateFlavorPrice() {
-        BigDecimal total = BigDecimal.ZERO;
+    //calculates the price of the size
+    //if no base price exists, set it to 0
+    public BigDecimal CalculateSizePrice(CoffeeModel item) {
+        String size = item.getSize();
+        if (item.getBasePrice().equals(null))
+            item.setBasePrice(BigDecimal.ZERO);
 
-        for (String flavor : currentItem.getFlavors()) {
-            total = total.add(BigDecimal.ONE);
+        BigDecimal price = switch (size) {
+            case "Small" -> item.getBasePrice();
+            case "Medium" -> item.getBasePrice().add(BigDecimal.valueOf(1));
+            case "Large" -> item.getBasePrice().add(BigDecimal.valueOf(2));
+            default -> BigDecimal.valueOf(-100);
+        };
+        return price;
+    }
+
+    public BigDecimal CalculateMilkPrice(CoffeeModel item) {
+        String milk = item.getMilk();
+        BigDecimal price = switch (milk) {
+            case "Whole" -> milkPrices[0];
+            case "2%" -> milkPrices[1];
+            case "Non-fat" -> milkPrices[2];
+            default -> BigDecimal.valueOf(-100);
+        };
+        return price;
+    }
+
+    //TODO: (maybe change this) since all flavors cost exactly 1 right now, this works
+    public BigDecimal CalculateFlavorPrice(CoffeeModel item) {
+        BigDecimal price = BigDecimal.ZERO;
+
+        if (item.getFlavors().equals(null))
+            return BigDecimal.ZERO;
+
+        for (String flavor : item.getFlavors()) {
+            price = price.add(BigDecimal.ONE);
         }
-        return total;
+        return price;
     }
 
     //What to do when the finish button is clicked
     @FXML
     public void FinishButtonClicked(ActionEvent event) throws IOException {
-
-        //testing stuff
-        System.out.println("Finish button was clicked.");
-
-        System.out.println("currentItem.getName() = " + currentItem.getName());
-        System.out.println("currentItem.getSize() = " + currentItem.getSize());
-        System.out.println("currentItem.getMilk() = " + currentItem.getMilk());
-        System.out.println("currentItem.getFlavors() = " + currentItem.getFlavors());
-        System.out.println("currentItem.getPrice() = " + currentItem.getPrice());
-        //</>
-
-        //current item SHOULD be completely populated with the correct choices
 
         //add customized item to cartManager
         CartManager.GetInstance().AddBeverage(currentItem);
