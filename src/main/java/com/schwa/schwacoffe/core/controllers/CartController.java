@@ -56,8 +56,6 @@ public class CartController {
     @FXML
     private Button PlaceOrderButton1;
 
-    private CartManager cartManager;
-
     private Stage stage;
     private Scene scene;
     private Parent root;
@@ -65,8 +63,7 @@ public class CartController {
     File baristaView = new File("orders.txt");
 
     public void initialize() {
-        cartManager = CartManager.GetInstance();
-        CartListView.setItems(cartManager.GetCartItems());
+        CartListView.setItems(CartManager.GetInstance().GetCartItems());
         CartListView.setCellFactory(new CoffeeCellFactory());
     }
 
@@ -124,15 +121,12 @@ public class CartController {
     }
 
     void WriteBaristaFile() throws FileNotFoundException {
-        cartManager = CartManager.GetInstance();
-        ObservableList<CoffeeModel> orders = cartManager.GetCartItems();
-
         PrintWriter writer = new PrintWriter("orders.txt");
         String names[] = new String[5], sizes[] = new String[5], milk[] = new String[5], flavors[] = new String[5];
         int i = 0;
 
         writer.println("Customer Order: ");
-        for (CoffeeModel item : orders) {
+        for (CoffeeModel item : CartManager.GetInstance().GetCartItems()) {
             names[i] = item.getName();
             sizes[i] = item.getSize();
             milk[i] = item.getMilk();
