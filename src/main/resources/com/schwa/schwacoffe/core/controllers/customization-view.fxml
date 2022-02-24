@@ -18,7 +18,7 @@
          </children></HBox>
         <Rectangle arcHeight="50.0" arcWidth="50.0" fill="DODGERBLUE" height="659.0" layoutX="100.0" layoutY="100.0" width="600.0" />
         <Button fx:id="backButton" layoutX="30.0" layoutY="15.0" mnemonicParsing="false" onAction="#BackButtonClicked" text="Back" />
-        <Rectangle fx:id="imagePlaceholder" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="150.0" layoutX="325.0" layoutY="120.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+        <Rectangle fx:id="imagePlaceholder" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="150.0" layoutX="325.0" layoutY="120.0" stroke="#3b200b" strokeType="INSIDE" width="150.0" />
         <Button fx:id="finishButton" layoutX="615.0" layoutY="705.0" mnemonicParsing="false" onAction="#FinishButtonClicked" text="Finish" />
         <Label fx:id="sizeLabel" layoutX="130.0" layoutY="345.0" text="Size" />
         <Label fx:id="milkLabel" layoutX="130.0" layoutY="470.0" text="Milk" />
