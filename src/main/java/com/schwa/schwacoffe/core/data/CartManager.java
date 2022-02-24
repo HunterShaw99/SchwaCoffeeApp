@@ -6,7 +6,6 @@ import javafx.collections.ObservableList;
 import java.math.BigDecimal;
 
 
-
 /**
  * CartManager allows for ease of communication between different scenes needing data from the cart.
  * @author Hunter
@@ -52,12 +51,12 @@ public class CartManager {
         return _currentOrder.isEmpty();
     }
 
-    public BigDecimal GetCartTotal() {
+    public String GetCartTotal() {
         BigDecimal cartTotal = new BigDecimal(0);
         for (CoffeeModel c : _currentOrder) {
-            cartTotal.add(c.getPrice());
+            cartTotal = cartTotal.add(c.getPrice());
         }
-        return cartTotal;
+        return "$"+cartTotal.toString();
     }
 
     public ObservableList<CoffeeModel> GetCartItems() {

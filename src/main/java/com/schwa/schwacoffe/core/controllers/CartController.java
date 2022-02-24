@@ -65,6 +65,7 @@ public class CartController {
     public void initialize() {
         CartListView.setItems(CartManager.GetInstance().GetCartItems());
         CartListView.setCellFactory(new CoffeeCellFactory());
+        CartTotalLabel.setText(CartManager.GetInstance().GetCartTotal());
     }
 
     @FXML
