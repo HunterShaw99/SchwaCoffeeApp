@@ -286,7 +286,7 @@
    <top>
       <HBox fx:id="HeaderBar" alignment="CENTER_LEFT" prefHeight="59.0" prefWidth="800.0" spacing="185.0" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="AppLabel" alignment="CENTER" contentDisplay="RIGHT" text="Schwa Coffee">
+            <Label fx:id="AppLabel" alignment="CENTER" contentDisplay="RIGHT" text="Quick Coffəə">
                <font>
                   <Font name="Georgia Bold" size="24.0" />
                </font>

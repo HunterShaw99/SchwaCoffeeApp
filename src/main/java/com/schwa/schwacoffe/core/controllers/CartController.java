@@ -75,7 +75,6 @@ public class CartController {
 
     @FXML
     void CancelOrderClicked(MouseEvent event) throws IOException {
-        System.out.println("Order Canceled");
         CartManager.GetInstance().EmptyCart();
         //switch scenes
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Menu.fxml"));
@@ -90,7 +89,6 @@ public class CartController {
 
     @FXML
     void MenuButtonClicked(MouseEvent event) throws IOException {
-        System.out.println("Menu Button Clicked");
 
         //switch scenes
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Menu.fxml"));
@@ -105,20 +103,22 @@ public class CartController {
 
     @FXML
     void PlaceOrderClicked(MouseEvent event) throws IOException {
-        System.out.println("Order Placed");
+        if (!CartManager.GetInstance().IsEmpty()) {
+            CreateBaristaFile();
+            WriteBaristaFile();
 
-        CreateBaristaFile();
-        WriteBaristaFile();
+            //switch scenes
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Confirmation-view.fxml"));
+            root = loader.load();
 
-        //switch scenes
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Confirmation-view.fxml"));
-        root = loader.load();
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
 
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }
+        CartListView.requestFocus();
 
-        stage.setScene(scene);
-        stage.show();
     }
 
     void CreateBaristaFile() {
