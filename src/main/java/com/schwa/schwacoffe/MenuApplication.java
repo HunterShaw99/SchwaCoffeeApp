@@ -12,7 +12,7 @@ public class MenuApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MenuApplication.class.getResource("core/controllers/Menu.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 800, 800);
-        stage.setTitle("Schwa Coffee");
+        stage.setTitle("Quick Coffəə");
         stage.setScene(scene);
         stage.show();
     }

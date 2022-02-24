@@ -57,7 +57,7 @@ public class CoffeeCell extends ListCell<CoffeeModel> {
             setGraphic(null);
         } else {
             nameLabel.setText(beverage.getName());
-            milkLabel.setText("Milk: "+beverage.getMilk());
+            milkLabel.setText(beverage.getMilk());
             flavorLabel.setText("Flavors: "+beverage.getFlavors().toString());
             priceLabel.setText("$"+beverage.getPrice().toString());
             coffeeImage.setImage(beverage.getImage());
