@@ -5,16 +5,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane fx:id="base" maxHeight="120.0" maxWidth="512.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="512.0" stylesheets="@cart-beverage.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="base" maxHeight="120.0" maxWidth="555.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="555.0" stylesheets="@cart-beverage.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label fx:id="nameLabel" layoutX="170.0" layoutY="35.0" text="Label" translateY="-25.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="170.0" AnchorPane.topAnchor="35.0" />
-      <Label fx:id="milkLabel" layoutX="138.0" layoutY="35.0" text="Label" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="138.0" AnchorPane.topAnchor="35.0" />
-      <Label fx:id="flavorLabel" layoutX="244.0" layoutY="35.0" text="Label" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="244.0" AnchorPane.topAnchor="35.0" />
-      <Label fx:id="priceLabel" layoutX="138.0" layoutY="66.0" text="Label" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="138.0" AnchorPane.topAnchor="66.0" />
-      <ImageView fx:id="coffeeImage" fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" />
-      <Rectangle fx:id="rect" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="90.0" stroke="BLACK" strokeType="INSIDE" width="90.0" />
-      <Label layoutX="96.0" layoutY="10.0" text="Beverage:" AnchorPane.bottomAnchor="60.0" AnchorPane.topAnchor="10.0" />
-      <Label layoutX="96.0" layoutY="66.0" text="Price:" />
-      <Label layoutX="96.0" layoutY="35.0" text="Dairy:" />
+      <Label fx:id="nameLabel" layoutX="203.0" layoutY="32.0" text="Label" translateY="-25.0" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="203.0" AnchorPane.topAnchor="32.0" />
+      <Label fx:id="milkLabel" layoutX="171.0" layoutY="60.0" text="Label" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="171.0" AnchorPane.topAnchor="60.0" />
+      <Label fx:id="flavorLabel" layoutX="129.0" layoutY="35.0" text="Label" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="129.0" AnchorPane.topAnchor="35.0" />
+      <Label fx:id="priceLabel" alignment="CENTER" layoutX="485.0" layoutY="30.0" text="Label" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="485.0" AnchorPane.topAnchor="30.0" />
+      <ImageView fx:id="coffeeImage" fitHeight="75.0" fitWidth="75.0" layoutX="20.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.topAnchor="7.0" />
+      <Rectangle fx:id="rect" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="75.0" layoutX="20.0" layoutY="5.0" stroke="BLACK" strokeType="INSIDE" width="75.0" AnchorPane.bottomAnchor="10.0" AnchorPane.topAnchor="7.0" />
+      <Label layoutX="129.0" layoutY="7.0" text="Beverage:" AnchorPane.bottomAnchor="63.0" AnchorPane.topAnchor="7.0" />
+      <Label layoutX="443.0" layoutY="35.0" text="Price:" />
+      <Label layoutX="129.0" layoutY="60.0" text="Dairy:" AnchorPane.bottomAnchor="10.0" AnchorPane.topAnchor="60.0" />
    </children>
 </AnchorPane>

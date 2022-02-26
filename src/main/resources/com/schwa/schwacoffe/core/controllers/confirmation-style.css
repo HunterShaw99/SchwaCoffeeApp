@@ -1,57 +1,37 @@
 .button {
-    -fx-font: 16px "Arial";
-    -fx-text-fill: "#ede0d4";
+    -fx-font: 16px  Arial ;
+    -fx-text-fill:  white;
     -fx-font-weight: BOLD;
-    -fx-background-color: "#7f5539";
+    -fx-background-color:  #361d09;
 }
-
-.button:pressed {
-    -fx-background-color: "#502c12";
-    -fx-text-fill: "#ede0d4";
+.button:focused {
+    -fx-background-color:  #502c12;
+    -fx-text-fill:  white;
 }
-
-#CartButton:pressed {
-    -fx-background-color: "#ede0d4";
-    -fx-text-fill: "#502c12";
+.list-cell, .list-view {
+    -fx-background-color: transparent;
 }
-
-#TempLabel {
-    -fx-font: 22px "Arial";
-    -fx-font-weight: BOLD;
-    -fx-text-fill: "#7f5539";
+#ConfirmListView .scroll-bar {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
 }
-
-#AppLabel {
-    -fx-font: 26px "Arial";
-    -fx-font-weight: BOLD;
-    -fx-text-fill: #ede0d4;
+#ConfirmListView .scroll-bar .thumb {
+    -fx-background-color: #1f0f04;
 }
-
 #HeaderBar {
-    -fx-background-color: "#502c12";
-    -fx-effect: dropshadow(three-pass-box, #3b200b, 10, .07, 0.5,0.5);
+    -fx-background-color:  #361d09;
+    -fx-effect: dropshadow(three-pass-box, #1f0f04, 10, .07, 0.5,0.5);
 }
-
 VBox {
-    -fx-background-color: "#ede0d4";
+    -fx-background-color:  white;
     -fx-background-radius: 25px;
     -fx-border-radius: 25px;
 }
-
 BorderPane {
-    -fx-background-color: "#bbaea3";
+    -fx-background-color:  #bbaea3 ;
 }
-
 .separator .line{
-    -fx-border-color: "#502c12";
+    -fx-border-color:  #361d09;
     -fx-border-width: 4px;
     -fx-border-style: solid;
-}
-
-Pane {
-    -fx-background-color: "#ede0d4";
-}
-
-.list-view {
-    -fx-background-color: transparent;
 }

@@ -1,89 +1,83 @@
 Label {
-    -fx-font: 22px "Arial";
+    -fx-font: 22px  Arial;
     -fx-font-weight: BOLD;
-    -fx-text-fill: "#7f5539";
+    -fx-text-fill:  #361d09;
 }
 Ellipse {
-    -fx-fill: "502c12";
-}
-#sizePriceLabel, #milkPriceLabel, #flavorPriceLabel, #totalPriceLabel {
-    -fx-font: 22px "Arial";
-    -fx-font-weight: BOLD;
-    -fx-text-fill: "#502c12";
+    -fx-fill:  #1f0f04;
 }
 #sizeOption1PriceLabel, #sizeOption2PriceLabel, #sizeOption3PriceLabel,
 #milkOption1PriceLabel, #milkOption2PriceLabel, #milkOption3PriceLabel,
-#flavorOption1PriceLabel, #flavorOption2PriceLabel, #flavorOption3PriceLabel {
-    -fx-font: 18px "Arial";
+#flavorOption1PriceLabel, #flavorOption2PriceLabel, #flavorOption3PriceLabel,
+#sizePriceLabel, #milkPriceLabel, #flavorPriceLabel, #totalPriceLabel {
+    -fx-font: 18px  Arial;
     -fx-font-weight: BOLD;
-    -fx-text-fill: "#502c12";
+    -fx-text-fill:  #361d09;
+}
+#sizePriceLabel, #milkPriceLabel, #flavorPriceLabel, #totalPriceLabel {
+    -fx-font-size: 22px;
 }
 #titleLabel {
-    -fx-font: 26px "Sans";
+    -fx-font: 26px  Sans;
     -fx-font-weight: BOLD;
-    -fx-text-fill: "#ede0d4";
+    -fx-text-fill:  white;
 }
 Rectangle {
-    -fx-fill: "#ede0d4";
+    -fx-fill:  white;
 }
-RadioButton {
-    -fx-font: 18px "Arial";
+RadioButton, CheckBox {
+    -fx-font: 18px  Arial;
     -fx-font-weight: BOLD;
-    -fx-text-fill: "#7f5539";
+    -fx-text-fill:  #361d09;
 }
 .radio-button .radio {
     -fx-border-width: 1px;
-    -fx-border-color: "502c12";
-    -fx-background-color: "ede0d4";
+    -fx-border-color:  #1f0f04;
+    -fx-background-color: #d9d9d9;
     -fx-border-radius: 15px;
     -fx-padding: 3px;
 }
 .radio-button:selected .radio .dot {
-    -fx-background-color: "502c12";
+    -fx-background-color:  #361d09;
     -fx-background-insets: 0;
-}
-CheckBox {
-    -fx-font: 18px "Arial";
-    -fx-font-weight: BOLD;
-    -fx-text-fill: "#7f5539";
 }
 .check-box .box {
     -fx-padding: 2;
-    -fx-background-color: "ede0d4";
-    -fx-border-color: "502c12";
+    -fx-border-color:  #1f0f04;
+    -fx-background-color: #d9d9d9;
     -fx-background-radius: 10;
     -fx-border-radius: 10;
 }
 .check-box:selected .mark {
     -fx-scale-x: 0.8;
     -fx-scale-y: 0.8;
-    -fx-background-color: "ede0d4";
+    -fx-background-color:  white;
 }
 .check-box:selected .box {
-    -fx-background-color: "502c12";
+    -fx-background-color:  #361d09;
 }
 .button {
-    -fx-font: 16px "Arial";
-    -fx-text-fill: "#ede0d4";
+    -fx-font: 16px  Arial ;
+    -fx-text-fill:  white;
     -fx-font-weight: BOLD;
-    -fx-background-color: "#7f5539";
+    -fx-background-color:  #361d09;
 }
 .button:pressed {
-    -fx-background-color: "#502c12";
-    -fx-text-fill: "#ede0d4";
+    -fx-background-color:  #502c12;
+    -fx-text-fill:  white;
 }
 #backButton:pressed {
-    -fx-background-color: "#ede0d4";
-    -fx-text-fill: "#502c12";
+    -fx-background-color:  white;
+    -fx-text-fill:  #bbaea3;
 }
 #headerBar {
-    -fx-background-color: "#502c12";
-    -fx-effect: dropshadow(three-pass-box, #674027FF, 10, .07, 0.5,0.5);
+    -fx-background-color: #361d09;
+    -fx-effect: dropshadow(three-pass-box, #1f0f04, 10, .07, 0.5,0.5);
 }
 AnchorPane {
-    -fx-background-color: "#bbaea3";
+    -fx-background-color:  #bbaea3;
 }
 #imagePlaceholder {
     -fx-stroke-width: 2;
-    -fx-stroke: #3b200b;
+    -fx-stroke: #361d09;
 }
