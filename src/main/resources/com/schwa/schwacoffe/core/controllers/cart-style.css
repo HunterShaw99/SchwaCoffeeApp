@@ -40,14 +40,6 @@
 .list-view .scroll-bar:vertical .decrement-button {
     -fx-background-color: transparent;
 }
-.list-view .scroll-bar:horizontal .increment-arrow,
-.list-view .scroll-bar:horizontal .decrement-arrow,
-.list-view .scroll-bar:horizontal .increment-button,
-.list-view .scroll-bar:horizontal .decrement-button,
-.list-view .scroll-bar:horizontal .thumb {
-    -fx-background-color: transparent;
-    -fx-padding: 0px;
-}
 #CartListView .scroll-bar {
     -fx-background-color: transparent;
     -fx-border-color: transparent;
