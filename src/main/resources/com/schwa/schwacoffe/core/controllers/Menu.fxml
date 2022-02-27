@@ -35,7 +35,7 @@
                </padding>
             </HBox>
             <Separator prefWidth="200.0" />
-            <Pane maxWidth="570.0" prefHeight="590.0" prefWidth="570.0">
+            <Pane maxWidth="570.0" prefHeight="648.0" prefWidth="570.0">
                <children>
                   <GridPane alignment="CENTER" prefHeight="590.0" prefWidth="575.0">
                      <columnConstraints>
