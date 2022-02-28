@@ -66,12 +66,16 @@ RadioButton, CheckBox {
     -fx-background-color:  #502c12;
     -fx-text-fill:  white;
 }
+#backButton {
+    -fx-text-fill: #361d09;
+    -fx-background-color: white;
+}
 #backButton:pressed {
-    -fx-background-color:  white;
-    -fx-text-fill:  #bbaea3;
+    -fx-background-color: #cccbc9;
+    -fx-text-fill:  #361d09;
 }
 #headerBar {
-    -fx-background-color: #361d09;
+    -fx-background-color: #45240a;
     -fx-effect: dropshadow(three-pass-box, #1f0f04, 10, .07, 0.5,0.5);
 }
 AnchorPane {
