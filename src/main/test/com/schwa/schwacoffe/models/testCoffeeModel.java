@@ -9,12 +9,10 @@ import java.math.BigDecimal;
 public class testCoffeeModel {
 
     private CoffeeModel toTest = new CoffeeModel();
-    private BigDecimal testCost = BigDecimal.valueOf(3.95);
 
     @Test
     void testSize() {
         toTest.setSize(Size.MEDIUM);
-        System.out.println(toTest.getPrice());
         assertEquals(Size.MEDIUM, toTest.getSize());
     }
 
@@ -27,6 +25,7 @@ public class testCoffeeModel {
 
     @Test
     void testPrice() {
+        BigDecimal testCost = BigDecimal.valueOf(3.95);
         toTest.setPrice(CoffeePrice.SMALL_COST);
         toTest.setPrice(toTest.getPrice().add(CoffeePrice.FLAVOR_COST));
         toTest.setPrice(toTest.getPrice().add(CoffeePrice.FLAVOR_COST));
@@ -36,6 +35,6 @@ public class testCoffeeModel {
     @Test
     void testDairy() {
         toTest.setMilk(Dairy.SOY);
-        assertEquals("Soy", toTest.getMilk());
+        assertEquals(Dairy.SOY, toTest.getMilk());
     }
 }

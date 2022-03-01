@@ -142,7 +142,7 @@ public class CartController {
         for (CoffeeModel item : CartManager.GetInstance().GetCartItems()) {
             names[i] = item.getName();
             sizes[i] = item.getSize().name();
-            milk[i] = item.getMilk();
+            milk[i] = item.getMilkValue();
             flavors[i] = String.valueOf(item.getFlavors());
 
             writer.println("   Item " + (i+1) + ":  " + names[i] + "    " + sizes[i] + "    " + milk[i] + "    " + flavors[i]);

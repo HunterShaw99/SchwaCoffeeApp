@@ -58,7 +58,11 @@ public class CoffeeModel {
         this.milk = milk;
     }
 
-    public String getMilk() {
+    public Dairy getMilk() {
+        return milk;
+    }
+
+    public String getMilkValue() {
         return milk.getDairy();
     }
 

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1c0500fc-2ff0-4666-a22a-d9328c6e0841" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_dlsc_formsfx_formsfx_core_11_3_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_controlsfx_controlsfx_11_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_kordamp_bootstrapfx_bootstrapfx_core_0_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_17_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_win_17_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_17_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_win_17_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_17_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_win_17_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_17_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_17_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchwaCoffe.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/controllers/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/controllers/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/controllers/CoffeeCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/controllers/CoffeeCell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/models/CoffeeModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/models/CoffeeModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/schwa/schwacoffe/schwa-logo-left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/schwa/schwacoffe/schwa-logo-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/com/schwa/schwacoffe/models/testCoffeeModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/schwa/schwacoffe/models/testCoffeeModel.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/data/SceneManager.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/MenuApplication.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="259omsi0iJVGXTaDZsEe1yKURNd" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="build.tools" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Hunte\IdeaProjects\SchwaCoffe\schwacoffe\src\main\resources\com\schwa\schwacoffe" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Hunte\IdeaProjects\SchwaCoffe\schwacoffe\src\main\resources\com\schwa\schwacoffe\core\controllers" />
+      <recent name="C:\Users\Hunte\IdeaProjects\SchwaCoffe\schwacoffe\src\main\resources\com\schwa\schwacoffe\core.controllers" />
+      <recent name="C:\Users\Hunte\IdeaProjects\SchwaCoffe\schwacoffe\src\main\resources\com\schwa\schwacoffe" />
+      <recent name="C:\Users\Hunte\My Documents" />
+      <recent name="C:\Users\Hunte\IdeaProjects\SchwaCoffe\schwacoffe\src\main\java\com\schwa\schwacoffe" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.schwa.schwacoffe.core.controllers" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.testCoffeeModel">
+    <configuration name="CartApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.schwa.schwacoffe.CartApplication" />
+      <module name="SchwaCoffe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.schwa.schwacoffe.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.schwa.schwacoffe.HelloApplication" />
+      <module name="SchwaCoffe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.schwa.schwacoffe.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MenuApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.schwa.schwacoffe.MenuApplication" />
+      <module name="SchwaCoffe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.schwa.schwacoffe.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testCoffeeModel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SchwaCoffe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.schwa.schwacoffe.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.schwa.schwacoffe.models" />
+      <option name="MAIN_CLASS_NAME" value="com.schwa.schwacoffe.models.testCoffeeModel" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.testCoffeeModel" />
+        <item itemvalue="Application.MenuApplication" />
+        <item itemvalue="Application.CartApplication" />
+        <item itemvalue="Application.HelloApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1c0500fc-2ff0-4666-a22a-d9328c6e0841" name="Changes" comment="" />
+      <created>1644948827850</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1644948827850</updated>
+      <workItem from="1644948832745" duration="2225000" />
+      <workItem from="1645030693151" duration="7866000" />
+      <workItem from="1645045366598" duration="306000" />
+      <workItem from="1645045715100" duration="160000" />
+      <workItem from="1645195105105" duration="6022000" />
+      <workItem from="1645202219526" duration="1661000" />
+      <workItem from="1645207243168" duration="2465000" />
+      <workItem from="1645210066930" duration="60000" />
+      <workItem from="1645212441357" duration="98000" />
+      <workItem from="1645213929954" duration="773000" />
+      <workItem from="1645452059175" duration="2843000" />
+      <workItem from="1645462369324" duration="600000" />
+      <workItem from="1645466164139" duration="3043000" />
+      <workItem from="1645651446138" duration="10000" />
+      <workItem from="1645687482578" duration="3808000" />
+      <workItem from="1645692635743" duration="958000" />
+      <workItem from="1645694281983" duration="1722000" />
+      <workItem from="1645696145479" duration="919000" />
+      <workItem from="1645807753116" duration="2626000" />
+      <workItem from="1646057144613" duration="1812000" />
+      <workItem from="1646067572827" duration="1201000" />
+      <workItem from="1646070633074" duration="2222000" />
+      <workItem from="1646086088471" duration="42000" />
+      <workItem from="1646156393030" duration="185000" />
+      <workItem from="1646156590013" duration="4000" />
+      <workItem from="1646156606706" duration="36000" />
+      <workItem from="1646156653389" duration="306000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
