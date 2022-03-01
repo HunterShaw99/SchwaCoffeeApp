@@ -4,6 +4,7 @@ import com.schwa.schwacoffe.models.CoffeeModel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import java.math.BigDecimal;
+import java.util.UUID;
 
 
 /**
@@ -48,7 +49,15 @@ public class CartManager {
      * @param toRemove
      */
     public void RemoveBeverage(CoffeeModel toRemove) {
-        _currentOrder.remove(toRemove);
+        if (_currentOrder.contains(toRemove)) _currentOrder.remove(toRemove);;
+        return;
+    }
+
+    public CoffeeModel GetBeverage(UUID beverageID) {
+        for (CoffeeModel e : _currentOrder) {
+            if (e.getItemID().equals(beverageID)) return e;
+        }
+        return null;
     }
 
     /**
@@ -63,7 +72,7 @@ public class CartManager {
      * @return boolean value depending on if cart is empty or not.
      */
     public boolean IsEmpty() {
-        return _currentOrder.isEmpty();
+        return _currentOrder.size() == 0;
     }
 
     /**
@@ -72,7 +81,7 @@ public class CartManager {
      * @return String that represents the aggregate of entire cart.
      */
     public String GetCartTotal() {
-        BigDecimal cartTotal = new BigDecimal(0);
+        BigDecimal cartTotal = BigDecimal.ZERO;
         for (CoffeeModel c : _currentOrder) {
             cartTotal = cartTotal.add(c.getPrice());
         }
@@ -84,9 +93,6 @@ public class CartManager {
      * @return Returns the current orders cart as a reference.
      */
     public ObservableList<CoffeeModel> GetCartItems() {
-        if (instance == null) {
-            GetInstance();
-        }
         return _currentOrder;
     }
 

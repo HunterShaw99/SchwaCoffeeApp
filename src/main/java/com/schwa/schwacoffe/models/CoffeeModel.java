@@ -34,6 +34,10 @@ public class CoffeeModel {
         this.flavors = new ArrayList<Flavor>();
     }
 
+    public UUID getItemID() {
+        return this.itemID;
+    }
+
     public String toString() {
         return name+" Price:"+price.toString()+" Flavors:"+flavors.toString();
     }

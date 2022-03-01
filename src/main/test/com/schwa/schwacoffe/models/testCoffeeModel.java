@@ -21,6 +21,9 @@ public class testCoffeeModel {
         toTest.addFlavor(Flavor.CARAMEL);
         toTest.addFlavor(Flavor.VANILLA);
         assertEquals("CARAMEL, VANILLA", toTest.getFlavors());
+        toTest.removeFlavor(Flavor.CARAMEL);
+        toTest.removeFlavor(Flavor.VANILLA);
+        assertEquals("", toTest.getFlavors());
     }
 
     @Test

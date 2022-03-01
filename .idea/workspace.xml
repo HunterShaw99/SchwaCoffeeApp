@@ -5,37 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c0500fc-2ff0-4666-a22a-d9328c6e0841" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_dlsc_formsfx_formsfx_core_11_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_controlsfx_controlsfx_11_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_kordamp_bootstrapfx_bootstrapfx_core_0_4_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_17_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_win_17_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_17_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_win_17_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_17_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_win_17_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_17_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_17_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchwaCoffe.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/controllers/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/controllers/CartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/controllers/CoffeeCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/controllers/CoffeeCell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/data/CartManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/data/CartManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/models/CoffeeModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/models/CoffeeModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/schwa/schwacoffe/schwa-logo-left.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/schwa/schwacoffe/schwa-logo-right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/com/schwa/schwacoffe/core/data/testCartManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/schwa/schwacoffe/core/data/testCartManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/test/com/schwa/schwacoffe/models/testCoffeeModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/schwa/schwacoffe/models/testCoffeeModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -101,42 +74,66 @@
       <recent name="com.schwa.schwacoffe.core.controllers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.testCoffeeModel">
-    <configuration name="CartApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.schwa.schwacoffe.CartApplication" />
+  <component name="RunManager" selected="JUnit.testCartManager">
+    <configuration name="testCartManager" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SchwaCoffe" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.schwa.schwacoffe.models.*" />
+          <option name="PATTERN" value="com.schwa.schwacoffe.core.data.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.schwa.schwacoffe.core.data" />
+      <option name="MAIN_CLASS_NAME" value="com.schwa.schwacoffe.core.data.testCartManager" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.schwa.schwacoffe.HelloApplication" />
+    <configuration name="testCartManager.testEmptyCart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SchwaCoffe" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.schwa.schwacoffe.models.*" />
+          <option name="PATTERN" value="com.schwa.schwacoffe.core.data.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.schwa.schwacoffe.core.data" />
+      <option name="MAIN_CLASS_NAME" value="com.schwa.schwacoffe.core.data.testCartManager" />
+      <option name="METHOD_NAME" value="testEmptyCart" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MenuApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.schwa.schwacoffe.MenuApplication" />
+    <configuration name="testCartManager.testGetBeverage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SchwaCoffe" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.schwa.schwacoffe.models.*" />
+          <option name="PATTERN" value="com.schwa.schwacoffe.core.data.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.schwa.schwacoffe.core.data" />
+      <option name="MAIN_CLASS_NAME" value="com.schwa.schwacoffe.core.data.testCartManager" />
+      <option name="METHOD_NAME" value="testGetBeverage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testCartManager.testRemoveItem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SchwaCoffe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.schwa.schwacoffe.core.data.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.schwa.schwacoffe.core.data" />
+      <option name="MAIN_CLASS_NAME" value="com.schwa.schwacoffe.core.data.testCartManager" />
+      <option name="METHOD_NAME" value="testRemoveItem" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -158,10 +155,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.testCartManager" />
+        <item itemvalue="JUnit.testCartManager.testRemoveItem" />
+        <item itemvalue="JUnit.testCartManager.testGetBeverage" />
+        <item itemvalue="JUnit.testCartManager.testEmptyCart" />
         <item itemvalue="JUnit.testCoffeeModel" />
-        <item itemvalue="Application.MenuApplication" />
-        <item itemvalue="Application.CartApplication" />
-        <item itemvalue="Application.HelloApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -199,7 +197,7 @@
       <workItem from="1646156393030" duration="185000" />
       <workItem from="1646156590013" duration="4000" />
       <workItem from="1646156606706" duration="36000" />
-      <workItem from="1646156653389" duration="306000" />
+      <workItem from="1646156653389" duration="3170000" />
     </task>
     <servers />
   </component>
