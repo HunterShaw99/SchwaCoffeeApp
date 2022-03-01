@@ -143,10 +143,8 @@ public class MenuController {
         String Price = itemPrice.replace("$", "");      // Remove $ from string
         BigDecimal price = BigDecimal.valueOf(Double.parseDouble(Price));   //convert string to bigdecimal
 
-        CoffeeModel m = new CoffeeModel();
-        m.setBasePrice(price);
+        CoffeeModel m = new CoffeeModel(image.getUrl());
         m.setName(itemName);
-        m.setImage(image);
         CartManager.GetInstance().SetCurrentItem(m);
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("customization-view.fxml"));

@@ -1,6 +1,8 @@
 package com.schwa.schwacoffe.core.data;
 
 import com.schwa.schwacoffe.models.CoffeeModel;
+import com.schwa.schwacoffe.models.constants.Dairy;
+import com.schwa.schwacoffe.models.constants.Size;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
@@ -20,8 +22,8 @@ public class testCartManager {
         //test cart isn't empty
         e.setPrice(BigDecimal.valueOf(5.25));
         e.setName("Coffee");
-        e.setMilk("Whole");
-        e.setSize("Small");
+        e.setMilk(Dairy.WHOLE);
+        e.setSize(Size.SMALL);
         CartManager.GetInstance().AddBeverage(e);
         assertEquals(false, CartManager.GetInstance().IsEmpty());
     }
