@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1c0500fc-2ff0-4666-a22a-d9328c6e0841" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/data/CartManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/data/CartManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/models/CoffeeModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/models/CoffeeModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/com/schwa/schwacoffe/core/data/testCartManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/schwa/schwacoffe/core/data/testCartManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/com/schwa/schwacoffe/models/testCoffeeModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/schwa/schwacoffe/models/testCoffeeModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/schwa/schwacoffe/core/controllers/Menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/schwa/schwacoffe/core/controllers/Menu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/schwa/schwacoffe/core/controllers/menu-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/schwa/schwacoffe/core/controllers/menu-style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +41,7 @@
     </option>
   </component>
   <component name="ProjectId" id="259omsi0iJVGXTaDZsEe1yKURNd" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -64,11 +62,11 @@
       <recent name="C:\Users\Hunte\IdeaProjects\SchwaCoffe\schwacoffe\src\main\resources\com\schwa\schwacoffe" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Hunte\IdeaProjects\SchwaCoffe\src\main\resources\com\schwa\schwacoffe" />
       <recent name="C:\Users\Hunte\IdeaProjects\SchwaCoffe\schwacoffe\src\main\resources\com\schwa\schwacoffe\core\controllers" />
       <recent name="C:\Users\Hunte\IdeaProjects\SchwaCoffe\schwacoffe\src\main\resources\com\schwa\schwacoffe\core.controllers" />
       <recent name="C:\Users\Hunte\IdeaProjects\SchwaCoffe\schwacoffe\src\main\resources\com\schwa\schwacoffe" />
       <recent name="C:\Users\Hunte\My Documents" />
-      <recent name="C:\Users\Hunte\IdeaProjects\SchwaCoffe\schwacoffe\src\main\java\com\schwa\schwacoffe" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.schwa.schwacoffe.core.controllers" />

@@ -148,51 +148,51 @@
                            <font>
                               <Font size="14.0" />
                            </font></Label>
-                        <ImageView fx:id="item1Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                        <ImageView fx:id="item1Picture" cache="true" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
                            <image>
                               <Image url="@../../Cuppuccino.PNG" />
                            </image></ImageView>
-                        <ImageView fx:id="item2Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                        <ImageView fx:id="item2Picture" cache="true" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
                            <image>
                               <Image url="@../../WhiteChoc.PNG" />
                            </image></ImageView>
-                        <ImageView fx:id="item3Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                        <ImageView fx:id="item3Picture" cache="true" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
                            <image>
                               <Image url="@../../CarmelMacc.PNG" />
                            </image></ImageView>
-                        <ImageView fx:id="item4Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+                        <ImageView fx:id="item4Picture" cache="true" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
                            <image>
                               <Image url="@../../CinnamonDL.PNG" />
                            </image></ImageView>
-                        <ImageView fx:id="item5Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+                        <ImageView fx:id="item5Picture" cache="true" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
                            <image>
                               <Image url="@../../ExpressoMacc.PNG" />
                            </image></ImageView>
-                        <ImageView fx:id="item6Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="BOTTOM">
+                        <ImageView fx:id="item6Picture" cache="true" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="BOTTOM">
                            <image>
                               <Image url="@../../PistachioL.PNG" />
                            </image></ImageView>
-                        <ImageView fx:id="item7Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                        <ImageView fx:id="item7Picture" cache="true" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
                            <image>
                               <Image url="@../../IcedCoffee.PNG" />
                            </image></ImageView>
-                        <ImageView fx:id="item8Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                        <ImageView fx:id="item8Picture" cache="true" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
                            <image>
                               <Image url="@../../IcedCarmelMacc.PNG" />
                            </image></ImageView>
-                        <ImageView fx:id="item9Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                        <ImageView fx:id="item9Picture" cache="true" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
                            <image>
                               <Image url="@../../IcedCoffeeL.PNG" />
                            </image></ImageView>
-                        <ImageView fx:id="item10Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+                        <ImageView fx:id="item10Picture" cache="true" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
                            <image>
                               <Image url="@../../IcedExpresso.PNG" />
                            </image></ImageView>
-                        <ImageView fx:id="item11Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+                        <ImageView fx:id="item11Picture" cache="true" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
                            <image>
                               <Image url="@../../SaltedCarmel.PNG" />
                            </image></ImageView>
-                        <ImageView fx:id="item12Picture" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="BOTTOM">
+                        <ImageView fx:id="item12Picture" cache="true" fitHeight="71.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="BOTTOM">
                            <image>
                               <Image url="@../../IcedCoffeeA.PNG" />
                            </image></ImageView>
@@ -256,18 +256,6 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Rectangle fx:id="rect" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="71.0" stroke="BLACK" strokeType="INSIDE" translateX="97.0" translateY="10.0" width="71.0" />
-                        <Rectangle fx:id="rect" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="71.0" stroke="BLACK" strokeType="INSIDE" translateX="97.0" translateY="10.0" width="71.0" GridPane.rowIndex="1" />
-                        <Rectangle fx:id="rect" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="71.0" stroke="BLACK" strokeType="INSIDE" translateX="97.0" translateY="10.0" width="71.0" GridPane.rowIndex="2" />
-                        <Rectangle fx:id="rect" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="71.0" stroke="BLACK" strokeType="INSIDE" translateX="97.0" translateY="10.0" width="71.0" GridPane.rowIndex="3" />
-                        <Rectangle fx:id="rect" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="71.0" stroke="BLACK" strokeType="INSIDE" translateX="97.0" translateY="10.0" width="71.0" GridPane.rowIndex="5" />
-                        <Rectangle fx:id="rect" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="71.0" stroke="BLACK" strokeType="INSIDE" translateX="97.0" translateY="10.0" width="71.0" GridPane.rowIndex="4" />
-                        <Rectangle fx:id="rect" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="71.0" stroke="BLACK" strokeType="INSIDE" translateX="87.0" translateY="10.0" width="71.0" GridPane.columnIndex="2" />
-                        <Rectangle fx:id="rect" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="71.0" stroke="BLACK" strokeType="INSIDE" translateX="87.0" translateY="10.0" width="71.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                        <Rectangle fx:id="rect" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="71.0" stroke="BLACK" strokeType="INSIDE" translateX="87.0" translateY="10.0" width="71.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                        <Rectangle fx:id="rect" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="71.0" stroke="BLACK" strokeType="INSIDE" translateX="87.0" translateY="10.0" width="71.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                        <Rectangle fx:id="rect" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="71.0" stroke="BLACK" strokeType="INSIDE" translateX="87.0" translateY="10.0" width="71.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                        <Rectangle fx:id="rect" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="71.0" stroke="BLACK" strokeType="INSIDE" translateX="87.0" translateY="10.0" width="71.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
                      </children>
                      <padding>
                         <Insets right="65.0" />
@@ -291,7 +279,14 @@
                   <Font name="Georgia Bold" size="24.0" />
                </font>
             </Label>
-            <Button fx:id="CartButton" mnemonicParsing="false" onAction="#CartButtonPressed" text="Cart" />
+            <Button fx:id="CartButton" mnemonicParsing="false" onAction="#CartButtonPressed">
+               <graphic>
+                  <ImageView fx:id="carticonImage" cache="true" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" smooth="false">
+                     <image>
+                        <Image url="@../../cart-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
          </children>
          <BorderPane.margin>
             <Insets bottom="15.0" />

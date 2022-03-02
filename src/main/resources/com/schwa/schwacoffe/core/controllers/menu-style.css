@@ -9,12 +9,10 @@
     -fx-text-fill:  white ;
 }
 #CartButton {
-    -fx-text-fill: #361d09;
-    -fx-background-color: white;
+    -fx-background-color: transparent;
 }
 #CartButton:focused {
-    -fx-background-color: #bbaea3;
-    -fx-text-fill:  #361d09;
+    -fx-background-color: transparent;
 }
 #TempLabel {
     -fx-font: 22px  Arial ;
