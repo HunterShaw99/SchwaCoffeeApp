@@ -1,20 +1,22 @@
 package com.schwa.schwacoffe.models;
 
+import com.schwa.schwacoffe.models.constants.OrderStatus;
 import javafx.collections.ObservableList;
 import java.math.BigDecimal;
-import java.util.List;
 import java.util.UUID;
 
 public class OrderModel {
 
     private final BigDecimal orderTotal;
-    private final List<CoffeeModel> beverageLIST;
+    private ObservableList<CoffeeModel> beverageLIST;
     private final String orderID;
+    private OrderStatus orderStatus;//Order Status is either {PROCESSING, DONE, CANCELLED}
 
-    public OrderModel(BigDecimal orderTotal, ObservableList<CoffeeModel> beverageLIST) {
+    public OrderModel(BigDecimal orderTotal, ObservableList<CoffeeModel> beverageLIST, OrderStatus orderStatus) {
         this.orderTotal = orderTotal;
         this.beverageLIST = beverageLIST;
         orderID = UUID.randomUUID().toString().substring(0,11);
+        this.orderStatus = orderStatus;
     }
 
     public BigDecimal Get_OrderTotal() {
@@ -22,11 +24,19 @@ public class OrderModel {
     }
 
     public ObservableList<CoffeeModel> GetBeverageList() {
-        return (ObservableList<CoffeeModel>) beverageLIST;
+        return beverageLIST;
     }
 
     public String GetOrderID() {
         return orderID;
+    }
+
+    public OrderStatus GetOrderStatus() {
+        return orderStatus;
+    }
+
+    public void SetOrderStatus(OrderStatus orderStatus) {
+        this.orderStatus = orderStatus;
     }
 
 }
