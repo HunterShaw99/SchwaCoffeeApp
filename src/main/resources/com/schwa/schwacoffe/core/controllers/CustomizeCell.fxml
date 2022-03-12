@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="base" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="565.0" spacing="10.0" stylesheets="@customize-cell-style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox fx:id="headerHBox" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="25.0">
+         <children>
+            <ImageView fx:id="beverageImageView" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="beverageNameLabel" text="Label" />
+         </children>
+         <padding>
+            <Insets left="25.0" />
+         </padding></HBox>
+      <Separator fx:id="pageBreak" prefWidth="200.0" />
+      <Label fx:id="sizeLabel" text="SIZE">
+         <VBox.margin>
+            <Insets left="25.0" />
+         </VBox.margin>
+      </Label>
+      <HBox fx:id="sizeHBox" alignment="CENTER_LEFT" prefHeight="73.0" prefWidth="550.0" spacing="100.0">
+         <children>
+            <RadioButton fx:id="smallLabel" mnemonicParsing="false" text="Small">
+               <toggleGroup>
+                  <ToggleGroup fx:id="sizeGroup" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="mediumLabel" mnemonicParsing="false" text="Medium" toggleGroup="$sizeGroup" />
+            <RadioButton fx:id="largeLabel" mnemonicParsing="false" text="Large" toggleGroup="$sizeGroup" />
+         </children>
+         <padding>
+            <Insets left="45.0" />
+         </padding></HBox>
+      <Label fx:id="dairyLabel" text="DIARY">
+         <VBox.margin>
+            <Insets left="25.0" />
+         </VBox.margin>
+      </Label>
+      <VBox fx:id="dairyBox" alignment="CENTER_LEFT" prefHeight="218.0" prefWidth="580.0" spacing="20.0">
+         <children>
+            <RadioButton fx:id="noDairyLabel" mnemonicParsing="false" text="None">
+               <toggleGroup>
+                  <ToggleGroup fx:id="dairyGroup" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="wholeLabel" mnemonicParsing="false" text="Whole" toggleGroup="$dairyGroup" />
+            <RadioButton fx:id="_2percentLabel" mnemonicParsing="false" text="2 Percent" toggleGroup="$dairyGroup" />
+            <RadioButton fx:id="nonFatLabel" mnemonicParsing="false" text="Non-Fat/Skim" toggleGroup="$dairyGroup" />
+            <RadioButton fx:id="almondLabel" mnemonicParsing="false" text="Almond" toggleGroup="$dairyGroup" />
+            <RadioButton fx:id="soyLabel" mnemonicParsing="false" text="Soy" toggleGroup="$dairyGroup" />
+         </children>
+         <padding>
+            <Insets left="60.0" />
+         </padding>
+      </VBox>
+      <Label fx:id="flavorLabel" text="FLAVORS">
+         <VBox.margin>
+            <Insets left="25.0" />
+         </VBox.margin>
+      </Label>
+      <VBox fx:id="flavorBox" prefHeight="236.0" prefWidth="580.0" spacing="20.0">
+         <children>
+            <RadioButton fx:id="caramelLabel" mnemonicParsing="false" text="Rich Caramel" />
+            <RadioButton fx:id="mochaLabel" mnemonicParsing="false" text="Creamy Mocha" />
+            <RadioButton fx:id="vanillaLabel" mnemonicParsing="false" text="French Vanilla" />
+            <RadioButton fx:id="almondFlavorLabel" mnemonicParsing="false" text="Toasted Almond" />
+            <RadioButton fx:id="hazelnutLabel" mnemonicParsing="false" text="Hazelnut" />
+            <RadioButton fx:id="coconutLabel" mnemonicParsing="false" text="Coconut" />
+         </children>
+         <padding>
+            <Insets left="60.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</VBox>

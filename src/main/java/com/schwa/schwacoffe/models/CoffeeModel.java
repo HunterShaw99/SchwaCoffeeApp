@@ -27,10 +27,10 @@ public class CoffeeModel {
         this.flavors = new ArrayList<Flavor>();
     }
 
-    public CoffeeModel(String imageURL) {
+    public CoffeeModel(String imageURL, BigDecimal price) {
         itemID = UUID.randomUUID();
         image = new Image(imageURL);
-        this.price = BigDecimal.ZERO;
+        this.price = price;
         this.flavors = new ArrayList<Flavor>();
     }
 

@@ -16,9 +16,10 @@ public class CartManager {
     private volatile static CartManager instance = null;
     private static ObservableList<CoffeeModel> _currentOrder;
     private static CoffeeModel currentItem;
-
+    private static ObservableList<CoffeeModel> currentItemList;
     private CartManager() {
         _currentOrder = FXCollections.observableArrayList();
+        currentItemList = FXCollections.observableArrayList();
     }
 
     /**
@@ -104,12 +105,17 @@ public class CartManager {
         return currentItem;
     }
 
+    public ObservableList<CoffeeModel> GetCurrentItemList() {
+        return currentItemList;
+    }
     /**
      * Sets the specified CoffeeModel item to m.
      * @param m
      */
     public void SetCurrentItem(CoffeeModel m) {
+        currentItemList.clear();
         currentItem = m;
+        currentItemList.add(m);
     }
 
 }
