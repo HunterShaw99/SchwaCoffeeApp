@@ -68,9 +68,9 @@ public class CartController {
         if (numInits == 0) {
             CartListView.setItems(CartManager.GetInstance().GetCartItems());
             CartListView.setCellFactory(new CoffeeCellFactory());
+            numInits++;
         }
         CartTotalLabel.setText(CartManager.GetInstance().GetCartTotal());
-        numInits++;
     }
 
     @FXML

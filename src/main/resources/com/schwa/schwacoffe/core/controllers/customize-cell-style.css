@@ -4,7 +4,7 @@
     -fx-text-fill:  #502c12;
 }
 #beverageNameLabel {
-    -fx-font: 22px  Arial ;
+    -fx-font: 22px  Arial;
     -fx-font-weight: BOLD;
     -fx-text-fill:  #502c12;
 }
@@ -12,4 +12,10 @@
     -fx-border-color:  #361d09;
     -fx-border-width: 4px;
     -fx-border-style: solid;
+}
+RadioButton {
+    -fx-font: 16px  Arial;
+}
+#beverageImageView {
+    -fx-effect: dropshadow(three-pass-box, rgba(31, 15, 4, 0.79), 10, .07, 0.5,0.5);
 }
