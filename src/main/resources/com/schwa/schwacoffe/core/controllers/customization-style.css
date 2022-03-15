@@ -1,87 +1,28 @@
-Label {
-    -fx-font: 22px  Arial;
-    -fx-font-weight: BOLD;
-    -fx-text-fill:  #361d09;
-}
-Ellipse {
-    -fx-fill:  #1f0f04;
-}
-#sizeOption1PriceLabel, #sizeOption2PriceLabel, #sizeOption3PriceLabel,
-#milkOption1PriceLabel, #milkOption2PriceLabel, #milkOption3PriceLabel,
-#flavorOption1PriceLabel, #flavorOption2PriceLabel, #flavorOption3PriceLabel,
-#sizePriceLabel, #milkPriceLabel, #flavorPriceLabel, #totalPriceLabel {
-    -fx-font: 18px  Arial;
-    -fx-font-weight: BOLD;
-    -fx-text-fill:  #361d09;
-}
-#sizePriceLabel, #milkPriceLabel, #flavorPriceLabel, #totalPriceLabel {
-    -fx-font-size: 22px;
-}
-#titleLabel {
-    -fx-font: 26px  Sans;
-    -fx-font-weight: BOLD;
-    -fx-text-fill:  white;
-}
-Rectangle {
-    -fx-fill:  white;
-}
-RadioButton, CheckBox {
-    -fx-font: 18px  Arial;
-    -fx-font-weight: BOLD;
-    -fx-text-fill:  #361d09;
-}
-.radio-button .radio {
-    -fx-border-width: 1px;
-    -fx-border-color:  #1f0f04;
-    -fx-background-color: #d9d9d9;
-    -fx-border-radius: 15px;
-    -fx-padding: 3px;
-}
-.radio-button:selected .radio .dot {
+#headerBox {
     -fx-background-color:  #361d09;
-    -fx-background-insets: 0;
-}
-.check-box .box {
-    -fx-padding: 2;
-    -fx-border-color:  #1f0f04;
-    -fx-background-color: #d9d9d9;
-    -fx-background-radius: 10;
-    -fx-border-radius: 10;
-}
-.check-box:selected .mark {
-    -fx-scale-x: 0.8;
-    -fx-scale-y: 0.8;
-    -fx-background-color:  white;
-}
-.check-box:selected .box {
-    -fx-background-color:  #361d09;
-}
-.button {
-    -fx-font: 16px  Arial ;
-    -fx-text-fill:  white;
-    -fx-font-weight: BOLD;
-    -fx-background-color:  #361d09;
-}
-.button:pressed {
-    -fx-background-color:  #502c12;
-    -fx-text-fill:  white;
-}
-#backButton {
-    -fx-text-fill: #361d09;
-    -fx-background-color: white;
-}
-#backButton:pressed {
-    -fx-background-color: #cccbc9;
-    -fx-text-fill:  #361d09;
-}
-#headerBar {
-    -fx-background-color: #45240a;
     -fx-effect: dropshadow(three-pass-box, #1f0f04, 10, .07, 0.5,0.5);
 }
-AnchorPane {
-    -fx-background-color:  #bbaea3;
+BorderPane {
+    -fx-background-color:  #bbaea3 ;
 }
-#imagePlaceholder {
-    -fx-stroke-width: 2;
-    -fx-stroke: #361d09;
+.list-cell, .list-view {
+    -fx-background-color: transparent;
+}
+.list-view .scroll-bar:vertical .increment-arrow,
+.list-view .scroll-bar:vertical .decrement-arrow,
+.list-view .scroll-bar:vertical .increment-button,
+.list-view .scroll-bar:vertical .decrement-button {
+    -fx-background-color: transparent;
+}
+#customizeListView .scroll-bar {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+#customizeListView .scroll-bar:vertical .thumb {
+    -fx-background-color: rgba(190, 190, 190, 0.5);
+}
+#centerVBox {
+    -fx-background-color:  white;
+    -fx-background-radius: 25px;
+    -fx-border-radius: 25px;
 }

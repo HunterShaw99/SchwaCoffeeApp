@@ -68,9 +68,9 @@ public class CartController {
         if (numInits == 0) {
             CartListView.setItems(CartManager.GetInstance().GetCartItems());
             CartListView.setCellFactory(new CoffeeCellFactory());
+            numInits++;
         }
         CartTotalLabel.setText(CartManager.GetInstance().GetCartTotal());
-        numInits++;
     }
 
     @FXML
@@ -141,8 +141,8 @@ public class CartController {
         writer.println("Customer Order: ");
         for (CoffeeModel item : CartManager.GetInstance().GetCartItems()) {
             names[i] = item.getName();
-            sizes[i] = item.getSize();
-            milk[i] = item.getMilk();
+            sizes[i] = item.getSize().name();
+            milk[i] = item.getMilkValue();
             flavors[i] = String.valueOf(item.getFlavors());
 
             writer.println("   Item " + (i+1) + ":  " + names[i] + "    " + sizes[i] + "    " + milk[i] + "    " + flavors[i]);

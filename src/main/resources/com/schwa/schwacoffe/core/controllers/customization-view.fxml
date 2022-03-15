@@ -1,52 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.RadioButton?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.shape.Ellipse?>
-<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane fx:id="ap" prefHeight="800.0" prefWidth="800.0" stylesheets="@customization-style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.schwa.schwacoffe.core.controllers.CustomizationController">
-    <children>
-        <HBox fx:id="headerBar" alignment="CENTER" prefHeight="59.0" prefWidth="800.0">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" stylesheets="@customization-style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.schwa.schwacoffe.core.controllers.CustomizationController">
+   <top>
+      <HBox fx:id="headerBox" prefHeight="59.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="15.0" />
+         </BorderPane.margin></HBox>
+   </top>
+   <center>
+      <VBox fx:id="centerVBox" alignment="CENTER" prefHeight="200.0" prefWidth="632.0" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="titleLabel" text="Customize Your Coffəə" textAlignment="CENTER" />
-         </children></HBox>
-        <Rectangle arcHeight="50.0" arcWidth="50.0" fill="DODGERBLUE" height="659.0" layoutX="100.0" layoutY="100.0" width="600.0" />
-        <Button fx:id="backButton" layoutX="30.0" layoutY="15.0" mnemonicParsing="false" onAction="#BackButtonClicked" text="Back" />
-        <Rectangle fx:id="imagePlaceholder" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="150.0" layoutX="325.0" layoutY="120.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
-        <Button fx:id="finishButton" layoutX="613.0" layoutY="685.0" mnemonicParsing="false" onAction="#FinishButtonClicked" prefHeight="59.0" prefWidth="78.0" text="Add to Cart" textAlignment="CENTER" wrapText="true" />
-        <Label fx:id="sizeLabel" layoutX="130.0" layoutY="345.0" text="Size" />
-        <Label fx:id="milkLabel" layoutX="130.0" layoutY="470.0" text="Dairy" />
-        <Label fx:id="flavorLabel" layoutX="130.0" layoutY="595.0" text="Flavors" />
-        <Label fx:id="sizePriceLabel" layoutX="525.0" layoutY="345.0" text="sizePrice" />
-        <Label fx:id="milkPriceLabel" layoutX="525.0" layoutY="470.0" text="milkPrice" />
-        <Label fx:id="flavorPriceLabel" layoutX="525.0" layoutY="595.0" text="flavorPrice" />
-        <Label fx:id="totalPriceLabel" layoutX="527.0" layoutY="702.0" text="totalPrice" />
-      <ImageView fx:id="coffeeImageView" fitHeight="150.0" fitWidth="150.0" layoutX="325.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true" />
-      <CheckBox fx:id="flavorCheckBox1" layoutX="240.0" layoutY="560.0" mnemonicParsing="false" text="Vanilla" />
-      <CheckBox fx:id="flavorCheckBox2" layoutX="240.0" layoutY="595.0" mnemonicParsing="false" text="Caramel" />
-      <RadioButton fx:id="sizeRadio1" layoutX="240.0" layoutY="310.0" mnemonicParsing="false" text="Small" />
-      <RadioButton fx:id="sizeRadio2" layoutX="240.0" layoutY="345.0" mnemonicParsing="false" text="Medium" />
-      <RadioButton fx:id="sizeRadio3" layoutX="240.0" layoutY="380.0" mnemonicParsing="false" text="Large" />
-      <Label fx:id="sizeOption1PriceLabel" layoutX="370.0" layoutY="310.0" text="sizeOption1Price" />
-      <Label fx:id="sizeOption2PriceLabel" layoutX="370.0" layoutY="345.0" text="sizeOption2Price" />
-      <Label fx:id="sizeOption3PriceLabel" layoutX="370.0" layoutY="380.0" text="sizeOption3Price" />
-      <RadioButton fx:id="milkRadio1" layoutX="240.0" layoutY="435.0" mnemonicParsing="false" text="Whole" />
-      <RadioButton fx:id="milkRadio2" layoutX="240.0" layoutY="470.0" mnemonicParsing="false" text="2%" />
-      <RadioButton fx:id="milkRadio3" layoutX="240.0" layoutY="505.0" mnemonicParsing="false" text="Non-fat" />
-      <Label fx:id="milkOption1PriceLabel" layoutX="370.0" layoutY="435.0" text="milkOption1Price" />
-      <Label fx:id="milkOption2PriceLabel" layoutX="370.0" layoutY="470.0" text="milkOption2Price" />
-      <Label fx:id="milkOption3PriceLabel" layoutX="370.0" layoutY="505.0" text="milkOption3Price" />
-      <CheckBox fx:id="flavorCheckBox3" layoutX="240.0" layoutY="630.0" mnemonicParsing="false" text="Hazelnut" />
-      <Label fx:id="flavorOption1PriceLabel" layoutX="370.0" layoutY="560.0" text="FlavorOption1Price" />
-      <Label fx:id="flavorOption2PriceLabel" layoutX="370.0" layoutY="595.0" text="FlavorOption2Price" />
-      <Label fx:id="flavorOption3PriceLabel" layoutX="370.0" layoutY="630.0" text="FlavorOption3Price" />
-      <Label fx:id="nameLabel" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="126.0" layoutY="132.0" prefHeight="109.0" prefWidth="182.0" text="Coffee Name" textAlignment="CENTER" wrapText="true" />
-      <Ellipse fill="BLACK" layoutX="553.0" layoutY="675.0" radiusX="50.0" radiusY="1.0" />
-    </children>
-</AnchorPane>
+            <ListView fx:id="customizeListView" prefHeight="583.0" prefWidth="600.0">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin></ListView>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="35.0">
+               <children>
+                  <Label text="Price:">
+                     <HBox.margin>
+                        <Insets right="-20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="totalPriceLabel" text="Label">
+                     <HBox.margin>
+                        <Insets right="200.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Button fx:id="finishButton" mnemonicParsing="false" onMouseClicked="#AddToCart" prefHeight="51.0" prefWidth="87.0" text="Add To Cart" />
+               </children>
+               <padding>
+                  <Insets right="75.0" />
+               </padding>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="20.0" left="100.0" right="100.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>

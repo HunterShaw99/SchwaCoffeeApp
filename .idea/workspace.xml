@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1c0500fc-2ff0-4666-a22a-d9328c6e0841" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="FxmlFile" />
+        <option value="CSS File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/data/SceneManager.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/MenuApplication.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="259omsi0iJVGXTaDZsEe1yKURNd" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="build.tools" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Hunte\IdeaProjects\SchwaCoffe\schwacoffe\src\main\resources\com\schwa\schwacoffe" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Hunte\IdeaProjects\SchwaCoffe\src\main\resources\com\schwa\schwacoffe" />
+      <recent name="C:\Users\Hunte\IdeaProjects\SchwaCoffe\schwacoffe\src\main\resources\com\schwa\schwacoffe\core\controllers" />
+      <recent name="C:\Users\Hunte\IdeaProjects\SchwaCoffe\schwacoffe\src\main\resources\com\schwa\schwacoffe\core.controllers" />
+      <recent name="C:\Users\Hunte\IdeaProjects\SchwaCoffe\schwacoffe\src\main\resources\com\schwa\schwacoffe" />
+      <recent name="C:\Users\Hunte\My Documents" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.schwa.schwacoffe.core.controllers" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.MenuApplication">
+    <configuration name="MenuApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.schwa.schwacoffe.MenuApplication" />
+      <module name="SchwaCoffe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.schwa.schwacoffe.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testCartManager" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SchwaCoffe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.schwa.schwacoffe.core.data.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.schwa.schwacoffe.core.data" />
+      <option name="MAIN_CLASS_NAME" value="com.schwa.schwacoffe.core.data.testCartManager" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testCartManager.testEmptyCart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SchwaCoffe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.schwa.schwacoffe.core.data.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.schwa.schwacoffe.core.data" />
+      <option name="MAIN_CLASS_NAME" value="com.schwa.schwacoffe.core.data.testCartManager" />
+      <option name="METHOD_NAME" value="testEmptyCart" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testCartManager.testGetBeverage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SchwaCoffe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.schwa.schwacoffe.core.data.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.schwa.schwacoffe.core.data" />
+      <option name="MAIN_CLASS_NAME" value="com.schwa.schwacoffe.core.data.testCartManager" />
+      <option name="METHOD_NAME" value="testGetBeverage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testCartManager.testRemoveItem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SchwaCoffe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.schwa.schwacoffe.core.data.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.schwa.schwacoffe.core.data" />
+      <option name="MAIN_CLASS_NAME" value="com.schwa.schwacoffe.core.data.testCartManager" />
+      <option name="METHOD_NAME" value="testRemoveItem" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MenuApplication" />
+        <item itemvalue="JUnit.testCartManager" />
+        <item itemvalue="JUnit.testCartManager.testRemoveItem" />
+        <item itemvalue="JUnit.testCartManager.testGetBeverage" />
+        <item itemvalue="JUnit.testCartManager.testEmptyCart" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1c0500fc-2ff0-4666-a22a-d9328c6e0841" name="Changes" comment="" />
+      <created>1644948827850</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1644948827850</updated>
+      <workItem from="1644948832745" duration="2225000" />
+      <workItem from="1645030693151" duration="7866000" />
+      <workItem from="1645045366598" duration="306000" />
+      <workItem from="1645045715100" duration="160000" />
+      <workItem from="1645195105105" duration="6022000" />
+      <workItem from="1645202219526" duration="1661000" />
+      <workItem from="1645207243168" duration="2465000" />
+      <workItem from="1645210066930" duration="60000" />
+      <workItem from="1645212441357" duration="98000" />
+      <workItem from="1645213929954" duration="773000" />
+      <workItem from="1645452059175" duration="2843000" />
+      <workItem from="1645462369324" duration="600000" />
+      <workItem from="1645466164139" duration="3043000" />
+      <workItem from="1645651446138" duration="10000" />
+      <workItem from="1645687482578" duration="3808000" />
+      <workItem from="1645692635743" duration="958000" />
+      <workItem from="1645694281983" duration="1722000" />
+      <workItem from="1645696145479" duration="919000" />
+      <workItem from="1645807753116" duration="2626000" />
+      <workItem from="1646057144613" duration="1812000" />
+      <workItem from="1646067572827" duration="1201000" />
+      <workItem from="1646070633074" duration="2222000" />
+      <workItem from="1646086088471" duration="42000" />
+      <workItem from="1646156393030" duration="185000" />
+      <workItem from="1646156590013" duration="4000" />
+      <workItem from="1646156606706" duration="36000" />
+      <workItem from="1646156653389" duration="3170000" />
+      <workItem from="1646452677261" duration="47000" />
+      <workItem from="1646495163055" duration="57000" />
+      <workItem from="1646948908998" duration="3862000" />
+      <workItem from="1647104931621" duration="7580000" />
+      <workItem from="1647131936309" duration="2059000" />
+      <workItem from="1647134359977" duration="1278000" />
+      <workItem from="1647137644517" duration="1592000" />
+      <workItem from="1647189531134" duration="193000" />
+      <workItem from="1647208971096" duration="9000" />
+      <workItem from="1647209259871" duration="954000" />
+      <workItem from="1647295851303" duration="6657000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

@@ -1,29 +1,41 @@
 package com.schwa.schwacoffe.models;
 
+import com.schwa.schwacoffe.models.constants.Dairy;
+import com.schwa.schwacoffe.models.constants.Flavor;
+import com.schwa.schwacoffe.models.constants.Size;
 import javafx.scene.image.Image;
-
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Dictionary;
-import java.util.HashMap;
 import java.util.List;
+import java.util.UUID;
 
 //each coffee model will have: a name, the chosen size, the chosen milk, the chosen flavors,
 //                            the total price, and the prices per size.
 public class CoffeeModel {
+
+    private UUID itemID;
     private String name;
-    private String size;
-    private String milk;
-    private List<String> flavors;
+    private Size size;
+    private Dairy milk;
+    private List<Flavor> flavors;
     private BigDecimal price;
-    private BigDecimal basePrice;
     private Image image;
 
     public CoffeeModel() {
-        this.basePrice = BigDecimal.ZERO;
-        this.flavors = new ArrayList<>();
-        size = "";
-        milk = "";
+        itemID = UUID.randomUUID();
+        this.price = BigDecimal.ZERO;
+        this.flavors = new ArrayList<Flavor>();
+    }
+
+    public CoffeeModel(String imageURL, BigDecimal price) {
+        itemID = UUID.randomUUID();
+        image = new Image(imageURL);
+        this.price = price;
+        this.flavors = new ArrayList<Flavor>();
+    }
+
+    public UUID getItemID() {
+        return this.itemID;
     }
 
     public String toString() {
@@ -33,48 +45,52 @@ public class CoffeeModel {
     public void setName(String name) {
         this.name = name;
     }
+
     public String getName() {
         return name;
     }
-    public void setSize(String size) {
+
+    public void setSize(Size size) {
         this.size = size;
     }
-    public String getSize() {
+
+    public Size getSize() {
         return size;
     }
-    public void setMilk(String milk) {
+
+    public void setMilk(Dairy milk) {
         this.milk = milk;
     }
-    public String getMilk() {
+
+    public Dairy getMilk() {
         return milk;
     }
-    public List<String> getFlavors() {
-        return flavors;
+
+    public String getMilkValue() {
+        return milk.getDairy();
     }
-    public void setFlavors(List<String> flavors) {
-        this.flavors = flavors;
+
+    public String getFlavors() {
+        String str = flavors.toString();
+        return str.substring(1, str.length()-1);
     }
+
     public void setPrice(BigDecimal price) {
         this.price = price;
     }
+
     public BigDecimal getPrice() {
         return price;
     }
-    public void setBasePrice(BigDecimal basePrice) {
-        this.basePrice = basePrice;
-    }
-    public BigDecimal getBasePrice() {
-        return basePrice;
-    }
-    public void addFlavor(String flavor) {
+
+    public void addFlavor(Flavor flavor) {
         flavors.add(flavor);
     }
-    public void removeFlavor(String flavor) {
+
+    public void removeFlavor(Flavor flavor) {
         flavors.remove(flavor);
     }
-    public void setImage(Image image) {
-        this.image = image;
-    }
+
     public Image getImage() {
         return image;
     }

@@ -2,19 +2,17 @@
     -fx-font: 16px Arial;
     -fx-text-fill: white;
     -fx-font-weight: BOLD;
-    -fx-background-color: #45240a;
+    -fx-background-color: #361d09;
 }
 .button:pressed {
     -fx-background-color: #502c12;
     -fx-text-fill:  white ;
 }
 #CartButton {
-    -fx-text-fill: #361d09;
-    -fx-background-color: white;
+    -fx-background-color: transparent;
 }
 #CartButton:focused {
-    -fx-background-color: #cccbc9;
-    -fx-text-fill:  #361d09;
+    -fx-background-color: transparent;
 }
 #TempLabel {
     -fx-font: 22px  Arial ;
@@ -32,7 +30,7 @@
     -fx-text-fill: white;
 }
 #HeaderBar {
-    -fx-background-color: #45240a;
+    -fx-background-color: #361d09;
     -fx-effect: dropshadow(three-pass-box, #1f0f04, 10, .07, 0.5,0.5);
 }
 #rect {
