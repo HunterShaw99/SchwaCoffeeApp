@@ -10,6 +10,7 @@ public class SendOrder implements Runnable {
 
     @Override
     public void run() {
+    /*
         AmazonSQS sqs = AmazonSQSClientBuilder.defaultClient();
 
         try {
@@ -24,6 +25,6 @@ public class SendOrder implements Runnable {
                 .withMessageBody("hello world")
                 .withDelaySeconds(5);
         sqs.sendMessage(send_msg_request);
-
+        */
     }
 }
