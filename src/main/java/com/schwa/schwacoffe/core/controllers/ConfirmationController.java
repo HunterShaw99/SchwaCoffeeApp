@@ -1,5 +1,10 @@
 package com.schwa.schwacoffe.core.controllers;
 
+import com.amazonaws.services.sqs.AmazonSQS;
+import com.amazonaws.services.sqs.AmazonSQSClientBuilder;
+import com.amazonaws.services.sqs.model.AmazonSQSException;
+import com.amazonaws.services.sqs.model.CreateQueueResult;
+import com.amazonaws.services.sqs.model.SendMessageRequest;
 import com.schwa.schwacoffe.core.data.CartManager;
 import com.schwa.schwacoffe.models.CoffeeModel;
 import javafx.event.ActionEvent;
@@ -33,6 +38,9 @@ public class ConfirmationController {
     @FXML
     private Button MenuButton;
 
+    private final String qURL = "https://sqs.us-east-1.amazonaws.com/261944900994/schwa-coffee.fifo";
+    private final String qNAME = "schwa-coffee.fifo";
+
     private Stage stage;
     private Scene scene;
     private Parent root;
@@ -59,6 +67,23 @@ public class ConfirmationController {
 
         stage.setScene(scene);
         stage.show();
+    }
+
+    private void SendOrder() {
+        AmazonSQS sqs = AmazonSQSClientBuilder.defaultClient();
+
+        try {
+            CreateQueueResult create_result = sqs.createQueue(qNAME);
+        } catch (AmazonSQSException e) {
+            if (!e.getErrorCode().equals("QueueAlreadyExists")) {
+                throw e;
+            }
+        }
+        SendMessageRequest send_msg_request = new SendMessageRequest()
+                .withQueueUrl(qURL)
+                .withMessageBody("hello world")
+                .withDelaySeconds(5);
+        sqs.sendMessage(send_msg_request);
     }
 }
 
