@@ -11,6 +11,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
@@ -84,7 +85,7 @@ public class CustomizeCell extends ListCell<CoffeeModel> {
             setGraphic(null);
         } else {
             beverageNameLabel.setText(beverage.getName());
-            beverageImageView.setImage(beverage.getImage());
+            beverageImageView.setImage(new Image(beverage.getImage()));
             setGraphic(base);
         }
     }

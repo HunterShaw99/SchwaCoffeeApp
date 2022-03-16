@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
@@ -60,7 +61,7 @@ public class CoffeeCell extends ListCell<CoffeeModel> {
             milkLabel.setText(beverage.getMilkValue());
             flavorLabel.setText("Flavors: "+beverage.getFlavors().replace("[", "").replace("]", ""));
             priceLabel.setText("$"+beverage.getPrice().toString());
-            coffeeImage.setImage(beverage.getImage());
+            coffeeImage.setImage(new Image(beverage.getImage()));
             setGraphic(base);
         }
     }

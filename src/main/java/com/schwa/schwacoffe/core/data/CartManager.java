@@ -81,12 +81,12 @@ public class CartManager {
      * order.
      * @return String that represents the aggregate of entire cart.
      */
-    public String GetCartTotal() {
+    public BigDecimal GetCartTotal() {
         BigDecimal cartTotal = BigDecimal.ZERO;
         for (CoffeeModel c : _currentOrder) {
             cartTotal = cartTotal.add(c.getPrice());
         }
-        return "$"+cartTotal.toString();
+        return cartTotal;
     }
 
     /**

@@ -70,7 +70,7 @@ public class CartController {
             CartListView.setCellFactory(new CoffeeCellFactory());
             numInits++;
         }
-        CartTotalLabel.setText(CartManager.GetInstance().GetCartTotal());
+        CartTotalLabel.setText("$"+CartManager.GetInstance().GetCartTotal());
     }
 
     @FXML

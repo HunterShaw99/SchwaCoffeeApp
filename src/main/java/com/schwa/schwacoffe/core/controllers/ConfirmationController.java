@@ -1,12 +1,19 @@
 package com.schwa.schwacoffe.core.controllers;
 
+import com.amazonaws.regions.Regions;
 import com.amazonaws.services.sqs.AmazonSQS;
 import com.amazonaws.services.sqs.AmazonSQSClientBuilder;
 import com.amazonaws.services.sqs.model.AmazonSQSException;
 import com.amazonaws.services.sqs.model.CreateQueueResult;
 import com.amazonaws.services.sqs.model.SendMessageRequest;
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.PropertyAccessor;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.schwa.schwacoffe.core.data.CartManager;
 import com.schwa.schwacoffe.models.CoffeeModel;
+import com.schwa.schwacoffe.models.OrderModel;
+import com.schwa.schwacoffe.models.constants.OrderStatus;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -18,8 +25,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
-
 import java.io.IOException;
+import java.math.BigDecimal;
+
+
+import static com.amazonaws.regions.Regions.US_EAST_1;
 
 public class ConfirmationController {
 
@@ -45,9 +55,10 @@ public class ConfirmationController {
     private Scene scene;
     private Parent root;
 
-    public void initialize() {
+    public void initialize() throws JsonProcessingException {
         ConfirmListView.setItems(CartManager.GetInstance().GetCartItems());
         ConfirmListView.setCellFactory(new CoffeeCellFactory());
+        SendOrder();
     }
 
     @FXML
@@ -69,20 +80,22 @@ public class ConfirmationController {
         stage.show();
     }
 
-    private void SendOrder() {
-        AmazonSQS sqs = AmazonSQSClientBuilder.defaultClient();
+    private void SendOrder() throws JsonProcessingException {
+        BigDecimal orderTotal = CartManager.GetInstance().GetCartTotal();
+        OrderModel order = new OrderModel(orderTotal, CartManager.GetInstance().GetCartItems(), OrderStatus.PROCESSING);
+        AmazonSQS sqs = AmazonSQSClientBuilder.standard()
+                .withRegion(US_EAST_1)
+                .build();
 
-        try {
-            CreateQueueResult create_result = sqs.createQueue(qNAME);
-        } catch (AmazonSQSException e) {
-            if (!e.getErrorCode().equals("QueueAlreadyExists")) {
-                throw e;
-            }
-        }
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
+        String orderJSON = objectMapper.writeValueAsString(order);
         SendMessageRequest send_msg_request = new SendMessageRequest()
                 .withQueueUrl(qURL)
-                .withMessageBody("hello world")
-                .withDelaySeconds(5);
+                .withMessageBody(orderJSON)
+                .withDelaySeconds(0);
+        send_msg_request.setMessageGroupId("coffee");
+        send_msg_request.setMessageDeduplicationId(order.orderID);
         sqs.sendMessage(send_msg_request);
     }
 }

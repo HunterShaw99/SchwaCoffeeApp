@@ -4,6 +4,8 @@ import com.schwa.schwacoffe.models.constants.Dairy;
 import com.schwa.schwacoffe.models.constants.Flavor;
 import com.schwa.schwacoffe.models.constants.Size;
 import javafx.scene.image.Image;
+
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +13,7 @@ import java.util.UUID;
 
 //each coffee model will have: a name, the chosen size, the chosen milk, the chosen flavors,
 //                            the total price, and the prices per size.
-public class CoffeeModel {
+public class CoffeeModel implements Serializable {
 
     private UUID itemID;
     private String name;
@@ -19,7 +21,7 @@ public class CoffeeModel {
     private Dairy milk;
     private List<Flavor> flavors;
     private BigDecimal price;
-    private Image image;
+    private String image;
 
     public CoffeeModel() {
         itemID = UUID.randomUUID();
@@ -29,7 +31,7 @@ public class CoffeeModel {
 
     public CoffeeModel(String imageURL, BigDecimal price) {
         itemID = UUID.randomUUID();
-        image = new Image(imageURL);
+        image = imageURL;
         this.price = price;
         this.flavors = new ArrayList<Flavor>();
     }
@@ -91,7 +93,7 @@ public class CoffeeModel {
         flavors.remove(flavor);
     }
 
-    public Image getImage() {
+    public String getImage() {
         return image;
     }
 }
