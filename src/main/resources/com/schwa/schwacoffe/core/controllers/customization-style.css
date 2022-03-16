@@ -1,3 +1,14 @@
+.button {
+    -fx-font: 16px  Arial;
+    -fx-text-fill:  white;
+    -fx-font-weight: BOLD;
+    -fx-background-color:  #361d09;
+}
+#priceLabel, #totalPriceLabel {
+    -fx-font: 16px  Arial;
+    -fx-font-weight: BOLD;
+    -fx-text-fill:  #361d09;
+}
 #headerBox {
     -fx-background-color:  #361d09;
     -fx-effect: dropshadow(three-pass-box, #1f0f04, 10, .07, 0.5,0.5);

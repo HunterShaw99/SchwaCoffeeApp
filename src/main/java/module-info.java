@@ -5,6 +5,7 @@ module com.schwa.schwacoffe {
     requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
     requires org.kordamp.bootstrapfx.core;
+    requires aws.java.sdk.sqs;
 
 
     opens com.schwa.schwacoffe to javafx.fxml;
