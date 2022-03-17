@@ -142,7 +142,6 @@ public class MenuController {
         }
         CoffeeModel m = new CoffeeModel(image, CoffeePrice.MEDIUM_COST);//Default base price for all beverages is medium
         m.setName(itemName);
-        System.out.println(image);
         CartManager.GetInstance().SetCurrentItem(m);
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("customization-view.fxml"));

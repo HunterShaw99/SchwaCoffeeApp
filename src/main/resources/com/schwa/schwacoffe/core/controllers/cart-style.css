@@ -48,7 +48,7 @@
     -fx-background-color: rgba(190, 190, 190, 0.5);
 }
 #HeaderBar {
-    -fx-background-color:  #45240a;
+    -fx-background-color:  #361d09;
     -fx-effect: dropshadow(three-pass-box, #1f0f04, 10, .07, 0.5,0.5);
 }
 VBox {

@@ -14,3 +14,8 @@
     -fx-background-radius: 25;
     -fx-border-radius: 25;
 }
+.button {
+    -fx-background-color: transparent;
+    -fx-text-fill: red;
+    -fx-font-size: 14px;
+}
