@@ -1,0 +1,75 @@
+.button {
+    -fx-font: 16px  Arial ;
+    -fx-text-fill:  white;
+    -fx-font-weight: BOLD;
+    -fx-background-color:  #361d09;
+}
+.button:focused {
+    -fx-background-color:  #502c12;
+    -fx-text-fill:  white;
+}
+#BackButton {
+    -fx-text-fill: #361d09;
+    -fx-background-color: white;
+}
+#BackButton:focused {
+    -fx-background-color: #cccbc9;
+    -fx-text-fill:  #361d09;
+}
+#PickUpLabel, #CartLabel {
+    -fx-font: 22px  Arial ;
+    -fx-font-weight: BOLD;
+    -fx-text-fill:  #502c12;
+}
+#CartTotalLabel {
+    -fx-font: 22px  Arial ;
+    -fx-font-weight: BOLD;
+    -fx-text-fill:  #361d09;
+}
+#CartTitleLabel {
+    -fx-font: 26px  Sans ;
+    -fx-font-weight: BOLD;
+    -fx-text-fill:  white;
+}
+.list-cell, .list-view {
+    -fx-background-color: transparent;
+}
+.list-view .scroll-bar:vertical .increment-arrow,
+.list-view .scroll-bar:vertical .decrement-arrow,
+.list-view .scroll-bar:vertical .increment-button,
+.list-view .scroll-bar:vertical .decrement-button {
+    -fx-background-color: transparent;
+}
+#CartListView .scroll-bar {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+#CartListView .scroll-bar:vertical .thumb {
+    -fx-background-color: rgba(190, 190, 190, 0.5);
+}
+#HeaderBar {
+    -fx-background-color:  #361d09;
+    -fx-effect: dropshadow(three-pass-box, #1f0f04, 10, .07, 0.5,0.5);
+}
+VBox {
+    -fx-background-color:  white;
+    -fx-background-radius: 25px;
+    -fx-border-radius: 25px;
+}
+BorderPane {
+    -fx-background-color:  #bbaea3 ;
+}
+.slider .track {
+    -fx-background-color:  grey;
+}
+.slider .axis .axis-tick-mark {
+    -fx-stroke:  #1f0f04;
+}
+#PickupSlider .thumb {
+    -fx-background-color: #1f0f04;
+}
+.separator .line{
+    -fx-border-color:  #361d09;
+    -fx-border-width: 4px;
+    -fx-border-style: solid;
+}

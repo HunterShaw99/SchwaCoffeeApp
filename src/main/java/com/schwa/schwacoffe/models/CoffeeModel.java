@@ -72,15 +72,9 @@ public class CoffeeModel implements Serializable {
         return milk.getDairy();
     }
 
-    public String getFlavors() {
-        String str;
-        if (flavors.size() > 0) {
-            str = flavors.toString();
-            return str.substring(1, str.length()-1);
-        } else {
-            str = " ";
-        }
-        return str;
+    public ArrayList<Flavor> getFlavors() {
+        ArrayList<Flavor> f = new ArrayList<>(flavors);
+        return f;
     }
 
     public void setPrice(BigDecimal price) {

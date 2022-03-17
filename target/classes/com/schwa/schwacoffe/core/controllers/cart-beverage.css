@@ -1,0 +1,31 @@
+.label {
+    -fx-font: 16px Arial;
+    -fx-text-fill: #361d09;
+}
+#priceLabel {
+    -fx-font-size: 22px;
+}
+#rect {
+    -fx-stroke-width: 2;
+    -fx-stroke: #361d09;
+}
+#base {
+    -fx-background-color: rgba(183, 183, 183, 0.15);
+    -fx-background-radius: 25;
+    -fx-border-radius: 25;
+}
+.button {
+    -fx-background-color: transparent;
+    -fx-text-fill: red;
+    -fx-font-size: 14px;
+}
+.button:focused {
+    -fx-background-color: transparent;
+    -fx-text-fill: red;
+    -fx-font-size: 14px;
+}
+.separator .line {
+    -fx-border-color:  #361d09;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+}
