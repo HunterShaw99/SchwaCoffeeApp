@@ -1,6 +1,7 @@
 package com.schwa.schwacoffe.core.controllers;
 
 import com.schwa.schwacoffe.core.data.CartManager;
+import com.schwa.schwacoffe.core.observer.Observer;
 import com.schwa.schwacoffe.models.CoffeeModel;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,13 +15,11 @@ import javafx.scene.control.Slider;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.math.BigDecimal;
 
 
-public class CartController {
+public class CartController implements Observer {
 
     @FXML
     private Button BackButton;
@@ -57,7 +56,7 @@ public class CartController {
     private Parent root;
     private int numInits = 0;
 
-    File baristaView = new File("orders.txt");
+    //File baristaView = new File("orders.txt");
 
     /**
      * Method that is called every time CartController is loaded into the stage.
@@ -68,6 +67,7 @@ public class CartController {
         if (numInits == 0) {
             CartListView.setItems(CartManager.GetInstance().GetCartItems());
             CartListView.setCellFactory(new CoffeeCellFactory());
+            CartManager.GetInstance().registerObserver(this);
             numInits++;
         }
         CartTotalLabel.setText("$"+CartManager.GetInstance().GetCartTotal());
@@ -104,9 +104,6 @@ public class CartController {
     @FXML
     void PlaceOrderClicked(MouseEvent event) throws IOException {
         if (!CartManager.GetInstance().IsEmpty()) {
-            CreateBaristaFile();
-            WriteBaristaFile();
-
             //switch scenes
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Confirmation-view.fxml"));
             root = loader.load();
@@ -121,6 +118,11 @@ public class CartController {
 
     }
 
+    @Override
+    public void update(BigDecimal total) {
+        CartTotalLabel.setText("$"+total);
+    }
+    /*
     void CreateBaristaFile() {
         try {
             if (baristaView.createNewFile()) {
@@ -133,6 +135,9 @@ public class CartController {
         }
     }
 
+     */
+
+    /*
     void WriteBaristaFile() throws FileNotFoundException {
         PrintWriter writer = new PrintWriter("orders.txt");
         String names[] = new String[5], sizes[] = new String[5], milk[] = new String[5], flavors[] = new String[5];
@@ -151,5 +156,7 @@ public class CartController {
         }
         writer.close();
     }
+
+     */
 }
 

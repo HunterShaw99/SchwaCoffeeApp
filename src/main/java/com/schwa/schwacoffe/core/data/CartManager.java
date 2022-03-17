@@ -1,9 +1,13 @@
 package com.schwa.schwacoffe.core.data;
 
+import com.schwa.schwacoffe.core.observer.Observer;
+import com.schwa.schwacoffe.core.observer.Subject;
 import com.schwa.schwacoffe.models.CoffeeModel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 
@@ -11,15 +15,17 @@ import java.util.UUID;
  * CartManager allows for ease of communication between different scenes needing data from the cart.
  * @author Hunter
  */
-public class CartManager {
+public class CartManager implements Subject {
 
     private volatile static CartManager instance = null;
     private static ObservableList<CoffeeModel> _currentOrder;
     private static CoffeeModel currentItem;
     private static ObservableList<CoffeeModel> currentItemList;
+    private List<Observer> observers;
     private CartManager() {
         _currentOrder = FXCollections.observableArrayList();
         currentItemList = FXCollections.observableArrayList();
+        observers = new ArrayList<>();
     }
 
     /**
@@ -51,7 +57,7 @@ public class CartManager {
      */
     public void RemoveBeverage(CoffeeModel toRemove) {
         if (_currentOrder.contains(toRemove)) _currentOrder.remove(toRemove);;
-        return;
+        notifyObservers();
     }
 
     public CoffeeModel GetBeverage(UUID beverageID) {
@@ -118,4 +124,20 @@ public class CartManager {
         currentItemList.add(m);
     }
 
+    @Override
+    public void registerObserver(Observer o) {
+        if (!observers.contains(o)) observers.add(o);
+    }
+
+    @Override
+    public void removeObserver(Observer o) {
+        if (observers.contains(o)) observers.remove(o);
+    }
+
+    @Override
+    public void notifyObservers() {
+        for (Observer o: observers) {
+            o.update(GetCartTotal());
+        }
+    }
 }

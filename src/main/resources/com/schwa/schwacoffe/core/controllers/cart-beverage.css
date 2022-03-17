@@ -19,3 +19,8 @@
     -fx-text-fill: red;
     -fx-font-size: 14px;
 }
+.button:focused {
+    -fx-background-color: transparent;
+    -fx-text-fill: red;
+    -fx-font-size: 14px;
+}

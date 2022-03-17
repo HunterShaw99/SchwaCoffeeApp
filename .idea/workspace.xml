@@ -6,15 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="1c0500fc-2ff0-4666-a22a-d9328c6e0841" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/controllers/CoffeeCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/controllers/CoffeeCell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/controllers/CustomizationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/controllers/CustomizationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/controllers/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/controllers/MenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/tasks/CartRemove.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/tasks/CartRemove.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/controllers/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/controllers/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/controllers/CoffeeCellFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/controllers/CoffeeCellFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/data/CartManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/data/CartManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/schwa/schwacoffe/core/controllers/CoffeeCell.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/schwa/schwacoffe/core/controllers/CoffeeCell.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/schwa/schwacoffe/core/controllers/cart-beverage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/schwa/schwacoffe/core/controllers/cart-beverage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/schwa/schwacoffe/core/controllers/cart-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/schwa/schwacoffe/core/controllers/cart-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/schwa/schwacoffe/core/controllers/customization-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/schwa/schwacoffe/core/controllers/customization-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/schwa/schwacoffe/core/controllers/customization-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/schwa/schwacoffe/core/controllers/customization-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +23,7 @@
         <option value="FxmlFile" />
         <option value="CSS File" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
