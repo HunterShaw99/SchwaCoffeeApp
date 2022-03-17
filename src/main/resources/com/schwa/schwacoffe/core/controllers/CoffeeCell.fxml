@@ -2,19 +2,23 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane fx:id="base" maxHeight="120.0" maxWidth="565.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="110.0" prefWidth="565.0" stylesheets="@cart-beverage.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label fx:id="nameLabel" layoutX="198.0" layoutY="32.0" prefHeight="20.0" prefWidth="347.0" text="Label" translateY="-25.0" AnchorPane.bottomAnchor="58.0" AnchorPane.leftAnchor="198.0" AnchorPane.topAnchor="32.0" />
-      <Label fx:id="milkLabel" layoutX="167.0" layoutY="35.0" prefHeight="20.0" prefWidth="40.0" text="Label" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="167.0" AnchorPane.topAnchor="35.0" />
+      <Label fx:id="milkLabel" layoutX="163.0" layoutY="45.0" prefHeight="20.0" prefWidth="52.0" text="Label" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="163.0" AnchorPane.topAnchor="45.0" />
       <Label fx:id="flavorLabel" layoutX="20.0" layoutY="86.0" prefHeight="20.0" prefWidth="533.0" text="Label" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="86.0" />
-      <Label fx:id="priceLabel" alignment="CENTER" layoutX="459.0" layoutY="30.0" prefHeight="30.0" prefWidth="88.0" text="Label" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="459.0" AnchorPane.topAnchor="30.0" />
+      <Label fx:id="priceLabel" alignment="CENTER" layoutX="457.0" layoutY="35.0" prefHeight="30.0" prefWidth="88.0" text="Label" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="457.0" AnchorPane.topAnchor="35.0" />
       <ImageView fx:id="coffeeImage" fitHeight="75.0" fitWidth="75.0" layoutX="20.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.topAnchor="7.0" />
       <Label layoutX="125.0" layoutY="7.0" prefHeight="20.0" prefWidth="73.0" text="Beverage:" AnchorPane.bottomAnchor="83.0" AnchorPane.topAnchor="7.0" />
-      <Label layoutX="430.0" layoutY="35.0" text="Price:" />
-      <Label layoutX="125.0" layoutY="35.0" prefHeight="20.0" prefWidth="42.0" text="Dairy:" AnchorPane.bottomAnchor="55.0" AnchorPane.topAnchor="35.0" />
-      <Button layoutX="459.0" layoutY="60.0" mnemonicParsing="false" onMouseClicked="#RemoveBevEvent" text="Remove" />
+      <Label layoutX="428.0" layoutY="40.0" text="Price:" />
+      <Label layoutX="121.0" layoutY="45.0" prefHeight="20.0" prefWidth="42.0" text="Dairy:" AnchorPane.bottomAnchor="45.0" AnchorPane.topAnchor="45.0" />
+      <Button layoutX="457.0" layoutY="65.0" mnemonicParsing="false" onMouseClicked="#RemoveBevEvent" text="Remove" />
+      <Label layoutX="236.0" layoutY="45.0" text="Size:" />
+      <Label fx:id="sizeLabel" layoutX="272.0" layoutY="45.0" text="Label" />
+      <Separator layoutX="214.0" layoutY="35.0" orientation="VERTICAL" prefHeight="40.0" prefWidth="4.0" />
    </children>
 </AnchorPane>

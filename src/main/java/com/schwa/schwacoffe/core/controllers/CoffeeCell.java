@@ -32,6 +32,9 @@ public class CoffeeCell extends ListCell<CoffeeModel> {
     private Label milkLabel;
 
     @FXML
+    private Label sizeLabel;
+
+    @FXML
     private ImageView coffeeImage;
 
     private CoffeeModel m;
@@ -68,6 +71,7 @@ public class CoffeeCell extends ListCell<CoffeeModel> {
             milkLabel.setText(beverage.getMilkValue());
             flavorLabel.setText("Flavors: "+beverage.getFlavors().replace("[", "").replace("]", ""));
             priceLabel.setText("$"+beverage.getPrice().toString());
+            sizeLabel.setText(beverage.getSize().getVal());
             coffeeImage.setImage(new Image(beverage.getImage()));
             setGraphic(base);
         }
