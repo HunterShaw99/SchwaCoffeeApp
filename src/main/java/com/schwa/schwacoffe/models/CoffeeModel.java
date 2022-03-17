@@ -68,10 +68,6 @@ public class CoffeeModel implements Serializable {
         return milk;
     }
 
-    public String getMilkValue() {
-        return milk.getDairy();
-    }
-
     public ArrayList<Flavor> getFlavors() {
         ArrayList<Flavor> f = new ArrayList<>(flavors);
         return f;

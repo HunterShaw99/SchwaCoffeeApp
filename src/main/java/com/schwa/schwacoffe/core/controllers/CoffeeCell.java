@@ -68,7 +68,7 @@ public class CoffeeCell extends ListCell<CoffeeModel> {
         } else {
             m = beverage;
             nameLabel.setText(beverage.getName());
-            milkLabel.setText(beverage.getMilkValue());
+            milkLabel.setText(beverage.getMilk().getDairy());
             flavorLabel.setText("Flavors: "+beverage.getFlavors());
             priceLabel.setText("$"+beverage.getPrice().toString());
             sizeLabel.setText(beverage.getSize().getVal());
