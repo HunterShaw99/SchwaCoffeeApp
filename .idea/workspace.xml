@@ -6,10 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1c0500fc-2ff0-4666-a22a-d9328c6e0841" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/controllers/CoffeeCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/controllers/CoffeeCell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/models/constants/Size.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/models/constants/Size.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/schwa/schwacoffe/core/controllers/CoffeeCell.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/schwa/schwacoffe/core/controllers/CoffeeCell.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/schwa/schwacoffe/core/controllers/cart-beverage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/schwa/schwacoffe/core/controllers/cart-beverage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/tasks/CartAdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/tasks/CartAdd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/models/CoffeeModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/models/CoffeeModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/models/constants/Flavor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/models/constants/Flavor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,6 +214,9 @@
       <workItem from="1647209259871" duration="954000" />
       <workItem from="1647295851303" duration="6657000" />
       <workItem from="1647385491842" duration="2906000" />
+      <workItem from="1647540038096" duration="2793000" />
+      <workItem from="1647546978357" duration="79000" />
+      <workItem from="1647549262420" duration="197000" />
     </task>
     <servers />
   </component>

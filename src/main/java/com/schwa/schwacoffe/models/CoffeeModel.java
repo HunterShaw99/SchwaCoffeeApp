@@ -73,8 +73,14 @@ public class CoffeeModel implements Serializable {
     }
 
     public String getFlavors() {
-        String str = flavors.toString();
-        return str.substring(1, str.length()-1);
+        String str;
+        if (flavors.size() > 0) {
+            str = flavors.toString();
+            return str.substring(1, str.length()-1);
+        } else {
+            str = " ";
+        }
+        return str;
     }
 
     public void setPrice(BigDecimal price) {
