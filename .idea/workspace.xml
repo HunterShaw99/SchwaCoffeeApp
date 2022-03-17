@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1c0500fc-2ff0-4666-a22a-d9328c6e0841" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/controllers/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/controllers/CartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/controllers/CoffeeCellFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/controllers/CoffeeCellFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/data/CartManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/data/CartManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/models/constants/CoffeePrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/models/constants/CoffeePrice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/schwa/schwacoffe/core/controllers/CoffeeCell.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/schwa/schwacoffe/core/controllers/CoffeeCell.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
