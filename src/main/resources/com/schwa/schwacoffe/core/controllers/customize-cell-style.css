@@ -3,8 +3,8 @@
     -fx-font-weight: BOLD;
     -fx-text-fill:  #502c12;
 }
-#beverageNameLabel {
-    -fx-font: 22px  Arial;
+#beverageNameLabel, #totalLabel {
+    -fx-font: 26px  Arial;
     -fx-font-weight: BOLD;
     -fx-text-fill:  #502c12;
 }

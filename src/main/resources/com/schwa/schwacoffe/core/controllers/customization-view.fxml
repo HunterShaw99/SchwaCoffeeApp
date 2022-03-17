@@ -33,24 +33,7 @@
                <VBox.margin>
                   <Insets top="25.0" />
                </VBox.margin></ListView>
-            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="35.0">
-               <children>
-                  <Label fx:id="priceLabel" text="Price:">
-                     <HBox.margin>
-                        <Insets right="-20.0" />
-                     </HBox.margin>
-                  </Label>
-                  <Label fx:id="totalPriceLabel" text="Label">
-                     <HBox.margin>
-                        <Insets right="190.0" />
-                     </HBox.margin>
-                  </Label>
-                  <Button fx:id="finishButton" mnemonicParsing="false" onMouseClicked="#AddToCart" prefHeight="51.0" prefWidth="115.0" text="Add To Cart" />
-               </children>
-               <padding>
-                  <Insets right="75.0" />
-               </padding>
-            </HBox>
+            <Button fx:id="finishButton" mnemonicParsing="false" onMouseClicked="#AddToCart" prefHeight="51.0" prefWidth="115.0" text="Add To Cart" />
          </children>
          <BorderPane.margin>
             <Insets bottom="20.0" left="100.0" right="100.0" />

@@ -56,18 +56,18 @@ public class MenuController {
     private Parent root;
 
     public void initialize() {
-        item1Picture.setImage(new Image("file:src/main/resources/com/schwa/schwacoffe/Cuppuccino.PNG"));
-        item2Picture.setImage(new Image("file:src/main/resources/com/schwa/schwacoffe/WhiteChoc.PNG"));
-        item3Picture.setImage(new Image("file:src/main/resources/com/schwa/schwacoffe/CarmelMacc.PNG"));
-        item4Picture.setImage(new Image("file:src/main/resources/com/schwa/schwacoffe/CinnamonDL.PNG"));
-        item5Picture.setImage(new Image("file:src/main/resources/com/schwa/schwacoffe/ExpressoMacc.PNG"));
-        item6Picture.setImage(new Image("file:src/main/resources/com/schwa/schwacoffe/PistachioL.PNG"));
-        item7Picture.setImage(new Image("file:src/main/resources/com/schwa/schwacoffe/IcedCoffee.PNG"));
-        item8Picture.setImage(new Image("file:src/main/resources/com/schwa/schwacoffe/IcedCarmelMacc.PNG"));
-        item9Picture.setImage(new Image("file:src/main/resources/com/schwa/schwacoffe/IcedCoffeeL.PNG"));
-        item10Picture.setImage(new Image("file:src/main/resources/com/schwa/schwacoffe/IcedExpresso.PNG"));
-        item11Picture.setImage(new Image("file:src/main/resources/com/schwa/schwacoffe/SaltedCarmel.PNG"));
-        item12Picture.setImage(new Image("file:src/main/resources/com/schwa/schwacoffe/IcedCoffeeA.PNG"));
+        item1Picture.setImage(new Image("file:src/main/resources/com/schwabarista/images/Cuppuccino.PNG"));
+        item2Picture.setImage(new Image("file:src/main/resources/com/schwabarista/images/WhiteChoc.PNG"));
+        item3Picture.setImage(new Image("file:src/main/resources/com/schwabarista/images/CarmelMacc.PNG"));
+        item4Picture.setImage(new Image("file:src/main/resources/com/schwabarista/images/CinnamonDL.PNG"));
+        item5Picture.setImage(new Image("file:src/main/resources/com/schwabarista/images/ExpressoMacc.PNG"));
+        item6Picture.setImage(new Image("file:src/main/resources/com/schwabarista/images/PistachioL.PNG"));
+        item7Picture.setImage(new Image("file:src/main/resources/com/schwabarista/images/IcedCoffee.PNG"));
+        item8Picture.setImage(new Image("file:src/main/resources/com/schwabarista/images/IcedCarmelMacc.PNG"));
+        item9Picture.setImage(new Image("file:src/main/resources/com/schwabarista/images/IcedCoffeeL.PNG"));
+        item10Picture.setImage(new Image("file:src/main/resources/com/schwabarista/images/IcedExpresso.PNG"));
+        item11Picture.setImage(new Image("file:src/main/resources/com/schwabarista/images/SaltedCarmel.PNG"));
+        item12Picture.setImage(new Image("file:src/main/resources/com/schwabarista/images/IcedCoffeeA.PNG"));
     }
 
     @FXML
