@@ -1,5 +1,6 @@
 package com.schwa.schwacoffe.core.controllers;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.schwa.schwacoffe.core.data.CartManager;
 import com.schwa.schwacoffe.models.CoffeeModel;
 import com.schwa.schwacoffe.models.constants.CoffeePrice;
@@ -54,6 +55,21 @@ public class MenuController {
     private Scene scene;
     private Parent root;
 
+    public void initialize() {
+        item1Picture.setImage(new Image("file:src/main/resources/com/schwa/schwacoffe/Cuppuccino.PNG"));
+        item2Picture.setImage(new Image("file:src/main/resources/com/schwa/schwacoffe/WhiteChoc.PNG"));
+        item3Picture.setImage(new Image("file:src/main/resources/com/schwa/schwacoffe/CarmelMacc.PNG"));
+        item4Picture.setImage(new Image("file:src/main/resources/com/schwa/schwacoffe/CinnamonDL.PNG"));
+        item5Picture.setImage(new Image("file:src/main/resources/com/schwa/schwacoffe/ExpressoMacc.PNG"));
+        item6Picture.setImage(new Image("file:src/main/resources/com/schwa/schwacoffe/PistachioL.PNG"));
+        item7Picture.setImage(new Image("file:src/main/resources/com/schwa/schwacoffe/IcedCoffee.PNG"));
+        item8Picture.setImage(new Image("file:src/main/resources/com/schwa/schwacoffe/IcedCarmelMacc.PNG"));
+        item9Picture.setImage(new Image("file:src/main/resources/com/schwa/schwacoffe/IcedCoffeeL.PNG"));
+        item10Picture.setImage(new Image("file:src/main/resources/com/schwa/schwacoffe/IcedExpresso.PNG"));
+        item11Picture.setImage(new Image("file:src/main/resources/com/schwa/schwacoffe/SaltedCarmel.PNG"));
+        item12Picture.setImage(new Image("file:src/main/resources/com/schwa/schwacoffe/IcedCoffeeA.PNG"));
+    }
+
     @FXML
     void CartButtonPressed(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("cart-view.fxml"));
@@ -71,61 +87,62 @@ public class MenuController {
         Button btn = (Button) event.getSource();
         String id = btn.getId();
         String itemName = "";
-        Image image = null;
+        String image = null;
 
         // Retrieve name and price of item selected
         switch (id) {
             case "customizeButton1" :
                 itemName = item1Name.getText();
-                image = item1Picture.getImage();
+                image = item1Picture.getImage().getUrl();
                 break;
             case "customizeButton2" :
                 itemName = item2Name.getText();
-                image = item2Picture.getImage();
+                image = item2Picture.getImage().getUrl();
                 break;
             case "customizeButton3" :
                 itemName = item3Name.getText();
-                image = item3Picture.getImage();
+                image = item3Picture.getImage().getUrl();
                 break;
             case "customizeButton4" :
                 itemName = item4Name.getText();
-                image = item4Picture.getImage();
+                image = item4Picture.getImage().getUrl();
                 break;
             case "customizeButton5" :
                 itemName = item5Name.getText();
-                image = item5Picture.getImage();
+                image = item5Picture.getImage().getUrl();
                 break;
             case "customizeButton6" :
                 itemName = item6Name.getText();
-                image = item6Picture.getImage();
+                image = item6Picture.getImage().getUrl();
                 break;
             case "customizeButton7" :
                 itemName = item7Name.getText();
-                image = item7Picture.getImage();
+                image = item7Picture.getImage().getUrl();
                 break;
             case "customizeButton8" :
                 itemName = item8Name.getText();
-                image = item8Picture.getImage();
+                image = item8Picture.getImage().getUrl();
                 break;
             case "customizeButton9" :
                 itemName = item9Name.getText();
-                image = item9Picture.getImage();
+                image = item9Picture.getImage().getUrl();
                 break;
             case "customizeButton10" :
                 itemName = item10Name.getText();
-                image = item10Picture.getImage();
+                image = item10Picture.getImage().getUrl();
                 break;
             case "customizeButton11" :
                 itemName = item11Name.getText();
-                image = item11Picture.getImage();
+                image = item11Picture.getImage().getUrl();
                 break;
             case "customizeButton12" :
                 itemName = item12Name.getText();
-                image = item12Picture.getImage();
+                image = item12Picture.getImage().getUrl();
                 break;
         }
-        CoffeeModel m = new CoffeeModel(image.getUrl(), CoffeePrice.MEDIUM_COST);//Default base price for all beverages is medium
+        CoffeeModel m = new CoffeeModel(image, CoffeePrice.MEDIUM_COST);//Default base price for all beverages is medium
         m.setName(itemName);
+        System.out.println(image);
         CartManager.GetInstance().SetCurrentItem(m);
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("customization-view.fxml"));
