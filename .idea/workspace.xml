@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1c0500fc-2ff0-4666-a22a-d9328c6e0841" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/controllers/CoffeeCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/controllers/CoffeeCell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/models/CoffeeModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/models/CoffeeModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/controllers/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/controllers/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/controllers/ConfirmationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/schwa/schwacoffe/core/controllers/ConfirmationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/schwa/schwacoffe/core/controllers/CustomizeCell.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/schwa/schwacoffe/core/controllers/CustomizeCell.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +21,8 @@
         <option value="Enum" />
         <option value="FxmlFile" />
         <option value="CSS File" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -62,7 +63,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+    <property name="settings.editor.selected.configurable" value="advanced.settings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -216,7 +217,9 @@
       <workItem from="1647540038096" duration="2793000" />
       <workItem from="1647546978357" duration="79000" />
       <workItem from="1647549262420" duration="1344000" />
-      <workItem from="1647550860200" duration="38000" />
+      <workItem from="1647550860200" duration="1511000" />
+      <workItem from="1647555395958" duration="312000" />
+      <workItem from="1647555942705" duration="1018000" />
     </task>
     <servers />
   </component>

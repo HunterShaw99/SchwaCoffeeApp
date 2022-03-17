@@ -2,7 +2,9 @@ package com.schwa.schwacoffe.core.controllers;
 
 import com.schwa.schwacoffe.core.data.CartManager;
 import com.schwa.schwacoffe.core.observer.Observer;
+import com.schwa.schwacoffe.core.tasks.ClearCart;
 import com.schwa.schwacoffe.models.CoffeeModel;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -75,7 +77,7 @@ public class CartController implements Observer {
 
     @FXML
     void CancelOrderClicked(MouseEvent event) throws IOException {
-        CartManager.GetInstance().EmptyCart();
+        Platform.runLater(new ClearCart());
         //switch scenes
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Menu.fxml"));
         root = loader.load();

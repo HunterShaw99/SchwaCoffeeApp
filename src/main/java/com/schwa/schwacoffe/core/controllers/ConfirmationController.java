@@ -11,9 +11,11 @@ import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.schwa.schwacoffe.core.data.CartManager;
+import com.schwa.schwacoffe.core.tasks.ClearCart;
 import com.schwa.schwacoffe.models.CoffeeModel;
 import com.schwa.schwacoffe.models.OrderModel;
 import com.schwa.schwacoffe.models.constants.OrderStatus;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -69,6 +71,7 @@ public class ConfirmationController {
 
     @FXML
     void MenuButtonClicked(ActionEvent event) throws IOException {
+        Platform.runLater(new ClearCart());
         //switch scenes
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Menu.fxml"));
         root = loader.load();

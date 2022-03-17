@@ -14,17 +14,8 @@
    <children>
       <HBox fx:id="headerHBox" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="25.0">
          <children>
-            <ImageView fx:id="beverageImageView" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
-            <VBox prefHeight="150.0" prefWidth="369.0" spacing="20.0">
-               <children>
-                  <Label fx:id="beverageNameLabel" text="Label">
-                     <VBox.margin>
-                        <Insets top="40.0" />
-                     </VBox.margin>
-                  </Label>
-                  <Label fx:id="totalLabel" layoutX="10.0" layoutY="10.0" text="Label" />
-               </children>
-            </VBox>
+            <ImageView fx:id="beverageImageView" fitHeight="125.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="beverageNameLabel" prefHeight="31.0" prefWidth="382.0" text="Label" />
          </children>
          <padding>
             <Insets left="25.0" />
